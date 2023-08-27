@@ -1,7 +1,25 @@
+import { Navbar } from "./(layout-components)/navbar";
+
 export default function Home() {
   return (
-    <div className="container min-h-screen flex flex-col justify-center items-center bg-base-100 text-neutral space-y-6 theme-mytheme">
-      <h1 className="text-4xl text-error">Page</h1>
-    </div>
+    <main className="bg-base-100 min-h-screen">
+      <Navbar />
+
+      <div className="container mx-auto">
+        <div className="flex flex-wrap justify-center">
+          <div className="w-full lg:w-1/2">
+            <div className="p-6">
+              <div className="text-2xl">Welcome to my personal website!</div>
+              <div className="text-base mt-4">
+                <h1 className="text-primary">
+                  Im Joshua Mayhew, a software engineer and computer science
+                  student at the University of Waterloo.
+                </h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
   );
 }

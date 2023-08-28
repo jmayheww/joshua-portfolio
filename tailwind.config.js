@@ -8,9 +8,10 @@ module.exports = {
   plugins: [require("daisyui")],
   daisyui: {
     themes: [
+      "synthwave", // first one will be the default theme
       {
         mytheme: {
-          primary: "#6ff798",
+          primary: "#EF476F",
 
           secondary: "#d67051",
 
@@ -18,15 +19,15 @@ module.exports = {
 
           neutral: "#29212c",
 
-          "base-100": "#2a3950",
+          "base-100": "#073B4C",
 
           info: "#82d8ed",
 
-          success: "#67e9c9",
+          success: "#EF476F",
 
           warning: "#b17410",
 
-          error: "#f33f51",
+          error: "#EF476F",
         },
       },
     ],

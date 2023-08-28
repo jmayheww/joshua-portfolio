@@ -36,7 +36,7 @@ export const Navbar = () => {
     <div
       className={`navbar fixed top-0 z-50 h-16 ${
         isVisible ? "block" : "hidden"
-      }`}
+      } flex justify-between items-center`}
       style={{
         backdropFilter: lastScrollTop > 0 ? "blur(10px)" : "none",
         backgroundColor: isVisible

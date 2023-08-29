@@ -3,18 +3,22 @@ import Image from "next/image";
 
 export const About = () => {
   const [ref, inView] = useInView({
-    triggerOnce: false, // Ensures the effect happens every time the section comes into view
-    threshold: 0.1,
+    triggerOnce: true,
+    threshold: 0.8,
   });
 
   return (
     <section
       ref={ref}
-      className={`h-screen bg-base-100 flex justify-center items-center transform ${
-        inView ? "scale-100 opacity-100" : "scale-85 opacity-0"
-      } transition-transform duration-700 delay-200 transition-opacity duration-700`}
+      className="h-screen bg-base-100 flex justify-center items-center"
     >
-      <div className="flex justify-center items-center h-64 w-64">
+      <div
+        className={`flex justify-center items-center h-64 w-64 transition-all duration-1000 ${
+          inView
+            ? "transform scale-100 translate-x-0 opacity-100"
+            : "transform scale-85 translate-x-12 opacity-0"
+        }`}
+      >
         <Image
           src="/images/headshot.jpg"
           alt="Joshua Mayhew headshot"

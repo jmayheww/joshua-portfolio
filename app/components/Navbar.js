@@ -22,7 +22,9 @@ export const Navbar = () => {
     };
   }, [lastScrollTop]);
 
-  const handleScrollToSection = (sectionId) => {
+  const handleScrollToSection = (event, sectionId) => {
+    event.preventDefault(); // Prevent default behavior of the anchor tag
+
     const section = document.getElementById(sectionId);
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
@@ -42,12 +44,17 @@ export const Navbar = () => {
       }}
     >
       <div className="flex-1">
-        <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+        <a
+          className="btn btn-ghost normal-case text-xl"
+          onClick={() => window.scroll(0, 0)}
+        >
+          daisyUI
+        </a>
       </div>
       <div className="flex-none">
         <ul className="menu menu-horizontal px-1">
           <li>
-            <a href="#" onClick={() => handleScrollToSection("about")}>
+            <a href="#" onClick={(e) => handleScrollToSection(e, "about")}>
               About
             </a>
           </li>

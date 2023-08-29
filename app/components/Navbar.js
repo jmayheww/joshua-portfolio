@@ -5,12 +5,8 @@ export const Navbar = () => {
   const [lastScrollTop, setLastScrollTop] = useState(0);
 
   useEffect(() => {
-    let inactivityTimer; // for inactivity detection
     function handleScroll() {
       let st = window.pageYOffset || document.documentElement.scrollTop;
-
-      // Clear the inactivity timer
-      clearTimeout(inactivityTimer);
 
       if (st > lastScrollTop) {
         setIsVisible(false);
@@ -18,19 +14,20 @@ export const Navbar = () => {
         setIsVisible(true);
       }
       setLastScrollTop(st <= 0 ? 0 : st);
-
-      // Set the inactivity timer
-      inactivityTimer = setTimeout(() => {
-        setIsVisible(false);
-      }, 5000); // 5 seconds of inactivity
     }
 
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
-      clearTimeout(inactivityTimer); // Clear the inactivity timer when the component unmounts
     };
   }, [lastScrollTop]);
+
+  const handleScrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <div
@@ -50,7 +47,9 @@ export const Navbar = () => {
       <div className="flex-none">
         <ul className="menu menu-horizontal px-1">
           <li>
-            <a>01. About</a>
+            <a href="#" onClick={() => handleScrollToSection("about")}>
+              About
+            </a>
           </li>
           <li>
             <a>02. Experience</a>

@@ -13,4 +13,17 @@
   width: 100%;
 }
 
+.fade-in {
+  opacity: 0;
+  transition: opacity 1s;
+  visibility: hidden;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+
 @import 'daisyui/dist/full.css';

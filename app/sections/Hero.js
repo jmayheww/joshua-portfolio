@@ -26,10 +26,15 @@ export const Hero = () => {
           }`}
         >
           <div className="p-6">
-            <h1 className="text-2xl">Welcome to my personal website!</h1>
-            <h2 className="text-base mt-4 text-primary">
-              I&rsquo;m Joshua Mayhew, a software engineer and computer science
-              student at the University of Waterloo.
+            <p className="text-base text-primary font-mono text-normal font-normal">
+              Hi, my name is
+            </p>
+            <h1 className="text-5xl font-extrabold leading-tight mt-0 mb-2 uppercase font-exo2">
+              Joshua Mayhew.
+            </h1>
+            <h2 className="text-4xl leading-[5.1rem] mt-0 mb-2 uppercase font-exo2">
+              I&rsquo;m a software engineer and computer science student at the
+              University of Waterloo.
             </h2>
           </div>
         </div>

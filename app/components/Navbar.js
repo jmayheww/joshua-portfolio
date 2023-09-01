@@ -24,8 +24,6 @@ export const Navbar = () => {
   }, [lastScrollTop]);
 
   const handleScrollToSection = (event, sectionId) => {
-    event.preventDefault(); // Prevent default behavior of the anchor tag
-
     const section = document.getElementById(sectionId);
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
@@ -49,8 +47,8 @@ export const Navbar = () => {
           <Image
             src="/images/jfox.png"
             alt="Joshua Mayhew logo"
-            width={200} // Adjust size as needed
-            height={200} // Adjust size as needed
+            width={160} // Adjust size as needed
+            height={160} // Adjust size as needed
             className="object-contain"
           />
         </a>
@@ -59,7 +57,7 @@ export const Navbar = () => {
       <div className="flex-none">
         <ul className="menu menu-horizontal px-1">
           <li>
-            <a href="#" onClick={(e) => handleScrollToSection(e, "about")}>
+            <a href="#about" onClick={(e) => handleScrollToSection(e, "about")}>
               About
             </a>
           </li>

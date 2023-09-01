@@ -8,6 +8,7 @@ export default function Home() {
   return (
     <main className="bg-base-100 min-h-screen">
       <section
+        id="hero"
         className="relative h-screen bg-center bg-cover"
         style={{ backgroundImage: "url('/images/workstation.jpg')" }}
       >

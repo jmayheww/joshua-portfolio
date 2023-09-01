@@ -29,21 +29,6 @@
   visibility: visible;
 }
 
-.snap-container {
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-  height: 100vh;
-  scroll-padding-top: 10vh;
-  /* Adjust as needed */
-}
-
-.snap-section {
-  scroll-snap-align: start;
-  height: 100vh;
-  scroll-margin-top: 10vh;
-  /* Adjust as needed */
-  scroll-snap-stop: normal;
-}
 
 html {
   scroll-behavior: smooth;

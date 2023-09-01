@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 export const Navbar = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -43,14 +44,18 @@ export const Navbar = () => {
           : "rgba(var(--base-100), 0.9)",
       }}
     >
-      <div className="flex-1">
-        <a
-          className="btn btn-ghost normal-case text-xl"
-          onClick={() => window.scroll(0, 0)}
-        >
-          daisyUI
+      <div className="flex items-center">
+        <a onClick={() => window.scroll(0, 0)}>
+          <Image
+            src="/images/jfox.png"
+            alt="Joshua Mayhew logo"
+            width={200} // Adjust size as needed
+            height={200} // Adjust size as needed
+            className="object-contain"
+          />
         </a>
       </div>
+
       <div className="flex-none">
         <ul className="menu menu-horizontal px-1">
           <li>

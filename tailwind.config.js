@@ -15,8 +15,10 @@ module.exports = {
         tighter: "5.1rem",
       },
       fontFamily: {
-        exo2: ['"Exo 2"', "sans-serif"],
-        mono: ["Roboto Mono", "monospace"],
+        "space-mono": ["Space Mono", "monospace"],
+        inter: ["Inter", "sans-serif"],
+        "roboto-mono": ["Roboto Mono", "monospace"],
+        "fira-mono": ["Fira Mono", "monospace"],
       },
       animation: {
         // bounce: "bounce 0.5s infinite",

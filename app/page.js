@@ -8,18 +8,21 @@ import { Navbar } from "./components/Navbar";
 import { About } from "./sections/About";
 
 export default function Home() {
-  const { push, replace } = useRouter();
-
   useEffect(() => {
     const hash = window.location.hash;
+    console.log("hash: ", hash);
+
     if (hash) {
-      console.log("hash: ", hash);
       const sectionId = hash.replace("#", "");
+
       const section = document.getElementById(sectionId);
-      console.log("section: ", section);
+
       if (section) {
+        console.log("section: ", section);
         section.scrollIntoView({ behavior: "smooth" });
       }
+    } else {
+      window.scroll(0, 0);
     }
   }, []);
 

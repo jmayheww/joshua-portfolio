@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
-import Link from "next/link";
 import Image from "next/image";
+import { sectionLinks } from "../utils/navlinks";
 
 export const Navbar = ({ is404 = false }) => {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollTop, setLastScrollTop] = useState(0);
-  const { push, replace } = useRouter();
+  const { push } = useRouter();
 
   useEffect(() => {
     function handleScroll() {
@@ -26,20 +26,18 @@ export const Navbar = ({ is404 = false }) => {
     };
   }, [lastScrollTop]);
 
-  const handleScrollToSection = (sectionId) => {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+  // const handleScrollToSection = (sectionId) => {
+  //   const section = document.getElementById(sectionId);
+  //   if (section) {
+  //     section.scrollIntoView({ behavior: "smooth" });
+  //   }
+  // };
 
   const handleLinkClick = (event, sectionId) => {
     if (is404) {
-      replace(`/#${sectionId}`);
-    } else {
-      handleScrollToSection(sectionId);
-      sectionId === "hero" ? push("/#") : replace(`/#${sectionId}`);
+      push(`/#${sectionId}`);
     }
+    return;
   };
 
   return (
@@ -55,12 +53,7 @@ export const Navbar = ({ is404 = false }) => {
       }}
     >
       <div className="flex items-center">
-        <a
-          href="#"
-          onClick={
-            is404 ? () => push("/") : () => handleScrollToSection("hero")
-          }
-        >
+        <a href="#" onClick={(e) => handleLinkClick(e, "")}>
           <Image
             src="/images/jfox.png"
             alt="Joshua Mayhew logo"
@@ -71,11 +64,18 @@ export const Navbar = ({ is404 = false }) => {
       </div>
       <div className="flex-none">
         <ul className="menu menu-horizontal px-1">
-          <li>
-            <a href="#about" onClick={(e) => handleLinkClick(e, "about")}>
-              About
-            </a>
-          </li>
+          {sectionLinks.map((section) => {
+            return (
+              <li key={section}>
+                <a
+                  href={`#${section}`}
+                  onClick={(e) => handleLinkClick(e, section)}
+                >
+                  {section}
+                </a>
+              </li>
+            );
+          })}
         </ul>
       </div>
     </div>

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
-import { sectionLinks } from "../utils/navlinks";
+import { sectionLinks } from "../data";
 
 export const Navbar = ({ is404 = false }) => {
   const [isVisible, setIsVisible] = useState(true);

@@ -18,6 +18,11 @@ module.exports = {
         exo2: ['"Exo 2"', "sans-serif"],
         mono: ["Roboto Mono", "monospace"],
       },
+      animation: {
+        // bounce: "bounce 0.5s infinite",
+        // popDown: "popDown 0.5s ease-in-out",
+        dropAndBounce: "dropAndBounce 1s forwards",
+      },
     },
   },
   daisyui: {

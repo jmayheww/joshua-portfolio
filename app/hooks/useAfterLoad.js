@@ -1,26 +1,26 @@
+// hooks/useAfterLoad.js
 import { useEffect } from "react";
 import { handleInitialLoad } from "../utils/loadScroll";
 
-const useAfterLoad = (setLoadingFunction) => {
+const useAfterLoad = (callback) => {
   useEffect(() => {
-    // This function encapsulates the logic you want to execute after the load event
     const afterLoad = () => {
-      handleInitialLoad(setLoadingFunction);
+      // Introducing a delay of 2 seconds (2000 milliseconds) after the page has loaded
+      handleInitialLoad(() => {
+        setTimeout(callback, 1000);
+      });
     };
 
-    // Check if the document has already loaded
     if (document.readyState === "complete") {
       afterLoad();
     } else {
-      // Otherwise, set up the load event listener
       window.addEventListener("load", afterLoad);
 
-      // Cleanup
       return () => {
         window.removeEventListener("load", afterLoad);
       };
     }
-  }, [setLoadingFunction]); // Dependency array ensures this effect responds to changes in setLoadingFunction
+  }, [callback]);
 };
 
 export default useAfterLoad;

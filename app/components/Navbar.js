@@ -26,13 +26,6 @@ export const Navbar = ({ is404 = false }) => {
     };
   }, [lastScrollTop]);
 
-  // const handleScrollToSection = (sectionId) => {
-  //   const section = document.getElementById(sectionId);
-  //   if (section) {
-  //     section.scrollIntoView({ behavior: "smooth" });
-  //   }
-  // };
-
   const handleLinkClick = (event, sectionId) => {
     if (is404) {
       push(`/#${sectionId}`);
@@ -57,8 +50,8 @@ export const Navbar = ({ is404 = false }) => {
           <Image
             src="/images/jfox.png"
             alt="Joshua Mayhew logo"
-            width={160}
-            height={160}
+            width={120}
+            height={120}
           />
         </a>
       </div>
@@ -70,12 +63,14 @@ export const Navbar = ({ is404 = false }) => {
                 <a
                   href={`#${section}`}
                   onClick={(e) => handleLinkClick(e, section)}
+                  className="font-mono"
                 >
                   {section}
                 </a>
               </li>
             );
           })}
+          <li>Resume</li>
         </ul>
       </div>
     </div>

@@ -7,7 +7,7 @@ export const Hero = () => {
   });
 
   return (
-    <div className="relative h-full font-fira-mono">
+    <div className="relative h-full">
       {/* Background Overlay */}
       <div className="absolute inset-0 bg-base-100 bg-opacity-90"></div>
 
@@ -26,13 +26,16 @@ export const Hero = () => {
           }`}
         >
           <div className="p-6 lg:p-12">
-            <p className="text-lg text-primary mb-2">Hi, my name is</p>
-            <h1 className="text-6xl font-extrabold leading-tight mt-0 mb-4 uppercase">
-              Joshua Mayhew.
+            <p className="text-lg text-primary mb-2 font-roboto-mono">
+              Hi, my name is
+            </p>
+            <h1 className="text-6xl font-extrabold font-roboto-mono leading-tight mt-0 mb-4 uppercase">
+              Joshua <span className="text-success">Mayhew.</span>
             </h1>
             <h2 className="text-5xl leading-snug mt-0 mb-4 uppercase">
-              I&rsquo;m a software engineer and computer science student at the
-              University of Waterloo.
+              I&rsquo;m a full-stack developer based in Los Angeles. I build
+              websites and web applications as fresh and robust as the coffee I
+              drink.
             </h2>
           </div>
         </div>

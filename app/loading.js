@@ -7,8 +7,8 @@ export default function Loading() {
         src="/images/jfox.png"
         alt="Loading logo JM brand logo"
         className="animate-dropAndBounce"
-        width={600}
-        height={600}
+        width={500}
+        height={500}
       />
     </div>
   );

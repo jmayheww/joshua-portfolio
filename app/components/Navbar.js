@@ -50,8 +50,8 @@ export const Navbar = ({ is404 = false }) => {
           <Image
             src="/images/jfox.png"
             alt="Joshua Mayhew logo"
-            width={120}
-            height={120}
+            width={100}
+            height={100}
           />
         </a>
       </div>

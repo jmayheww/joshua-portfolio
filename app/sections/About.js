@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export const About = () => {
   const [ref, inView] = useInView({
-    triggerOnce: true,
+    triggerOnce: false,
     threshold: 0.8,
   });
 

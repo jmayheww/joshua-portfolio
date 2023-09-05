@@ -3,7 +3,7 @@ import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { sectionLinks } from "../data";
 
-export const Navbar = ({ is404 = false }) => {
+export const Navbar = ({ is404 = false, showLogo }) => {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollTop, setLastScrollTop] = useState(0);
   const { push } = useRouter();
@@ -46,14 +46,16 @@ export const Navbar = ({ is404 = false }) => {
       }}
     >
       <div className="flex items-center">
-        <a href="#" onClick={(e) => handleLinkClick(e, "")}>
-          <Image
-            src="/images/jfox.png"
-            alt="Joshua Mayhew logo"
-            width={50}
-            height={50}
-          />
-        </a>
+        {showLogo && (
+          <a href="#" onClick={(e) => handleLinkClick(e, "")}>
+            <Image
+              src="/images/jfox.png"
+              alt="Joshua Mayhew logo"
+              width={50}
+              height={50}
+            />
+          </a>
+        )}
       </div>
       <div className="flex-none">
         <ul className="menu menu-horizontal px-1">

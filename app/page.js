@@ -8,6 +8,7 @@ import Loading from "./loading";
 import { Hero } from "./sections/Hero";
 import { Navbar } from "./components/Navbar";
 import { About } from "./sections/About";
+import Image from "next/image";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -24,8 +25,13 @@ export default function Home() {
             ref={heroRef}
             id="hero"
             className="relative h-screen bg-center bg-cover"
-            style={{ backgroundImage: "url('/images/workstation.jpg')" }}
           >
+            <Image
+              src="/images/workstation.jpg"
+              alt="Workstation"
+              layout="fill"
+              objectFit="cover"
+            />
             <div className="absolute inset-0 bg-gradient-to-b from-transparent to-base-100">
               <Navbar showLogo={showLogo} />
               <Hero />

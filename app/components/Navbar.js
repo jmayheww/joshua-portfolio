@@ -1,30 +1,17 @@
-import { useState, useEffect } from "react";
-import { useRouter } from "next/navigation"; // Corrected the import from "next/navigation" to "next/router"
 import useScrollDirection from "../hooks/useScrollDirection";
+import useSmoothScroll from "../hooks/useSmoothScroll";
 import Image from "next/image";
 import { sectionLinks } from "../data";
 
-export const Navbar = ({ is404 = false, showLogo }) => {
-  const isVisible = useScrollDirection();
-  const [lastScrollTop, setLastScrollTop] = useState(0);
-  const { push } = useRouter();
+export const Navbar = ({ is404 = false, showLogo = true }) => {
+  const { isVisible, lastScrollTop } = useScrollDirection();
 
-  const handleLinkClick = (event, sectionId) => {
-    const sectionElement = document.getElementById(sectionId);
-    if (sectionElement) {
-      event.preventDefault();
-      if (is404) {
-        push(`/#${sectionId}`);
-      } else {
-        sectionElement.scrollIntoView({ behavior: "smooth" });
-      }
-    }
-  };
+  useSmoothScroll(is404); // Ensure this doesn't interfere with scrolling behavior.
 
   return (
     <div
       className={`navbar fixed top-0 z-50 h-16 flex justify-between items-center transition-transform duration-300 ${
-        isVisible ? "transform translateY(0)" : "transform translateY(-100%)"
+        isVisible ? "block" : "hidden"
       }`}
       style={{
         backdropFilter: lastScrollTop > 0 ? "blur(10px)" : "none",
@@ -35,7 +22,7 @@ export const Navbar = ({ is404 = false, showLogo }) => {
     >
       <div className="flex items-center">
         {showLogo && (
-          <a href="#" onClick={(e) => handleLinkClick(e, "")}>
+          <a href="#" data-section-id="hero">
             <Image
               src="/images/jfox.png"
               alt="Joshua Mayhew logo"
@@ -51,7 +38,7 @@ export const Navbar = ({ is404 = false, showLogo }) => {
             <li key={section}>
               <a
                 href={`#${section}`}
-                onClick={(e) => handleLinkClick(e, section)}
+                data-section-id={section}
                 className="font-mono"
               >
                 {section}

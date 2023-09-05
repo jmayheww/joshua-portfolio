@@ -1,45 +1,36 @@
 import { useEffect } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter } from "next/navigation"; // correct import
 
 const useSmoothScroll = (is404) => {
   const { push } = useRouter();
 
-  useEffect(() => {
-    if (is404) {
-      push(`/#${sectionId}`);
-      return;
+  const onLinkClick = (event) => {
+    let sectionId = event.target.getAttribute("data-section-id");
+    if (!sectionId) {
+      sectionId = ""; // default to hero section if sectionId is null
     }
 
-    const onLinkClick = (event) => {
-      const sectionId = event.target.getAttribute("data-section-id");
-      const sectionElement = document.getElementById(sectionId);
+    const sectionElement = document.getElementById(sectionId);
 
-      if (sectionElement) {
-        event.preventDefault();
-        sectionElement.scrollIntoView({ behavior: "smooth" });
+    if (is404) {
+      push(`/#${sectionId}`);
+      return; // Make sure to return to prevent further execution.
+    }
 
-        let lastScrollTop =
-          window.pageYOffset || document.documentElement.scrollTop;
-        const checkScrollEnd = setInterval(() => {
-          let currentScrollTop =
-            window.pageYOffset || document.documentElement.scrollTop;
+    if (sectionElement) {
+      event.preventDefault();
+      sectionElement.scrollIntoView({ behavior: "smooth" });
+      history.replaceState(null, null, `#${sectionId}`);
+    }
+  };
 
-          if (lastScrollTop === currentScrollTop) {
-            clearInterval(checkScrollEnd);
-            history.pushState(null, null, `#${sectionId}`);
-          } else {
-            lastScrollTop = currentScrollTop;
-          }
-        }, 100);
-      }
-    };
-
+  useEffect(() => {
     document.addEventListener("click", onLinkClick);
 
     return () => {
       document.removeEventListener("click", onLinkClick);
     };
-  }, []);
+  }, [is404]);
 
   return;
 };

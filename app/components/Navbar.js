@@ -1,12 +1,19 @@
-import useScrollDirection from "../hooks/useScrollDirection";
-import useSmoothScroll from "../hooks/useSmoothScroll";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import { sectionLinks } from "../data";
 
-export const Navbar = ({ is404 = false, showLogo = true }) => {
-  const { isVisible, lastScrollTop } = useScrollDirection();
+const Navbar = ({ showLogo = true }) => {
+  const [isVisible, setIsVisible] = useState(true);
 
-  useSmoothScroll(is404); // Ensure this doesn't interfere with scrolling behavior.
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsVisible(window.scrollY <= 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <div
@@ -14,7 +21,7 @@ export const Navbar = ({ is404 = false, showLogo = true }) => {
         isVisible ? "block" : "hidden"
       }`}
       style={{
-        backdropFilter: lastScrollTop > 0 ? "blur(10px)" : "none",
+        backdropFilter: isVisible ? "blur(10px)" : "none",
         backgroundColor: isVisible
           ? "rgba(var(--base-100), 0.6)"
           : "rgba(var(--base-100), 0.9)",
@@ -22,7 +29,7 @@ export const Navbar = ({ is404 = false, showLogo = true }) => {
     >
       <div className="flex items-center">
         {showLogo && (
-          <a href="#" data-section-id="hero">
+          <a href="#hero">
             <Image
               src="/images/jfox.png"
               alt="Joshua Mayhew logo"
@@ -34,20 +41,17 @@ export const Navbar = ({ is404 = false, showLogo = true }) => {
       </div>
       <div className="flex-none">
         <ul className="menu menu-horizontal px-1">
-          {sectionLinks.map((section) => (
-            <li key={section}>
-              <a
-                href={`#${section}`}
-                data-section-id={section}
-                className="font-mono"
-              >
-                {section}
-              </a>
-            </li>
-          ))}
+          <li>
+            <a href="#about" className="font-mono">
+              About
+            </a>
+          </li>
+          {/* Add other section links here */}
           <li>Resume</li>
         </ul>
       </div>
     </div>
   );
 };
+
+export default Navbar;

@@ -1,35 +1,44 @@
-import { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
 
-const useScrollDirection = () => {
-  const [isVisible, setIsVisible] = useState(true);
-  const [lastScrollTop, setLastScrollTop] = useState(0);
-  const [isTopOfPage, setIsTopOfPage] = useState(true);
+// export const useScrollDirection = () => {
+//   const [isVisible, setIsVisible] = useState(true);
+//   const [lastScrollTop, setLastScrollTop] = useState(0);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const st = window.pageYOffset || document.documentElement.scrollTop;
+//   useEffect(() => {
+//     let throttleTimeout;
 
-      console.log(`Current Scroll: ${st}`);
-      console.log(`Last Scroll: ${lastScrollTop}`);
+//     const handleScroll = () => {
+//       clearTimeout(throttleTimeout);
 
-      if (st > lastScrollTop && st > 0) {
-        console.log("Hiding Navbar");
-        setIsVisible(false);
-      } else {
-        console.log("Showing Navbar");
-        setIsVisible(true);
-      }
+//       throttleTimeout = setTimeout(() => {
+//         const st = window.pageYOffset || document.documentElement.scrollTop;
+//         setIsVisible(st <= 0 || st < lastScrollTop);
+//         setLastScrollTop(st);
+//       }, 100);
+//     };
 
-      setLastScrollTop(st);
-    };
+//     window.addEventListener("scroll", handleScroll);
+//     return () => {
+//       window.removeEventListener("scroll", handleScroll);
+//       clearTimeout(throttleTimeout);
+//     };
+//   }, [lastScrollTop]);
 
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [lastScrollTop]);
+//   return { isVisible };
+// };
 
-  return { isVisible, lastScrollTop };
-};
-
-export default useScrollDirection;
+// export const useHandlePageLoad = (callback) => {
+//   useEffect(() => {
+//     const hash = window.location.hash;
+//     if (hash) {
+//       const sectionId = hash.replace("#", "");
+//       const section = document.getElementById(sectionId);
+//       if (section) {
+//         section.scrollIntoView({ behavior: "smooth" });
+//       }
+//     } else {
+//       window.scrollTo({ top: 0, behavior: "auto" });
+//     }
+//     callback(); // This should hide the loading screen
+//   }, [callback]);
+// };

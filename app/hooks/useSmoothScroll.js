@@ -1,38 +1,42 @@
-import { useEffect } from "react";
-import { useRouter } from "next/navigation"; // correct import
+// import { useEffect } from "react";
+// import { useRouter } from "next/navigation";
 
-const useSmoothScroll = (is404) => {
-  const { push } = useRouter();
+// const useSmoothScroll = () => {
+//   const router = useRouter();
 
-  const onLinkClick = (event) => {
-    let sectionId = event.target.getAttribute("data-section-id");
-    if (!sectionId) {
-      sectionId = ""; // default to hero section if sectionId is null
-    }
+//   useEffect(() => {
+//     const onLinkClick = (event) => {
+//       const sectionId = event.target.getAttribute("data-section-id");
+//       const sectionElement = document.getElementById(sectionId);
 
-    const sectionElement = document.getElementById(sectionId);
+//       if (sectionElement) {
+//         event.preventDefault();
+//         sectionElement.scrollIntoView({ behavior: "smooth" });
 
-    if (is404) {
-      push(`/#${sectionId}`);
-      return; // Make sure to return to prevent further execution.
-    }
+//         const updateUrl = () => {
+//           if (window.location.hash !== `#${sectionId}`) {
+//             router.replace(`#${sectionId}`, undefined, { shallow: true });
+//           }
+//         };
 
-    if (sectionElement) {
-      event.preventDefault();
-      sectionElement.scrollIntoView({ behavior: "smooth" });
-      history.replaceState(null, null, `#${sectionId}`);
-    }
-  };
+//         const scrollTimeout = setTimeout(updateUrl, 300); // Adjust the delay as needed
 
-  useEffect(() => {
-    document.addEventListener("click", onLinkClick);
+//         sectionElement.addEventListener(
+//           "transitionend",
+//           () => {
+//             clearTimeout(scrollTimeout);
+//             updateUrl();
+//           },
+//           { once: true }
+//         );
+//       }
+//     };
 
-    return () => {
-      document.removeEventListener("click", onLinkClick);
-    };
-  }, [is404]);
+//     document.addEventListener("click", onLinkClick);
+//     return () => {
+//       document.removeEventListener("click", onLinkClick);
+//     };
+//   }, [router]);
+// };
 
-  return;
-};
-
-export default useSmoothScroll;
+// export default useSmoothScroll;

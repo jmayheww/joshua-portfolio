@@ -1,23 +1,31 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
-const useHandlePageLoad = (callback) => {
+export const useHandlePageLoad = (callback) => {
+  const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
-    const hash = window.location.hash;
-    if (hash) {
-      const sectionId = hash.replace("#", "");
-      const section = document.getElementById(sectionId);
+    const loadingDuration = 1000; // Loading duration in milliseconds
 
-      if (section) {
-        section.scrollIntoView({ behavior: "smooth" });
+    const timeoutId = setTimeout(() => {
+      setIsLoading(false); // Set loading state to false after loading duration
+    }, loadingDuration);
+
+    return () => {
+      clearTimeout(timeoutId);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!isLoading) {
+      const hash = window.location.hash;
+      if (hash) {
+        const sectionId = hash.replace("#", "");
+        const section = document.getElementById(sectionId);
+        if (section) {
+          section.scrollIntoView({ behavior: "smooth" });
+        }
       }
-    } else {
-      if (window.scrollY === 0) {
-        window.scroll(0, 0);
-      }
+      callback(); // This should hide the loading screen
     }
-
-    callback(); // This should hide the loading screen
-  }, [callback]);
+  }, [isLoading, callback]);
 };
-
-export default useHandlePageLoad;

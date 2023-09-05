@@ -13,7 +13,7 @@ const useShowNavBarLogo = () => {
       const aboutTop = aboutRef.current.getBoundingClientRect().top;
       const windowHeight = window.innerHeight;
 
-      if (heroBottom <= 0 || aboutTop < windowHeight * 0.8) {
+      if (heroBottom <= 0 || aboutTop < windowHeight * 0.6) {
         setShowLogo(true);
       } else {
         setShowLogo(false);

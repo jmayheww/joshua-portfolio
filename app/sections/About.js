@@ -4,12 +4,13 @@ export const About = () => {
   return (
     <section className="h-screen bg-base-100 flex justify-center items-center">
       <div>
-        {/* <Image
+        <Image
           src="/images/headshot.jpg"
           alt="Joshua Mayhew headshot"
           width={256}
           height={256}
-        /> */}
+          loading="lazy"
+        />
       </div>
     </section>
   );

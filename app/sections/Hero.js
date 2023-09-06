@@ -32,23 +32,22 @@ export const Hero = () => {
               Hey there, I&rsquo;m
             </p>
             <h1 className="text-5xl font-extrabold font-jetbrains-mono leading-tight">
-              <span className="text-accent">Joshua </span>
-              <span className="text-accent">Mayhew.</span>
+              Joshua <span className="text-success">Mayhew</span>
             </h1>
             <div className="text-4xl leading-snug text-gray-300">
-              Brewing <Typing wordsList={typedAttr} /> web apps with the gusto
-              of that first glorious sip of morning coffee.
+              I craft <Typing wordsList={typedAttr} />
+              code that
+              <span className="text-primary"> works.</span>
             </div>
             <p className="text-lg font-jetbrains-mono text-gray-400 mt-4">
-              A full-stack developer infusing caffeine&rsquo;s energy into every
-              line of code. Committed to creating exceptional, user-centric
-              digital experiences. Let&rsquo;s blend your vision with my code.
+              I&rsquo;m a fully-caffeinated full-stack developer based in Los
+              Angeles.
             </p>
             <a
               href="mailto:your_email@example.com"
-              className="text-accent hover:underline mt-4"
+              className="text-primary hover:underline mt-4"
             >
-              Got a project in mind? Let&rsquo;s brew it together.
+              Got an idea? Let&rsquo;s turn it into a digital masterpiece.
             </a>
           </div>
         </div>

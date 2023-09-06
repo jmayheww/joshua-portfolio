@@ -1,4 +1,5 @@
 import { useInView } from "react-intersection-observer";
+import Image from "next/image";
 
 export const Hero = () => {
   const [ref, inView] = useInView({
@@ -8,7 +9,7 @@ export const Hero = () => {
   return (
     <div className="relative h-full">
       {/* Background Overlay */}
-      <div className="absolute inset-0 bg-base-100 bg-opacity-90"></div>
+      <div className="absolute inset-0 bg-base-100 bg-opacity-50"></div>
       {/* Content */}
       <div
         ref={ref}
@@ -23,18 +24,30 @@ export const Hero = () => {
               : "transform -translate-x-8 opacity-0"
           }`}
         >
-          <div className="p-6 lg:p-12">
-            <p className="text-lg text-primary mb-2 font-roboto-mono">
-              Hi, my name is
+          <div className="flex flex-col justify-center space-y-4">
+            <p className="text-lg text-white font-jetbrains-mono">
+              Hello there 👋
             </p>
-            <h1 className="text-6xl font-extrabold font-roboto-mono leading-tight mt-0 mb-4 uppercase">
-              Joshua <span className="text-success">Mayhew.</span>
+            <h1 className="text-6xl font-extrabold font-jetbrains-mono leading-tight">
+              I&rsquo;m <span className="text-green-400">Joshua Mayhew.</span>
             </h1>
-            <h2 className="text-5xl leading-snug mt-0 mb-4 uppercase">
-              I&rsquo;m a full-stack developer based in Los Angeles. I build
-              websites and web applications as fresh and robust as the coffee I
-              drink.
+            <h2 className="text-4xl leading-snug text-gray-300">
+              Crafting digital experiences with modern web technologies.
             </h2>
+            <p className="text-lg font-jetbrains-mono text-gray-400">
+              Passionate about clean code and user-centric design.
+            </p>
+          </div>
+
+          {/* Logo */}
+          <div className="flex flex-col items-end">
+            <Image
+              src="/images/jfox.png"
+              alt="Joshua Mayhew logo"
+              width={160}
+              height={160}
+              loading="lazy"
+            />
           </div>
         </div>
       </div>

@@ -1,19 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Image from "next/image";
+import useNavBarEffects from "../hooks/useNavBarEffects"; // Import the updated hook
+import { sectionLinks } from "../data";
 
 const Navbar = ({ showLogo = true }) => {
-  const [isVisible, setIsVisible] = useState(true);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsVisible(window.scrollY <= 0);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  const { isVisible, isTopOfPage, isLogoVisible } = useNavBarEffects(); // Use the updated hook
 
   return (
     <div
@@ -21,15 +12,15 @@ const Navbar = ({ showLogo = true }) => {
         isVisible ? "block" : "hidden"
       }`}
       style={{
-        backdropFilter: isVisible ? "blur(10px)" : "none",
+        backdropFilter: isTopOfPage ? "none" : "blur(10px)",
         backgroundColor: isVisible
           ? "rgba(var(--base-100), 0.6)"
           : "rgba(var(--base-100), 0.9)",
       }}
     >
       <div className="flex items-center">
-        {showLogo && (
-          <a href="#hero">
+        {showLogo && isLogoVisible && (
+          <a href="#">
             <Image
               src="/images/jfox.png"
               alt="Joshua Mayhew logo"
@@ -41,13 +32,13 @@ const Navbar = ({ showLogo = true }) => {
       </div>
       <div className="flex-none">
         <ul className="menu menu-horizontal px-1">
-          <li>
-            <a href="#about" className="font-mono">
-              About
-            </a>
-          </li>
-          {/* Add other section links here */}
-          <li>Resume</li>
+          {sectionLinks.map((link) => (
+            <li key={link}>
+              <a href={`#${link}`} className="btn btn-ghost btn-sm rounded-btn">
+                {link}
+              </a>
+            </li>
+          ))}
         </ul>
       </div>
     </div>

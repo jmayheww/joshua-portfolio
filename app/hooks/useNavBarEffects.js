@@ -1,29 +1,44 @@
 import { useEffect, useState } from "react";
 
-const useNavBarEffects = () => {
+export const useNavBarEffects = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [isTopOfPage, setIsTopOfPage] = useState(true);
   const [isLogoVisible, setIsLogoVisible] = useState(false);
 
+  // Scroll listener useEffect
   useEffect(() => {
     let lastScrollTop = 0;
 
     const handleScroll = () => {
       const st = window.pageYOffset || document.documentElement.scrollTop;
 
+      // If scrolling down, and not already at the top, hide navbar
       if (st > lastScrollTop && st > 0) {
         setIsVisible(false);
-      } else if (st < lastScrollTop) {
+      } else {
         setIsVisible(true);
       }
 
-      setIsTopOfPage(st <= 0);
-      lastScrollTop = st;
+      if (st <= 0) {
+        setIsTopOfPage(true);
+      } else {
+        setIsTopOfPage(false);
+      }
+
+      lastScrollTop = st <= 0 ? 0 : st; // Reset lastScrollTop to 0 if it's negative
     };
 
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  // Intersection observer useEffect
+  useEffect(() => {
     const heroSection = document.getElementById("hero");
     if (heroSection) {
-      // Intersection Observer to watch the hero section
       const observer = new IntersectionObserver(
         (entries) => {
           if (!entries[0].isIntersecting) {
@@ -33,26 +48,17 @@ const useNavBarEffects = () => {
           }
         },
         {
-          rootMargin: "-50% 0px -50% 0px", // This will trigger the callback when 50% of the hero section is out of view
+          rootMargin: "-50% 0px -50% 0px",
         }
       );
 
-      // Observe the hero section
       observer.observe(heroSection);
 
-      // Clean up the observer
       return () => {
         observer.disconnect();
       };
     }
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
   }, []);
 
-  return { isVisible, isTopOfPage, isLogoVisible };
+  return { isVisible, isLogoVisible, isTopOfPage };
 };
-
-export default useNavBarEffects;

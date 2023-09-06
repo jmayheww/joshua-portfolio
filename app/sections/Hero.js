@@ -1,5 +1,4 @@
 import { useInView } from "react-intersection-observer";
-import Image from "next/image";
 import Typing from "../components/Typing";
 import { typedAttr } from "../data";
 
@@ -30,7 +29,7 @@ export const Hero = () => {
         >
           <div className="flex flex-col justify-center space-y-4">
             <p className="text-lg text-white font-jetbrains-mono">
-              Hey there, I'm
+              Hey there, I&rsquo;m
             </p>
             <h1 className="text-5xl font-extrabold font-jetbrains-mono leading-tight">
               <span className="text-accent">Joshua </span>
@@ -41,15 +40,15 @@ export const Hero = () => {
               of that first glorious sip of morning coffee.
             </div>
             <p className="text-lg font-jetbrains-mono text-gray-400 mt-4">
-              A full-stack developer infusing caffeine's energy into every line
-              of code. Committed to creating exceptional, user-centric digital
-              experiences. Let's blend your vision with my code.
+              A full-stack developer infusing caffeine&rsquo;s energy into every
+              line of code. Committed to creating exceptional, user-centric
+              digital experiences. Let&rsquo;s blend your vision with my code.
             </p>
             <a
               href="mailto:your_email@example.com"
               className="text-accent hover:underline mt-4"
             >
-              Got a project in mind? Let's brew it together.
+              Got a project in mind? Let&rsquo;s brew it together.
             </a>
           </div>
         </div>

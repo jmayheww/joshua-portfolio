@@ -1,22 +1,15 @@
-import React from "react";
 import Image from "next/image";
-import useNavBarEffects from "../hooks/useNavBarEffects"; // Import the updated hook
+import { useNavBarEffects } from "../hooks/useNavBarEffects";
 import { sectionLinks } from "../data";
 
 const Navbar = ({ showLogo = true }) => {
-  const { isVisible, isTopOfPage, isLogoVisible } = useNavBarEffects(); // Use the updated hook
+  const { isVisible, isTopOfPage, isLogoVisible } = useNavBarEffects();
 
   return (
     <div
-      className={`navbar fixed top-0 z-50 h-16 flex justify-between items-center transition-transform duration-300 ${
-        isVisible ? "block" : "hidden"
-      }`}
-      style={{
-        backdropFilter: isTopOfPage ? "none" : "blur(10px)",
-        backgroundColor: isVisible
-          ? "rgba(var(--base-100), 0.6)"
-          : "rgba(var(--base-100), 0.9)",
-      }}
+      className={`navbar fixed top-0 z-50 h-16 flex justify-between items-center transition-transform duration-300
+        ${isVisible ? "block" : "hidden"}
+        ${isTopOfPage ? "bg-opacity-60" : "bg-opacity-90 backdrop-blur-md"}`}
     >
       <div className="flex items-center">
         {showLogo && isLogoVisible && (
@@ -31,6 +24,7 @@ const Navbar = ({ showLogo = true }) => {
           </a>
         )}
       </div>
+
       <div className="flex-none">
         <ul className="menu menu-horizontal px-1">
           {sectionLinks.map((link) => (

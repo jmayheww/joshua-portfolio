@@ -26,6 +26,7 @@ const Navbar = ({ showLogo = true }) => {
               alt="Joshua Mayhew logo"
               width={50}
               height={50}
+              loading="lazy"
             />
           </a>
         )}

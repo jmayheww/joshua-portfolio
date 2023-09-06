@@ -23,17 +23,15 @@ export default function Home() {
         <Loading />
       ) : (
         <>
-          <section
-            // ref={heroRef}
-            id="hero"
-            className="relative h-screen bg-center bg-cover"
-          >
+          <section id="hero" className="relative h-screen bg-center bg-cover">
             <Image
               src="/images/workstation.jpg"
               alt="Workstation"
               layout="fill"
               objectFit="cover"
+              loading="lazy"
             />
+            <div className="absolute inset-0 bg-base-100 bg-opacity-60"></div>
             <div className="absolute inset-0 bg-gradient-to-b from-transparent to-base-100">
               <Navbar />
               <Hero />

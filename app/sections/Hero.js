@@ -1,15 +1,19 @@
 import { useInView } from "react-intersection-observer";
 import Image from "next/image";
+import Typing from "../components/Typing";
+import { typedAttr } from "../data";
 
 export const Hero = () => {
   const [ref, inView] = useInView({
     triggerOnce: false,
     threshold: 0.7,
   });
+
   return (
     <div className="relative h-full">
       {/* Background Overlay */}
       <div className="absolute inset-0 bg-base-100 bg-opacity-50"></div>
+
       {/* Content */}
       <div
         ref={ref}
@@ -26,28 +30,27 @@ export const Hero = () => {
         >
           <div className="flex flex-col justify-center space-y-4">
             <p className="text-lg text-white font-jetbrains-mono">
-              Hello there 👋
+              Hey there, I'm
             </p>
-            <h1 className="text-6xl font-extrabold font-jetbrains-mono leading-tight">
-              I&rsquo;m <span className="text-green-400">Joshua Mayhew.</span>
+            <h1 className="text-5xl font-extrabold font-jetbrains-mono leading-tight">
+              <span className="text-accent">Joshua </span>
+              <span className="text-accent">Mayhew.</span>
             </h1>
-            <h2 className="text-4xl leading-snug text-gray-300">
-              Crafting digital experiences with modern web technologies.
-            </h2>
-            <p className="text-lg font-jetbrains-mono text-gray-400">
-              Passionate about clean code and user-centric design.
+            <div className="text-4xl leading-snug text-gray-300">
+              Brewing <Typing wordsList={typedAttr} /> web apps with the gusto
+              of that first glorious sip of morning coffee.
+            </div>
+            <p className="text-lg font-jetbrains-mono text-gray-400 mt-4">
+              A full-stack developer infusing caffeine's energy into every line
+              of code. Committed to creating exceptional, user-centric digital
+              experiences. Let's blend your vision with my code.
             </p>
-          </div>
-
-          {/* Logo */}
-          <div className="flex flex-col items-end">
-            <Image
-              src="/images/jfox.png"
-              alt="Joshua Mayhew logo"
-              width={160}
-              height={160}
-              loading="lazy"
-            />
+            <a
+              href="mailto:your_email@example.com"
+              className="text-accent hover:underline mt-4"
+            >
+              Got a project in mind? Let's brew it together.
+            </a>
           </div>
         </div>
       </div>

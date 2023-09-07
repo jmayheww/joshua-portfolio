@@ -20,22 +20,21 @@ export const Hero = () => {
 `;
 
   const contentClasses = `
-  flex flex-col justify-center space-y-4
+  flex flex-col justify-center space-y-6 sm:space-y-10
   w-10/12 sm:w-10/12 md:w-3/4 lg:w-2/3 xl:w-5/8 2xl:w-5/8
-  max-w-4xl  // This ensures your content doesn't stretch too wide on larger screens
+  max-w-4xl
 `;
 
   const paragraphClasses = `
-  mt-4
+  mt-2
   text-sm sm:text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl
   font-jetbrains-mono text-gray-400
 `;
 
   const buttonContainerClasses = `
-  mt-8
+  mt-16 sm:mt-10
   transition-transform duration-300 transform
 `;
-
   return (
     <div className={containerClasses} ref={ref}>
       <div className={contentClasses}>
@@ -46,9 +45,10 @@ export const Hero = () => {
           Joshua <span className="text-success">Mayhew</span>
         </h1>
 
-        <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl leading-snug text-gray-300">
+        <div className="text-xl sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl leading-snug text-gray-300">
           I craft <Typing wordsList={typedAttr} />
-          code that <span className="text-primary">works.</span>
+          <br className="sm:hidden" /> code that{" "}
+          <span className="text-primary">works.</span>
         </div>
 
         <p className={paragraphClasses}>
@@ -64,10 +64,10 @@ export const Hero = () => {
           where caffeine meets creativity.
         </p>
 
-        <div className={buttonContainerClasses}>
+        <div className="mt-12 sm:mt-16 mb-20">
           <a
             href="#work"
-            className="btn bg-primary-100 hover:bg-primary-400 text-white btn-xs sm:btn-md md:btn-md lg:btn-lg hover:shadow-md transition-transform transform hover:-translate-y-1 rounded-md border border-primary-500"
+            className="btn bg-primary-100 hover:bg-primary-400 text-white py-4 px-6 sm:py-4 sm:px-6 hover:shadow-lg transition-transform transform hover:-translate-y-1 rounded-md border border-primary-500"
           >
             See my work
             <svg
@@ -76,7 +76,7 @@ export const Hero = () => {
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="w-6 h-6"
+              className="w-6 h-6 ml-2"
             >
               <path
                 strokeLinecap="round"
@@ -87,7 +87,7 @@ export const Hero = () => {
           </a>
         </div>
 
-        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 animate-pulse">
+        <div className="absolute bottom-8 sm:bottom-4 left-1/2 transform -translate-x-1/2 animate-pulse">
           <a href="#about">
             <svg
               xmlns="http://www.w3.org/2000/svg"

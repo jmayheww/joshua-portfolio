@@ -39,20 +39,29 @@ export const Hero = () => {
               code that <span className="text-primary"> works.</span>
             </div>
             <p className="text-sm sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-jetbrains-mono text-gray-400">
-              I’m a full-stack developer, blending code and coffee in the heart
+              I’m a full-stack developer blending code and coffee in the heart
               of Los Angeles. I craft digital products that uplift users and
               bolster businesses. My values? Clean code, intuitive design, and
-              fostering unforgettable digital journeys. Join me where caffeine
-              meets creativity
+              fostering unforgettable digital journeys. Let&rsquo;s{` `}
+              <a
+                href="mailto:joshsmayhew@gmail.com"
+                className="text-success hover:underline"
+              >
+                connect
+              </a>
+              {` `}
+              where caffeine meets creativity.
             </p>
-            <a
-              href="mailto:your_email@example.com"
-              className="text-primary hover:underline text-sm sm:text-lg md:text-xl lg:text-2xl xl:text-3xl"
-            >
-              Got an idea? Let&rsquo;s collaborate.
-            </a>
           </div>
         </div>
+      </div>
+      <div className="mt-8">
+        <a
+          href="#work"
+          className="btn btn-primary btn-xs sm:btn-sm md:btn-md lg:btn-lg hover:shadow-md transition-transform transform hover:-translate-y-1 rounded-md hover:border hover:border-primary-500"
+        >
+          See my work
+        </a>
       </div>
     </div>
   );

@@ -8,6 +8,5 @@ export const typedAttr = [
   "responsive",
   "efficient",
   "secure",
-  "maintainable",
   "dynamic",
 ];

@@ -39,39 +39,7 @@ html {
 
 
 
-/* @keyframes bounce {
 
-  0%,
-  20%,
-  50%,
-  80%,
-  100% {
-    transform: translateY(0);
-  }
-
-  40% {
-    transform: translateY(-20px);
-  }
-
-  60% {
-    transform: translateY(-10px);
-  }
-}
-
-
-@keyframes popDown {
-  0% {
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-} */
-
-/* Add this to your global styles or CSS module */
 @keyframes dropAndBounce {
   0% {
     transform: translateY(-100%);
@@ -90,6 +58,33 @@ html {
   }
 }
 
+.animate-pulse {
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .tablet\:w-8\/12 {
+    width: 66.666667%;
+  }
+
+  .tablet\:text-center {
+    text-align: center;
+  }
+}
 
 
 

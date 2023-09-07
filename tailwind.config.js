@@ -20,10 +20,12 @@ module.exports = {
         "roboto-mono": ["Roboto Mono", "monospace"],
         "fira-mono": ["Fira Mono", "monospace"],
       },
+      screens: {
+        nm: "600px",
+      },
       animation: {
-        // bounce: "bounce 0.5s infinite",
-        // popDown: "popDown 0.5s ease-in-out",
         dropAndBounce: "dropAndBounce 1s forwards",
+        pulse: "pulse 1s infinite",
       },
     },
   },

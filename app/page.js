@@ -31,7 +31,7 @@ export default function Home() {
               objectFit="cover"
               loading="lazy"
             />
-            <div className="absolute inset-0 bg-base-100 bg-opacity-60 transition duration-500 ease-in-out"></div>
+            <div className="absolute inset-0 bg-base-100 bg-opacity-80 transition duration-500 ease-in-out"></div>
             <div className="absolute inset-0 bg-gradient-to-b from-transparent to-base-100">
               <Navbar />
               <Hero />

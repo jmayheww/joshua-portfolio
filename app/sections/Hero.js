@@ -10,7 +10,7 @@ export const Hero = () => {
 
   const containerClasses = `
   flex justify-center items-center
-  h-full
+  h-screen
   overflow-hidden
   transition-all duration-1000
   transform ${

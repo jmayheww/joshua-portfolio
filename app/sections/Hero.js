@@ -33,7 +33,7 @@ export const Hero = () => {
 
   const buttonContainerClasses = `
   mt-8
-  transition-transform duration-300 transform hover:-translate-y-1
+  transition-transform duration-300 transform
 `;
 
   return (
@@ -63,6 +63,7 @@ export const Hero = () => {
           </a>{" "}
           where caffeine meets creativity.
         </p>
+
         <div className={buttonContainerClasses}>
           <a
             href="#work"

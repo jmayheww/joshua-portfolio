@@ -9,42 +9,45 @@ export const Hero = () => {
   });
 
   return (
-    <div className="relative h-[85vh] sm:h-full flex items-center justify-center sm:justify-start">
+    <div className="relative h-[85vh] sm:h-full flex items-center justify-start">
       {/* Background Overlay */}
       <div className="absolute inset-0 bg-base-100 bg-opacity-50"></div>
 
       {/* Content */}
       <div
         ref={ref}
-        className={`flex flex-wrap justify-center w-full pl-4 sm:pl-12 md:pl-24 lg:pl-40 p-4 md:p-8 lg:justify-start transition-opacity duration-1000 ${
+        className={`flex flex-wrap justify-center lg:justify-start w-11/12 sm:w-10/12 lg:w-9/12 xl:w-8/12 2xl:w-7/12 mx-auto lg:ml-16 xl:ml-32 transition-opacity duration-1000 ${
           inView ? "opacity-100 delay-600" : "opacity-10"
         }`}
       >
         <div
-          className={`w-full lg:w-4/5 xl:w-3/4 transition-all duration-1000 ${
+          className={`w-full transition-all duration-1000 ${
             inView
               ? "transform translate-x-0 opacity-100"
               : "transform -translate-x-8 opacity-0"
           }`}
         >
-          <div className="flex flex-col justify-center space-y-3 sm:space-y-4 md:space-y-5 lg:space-y-6 xl:space-y-8">
-            <p className="text-sm sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl text-white font-jetbrains-mono">
+          <div className="flex flex-col justify-center space-y-4 sm:space-y-6 md:space-y-8 max-w-screen-xl">
+            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-white font-jetbrains-mono">
               Hey there, I&rsquo;m
             </p>
-            <h1 className="whitespace-nowrap text-2xl sm:text-4xl md:text-6xl lg:text-8xl xl:text-9xl 2xl:text-10xl font-extrabold font-jetbrains-mono leading-none">
+            <h1 className="whitespace-nowrap text-4xl sm:text-5xl md:text-6xl lg:text-8xl xl:text-9xl font-extrabold font-jetbrains-mono leading-none">
               Joshua <span className="text-success">Mayhew</span>
             </h1>
-            <div className="text-xl sm:text-2xl md:text-3xl lg:text-5xl xl:text-6xl 2xl:text-7xl leading-snug text-gray-300">
+            <div className="whitespace-nowrap text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl leading-snug text-gray-300">
               I craft <Typing wordsList={typedAttr} />
               code that <span className="text-primary"> works.</span>
             </div>
-            <p className="text-xs sm:text-md md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl font-jetbrains-mono text-gray-400">
-              I&rsquo;m a fully-caffeinated full-stack developer based in Los
-              Angeles.
+            <p className="text-sm sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-jetbrains-mono text-gray-400">
+              I’m a full-stack developer, blending code and coffee in the heart
+              of Los Angeles. I craft digital products that uplift users and
+              bolster businesses. My values? Clean code, intuitive design, and
+              fostering unforgettable digital journeys. Join me where caffeine
+              meets creativity
             </p>
             <a
               href="mailto:your_email@example.com"
-              className="text-primary hover:underline text-xs sm:text-md md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl"
+              className="text-primary hover:underline text-sm sm:text-lg md:text-xl lg:text-2xl xl:text-3xl"
             >
               Got an idea? Let&rsquo;s collaborate.
             </a>

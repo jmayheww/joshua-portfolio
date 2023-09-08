@@ -34,13 +34,13 @@ const Navbar = () => {
           : "bg-opacity-90 backdrop-blur-md"
       }`}
     >
-      <div className="flex items-center mt-2">
-        <a href="#" className="ml-2">
+      <div className="flex items-center justify-start mt-0.5 ml-[-1rem]">
+        <a href="#" className="ml-1 sm:ml-0">
           <Image
             src="/images/jfoxs.png"
             alt="Joshua Mayhew fox logo"
-            width={120}
-            height={120}
+            width={100}
+            height={100}
             loading="lazy"
           />
         </a>
@@ -70,11 +70,11 @@ const Navbar = () => {
       <div className="hidden md:flex">
         <ul className="menu menu-horizontal px-1">
           {sectionLinks.map((link) => (
-            <li key={link}>
+            <li key={link} className="m-1">
               <a
                 href={`#${link}`}
                 onClick={handleLinkClick}
-                className="text-gray-400 hover:text-success py-4 text-xl font-bold text-center block w-full"
+                className="text-gray-400 hover:text-success hover:bg-primary-100 transition-all transform hover:scale-105 hover:shadow-md rounded-md py-4 text-xl font-bold text-center block w-full focus:outline-none focus:ring focus:ring-primary-200"
               >
                 {link}
               </a>

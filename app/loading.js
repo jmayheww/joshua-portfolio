@@ -4,11 +4,11 @@ export default function Loading() {
   return (
     <div className="fixed inset-0 z-50 flex justify-center items-center bg-base-100">
       <Image
-        src="/images/jfox.png"
+        src="/images/jfoxs.png"
         alt="Loading logo JM brand logo"
         className="animate-dropAndBounce"
-        width={500}
-        height={500}
+        width={1000}
+        height={1000}
       />
     </div>
   );

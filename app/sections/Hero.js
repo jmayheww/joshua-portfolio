@@ -20,8 +20,8 @@ export const Hero = () => {
 `;
 
   const contentClasses = `
-  flex flex-col justify-center space-y-6 sm:space-y-10
-  w-10/12 sm:w-10/12 md:w-3/4 lg:w-2/3 xl:w-5/8 2xl:w-5/8
+  flex flex-col justify-start space-y-6 sm:space-y-10
+  w-10/12 sm:w-10/12 md:w-2/3 lg:w-2/3 xl:w-5/8 2xl:w-5/8
   max-w-4xl
 `;
 
@@ -32,9 +32,23 @@ export const Hero = () => {
 `;
 
   const buttonContainerClasses = `
-  mt-16 sm:mt-10
-  transition-transform duration-300 transform
+  mt-8 sm:mt-10 md:mt-12 lg:mt-14 xl:mt-16 2xl:mt-18
+  flex justify-start
 `;
+
+  const buttonClasses = `
+  inline-flex items-center justify-center
+  py-3 md:py-4 px-5 md:px-7
+  text-sm md:text-lg
+  bg-neutral text-white
+  border border-primary-500
+  rounded-lg shadow-md
+  transition-all transform
+  hover:bg-primary hover:shadow-xl hover:-translate-y-1
+  active:scale-95 focus:outline-none focus:ring focus:ring-primary-200
+  font-inter font-bold
+`;
+
   return (
     <div className={containerClasses} ref={ref}>
       <div className={contentClasses}>
@@ -64,11 +78,8 @@ export const Hero = () => {
           where caffeine meets creativity.
         </p>
 
-        <div className="mt-12 sm:mt-16 mb-20">
-          <a
-            href="#work"
-            className="btn bg-primary-100 hover:bg-primary-400 text-white py-4 px-6 sm:py-4 sm:px-6 hover:shadow-lg transition-transform transform hover:-translate-y-1 rounded-md border border-primary-500"
-          >
+        <div className={`${buttonContainerClasses}`}>
+          <a href="#work" className={buttonClasses}>
             See my work
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -76,7 +87,7 @@ export const Hero = () => {
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="w-6 h-6 ml-2"
+              className="w-4 md:w-6 h-4 md:h-6 ml-2 transition-transform transform hover:translate-x-1"
             >
               <path
                 strokeLinecap="round"

@@ -8,31 +8,43 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsOpen(!isOpen);
-    document.body.style.overflow = isOpen ? "" : "hidden";
+    if (!isOpen) {
+      setIsOpen(true);
+      document.body.style.overflow = "hidden"; // Disable scrolling
+    } else {
+      setIsOpen(false);
+      document.body.style.overflow = ""; // Enable scrolling
+    }
   };
 
   const handleLinkClick = (e) => {
-    e.preventDefault();
-    const targetSection = e.target.getAttribute("href");
-    window.location.hash = targetSection;
-    toggleMenu();
+    e.preventDefault(); // Prevent the default link behavior
+    const targetSection = e.target.getAttribute("href"); // Get the target section
+    window.location.hash = targetSection; // Jump to the target section
+    toggleMenu(); // Close the menu
   };
 
   return (
     <div
       className={`navbar fixed top-0 z-50 w-full h-16 flex justify-between items-center transition-colors duration-300 ease-out ${
         isVisible ? "block" : "hidden"
-      } ${isTopOfPage ? "bg-opacity-60" : "bg-opacity-90 backdrop-blur-md"}`}
+      } ${
+        isTopOfPage
+          ? "bg-opacity-10 backdrop-blur-sm"
+          : "bg-opacity-90 backdrop-blur-md"
+      }`}
     >
-      <div className="flex items-center">
+      <div className="flex items-center ml-4 mt-2">
+        {/* Increase margin-top (mt-2) for additional padding */}
         <a href="#" className="ml-4">
+          {/* Add margin to the top and right (mr-4) for the hamburger button */}
           <Image
             src="/images/jfox.png"
             alt="Joshua Mayhew logo"
             width={50}
             height={50}
             loading="lazy"
+            className="mr-4"
           />
         </a>
       </div>
@@ -44,6 +56,8 @@ const Navbar = () => {
           viewBox="0 0 24 24"
           stroke="currentColor"
           className="h-6 w-6"
+          // Adjust margin-top and margin-right for professional positioning
+          style={{ marginTop: "0.5rem", marginRight: "0.75rem" }}
         >
           <path
             strokeLinecap="round"

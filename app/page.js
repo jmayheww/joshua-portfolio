@@ -18,13 +18,13 @@ export default function Home() {
   useHandlePageLoad(() => setIsLoading(false));
 
   return (
-    <main className="bg-base-100 min-h-screen">
+    <main className="bg-base-100 min-h-screen relative">
       {isLoading ? (
         <Loading />
       ) : (
         <>
           <Navbar />
-          <section id="hero" className="relative h-screen bg-center bg-cover">
+          <section id="hero" className="relative h-screen bg-center bg-cover ">
             <Image
               src="/images/workstation.jpg"
               alt="Workstation"

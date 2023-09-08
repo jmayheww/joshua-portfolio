@@ -34,30 +34,29 @@ const Navbar = () => {
           : "bg-opacity-90 backdrop-blur-md"
       }`}
     >
-      <div className="flex items-center ml-4 mt-2">
-        {/* Increase margin-top (mt-2) for additional padding */}
-        <a href="#" className="ml-4">
-          {/* Add margin to the top and right (mr-4) for the hamburger button */}
+      <div className="flex items-center mt-2">
+        <a href="#" className="ml-2">
           <Image
-            src="/images/jfox.png"
-            alt="Joshua Mayhew logo"
-            width={50}
-            height={50}
+            src="/images/jfoxs.png"
+            alt="Joshua Mayhew fox logo"
+            width={120}
+            height={120}
             loading="lazy"
-            className="mr-4"
           />
         </a>
       </div>
 
-      <button onClick={toggleMenu} className=" md:hidden">
+      <button
+        onClick={toggleMenu}
+        className="mt-2 ml-4 md:hidden"
+        alt="Menu Button"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
-          className="h-6 w-6"
-          // Adjust margin-top and margin-right for professional positioning
-          style={{ marginTop: "0.5rem", marginRight: "0.75rem" }}
+          className="h-12 w-12"
         >
           <path
             strokeLinecap="round"
@@ -74,7 +73,8 @@ const Navbar = () => {
             <li key={link}>
               <a
                 href={`#${link}`}
-                className="btn btn-ghost btn-sm rounded-btn hover:text-success transition-colors duration-300"
+                onClick={handleLinkClick}
+                className="text-gray-400 hover:text-success py-4 text-xl font-bold text-center block w-full"
               >
                 {link}
               </a>

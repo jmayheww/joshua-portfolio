@@ -18,9 +18,6 @@ const Navbar = () => {
   };
 
   const handleLinkClick = (e) => {
-    e.preventDefault(); // Prevent the default link behavior
-    const targetSection = e.target.getAttribute("href"); // Get the target section
-    window.location.hash = targetSection; // Jump to the target section
     toggleMenu(); // Close the menu
   };
 
@@ -34,8 +31,11 @@ const Navbar = () => {
           : "bg-opacity-90 backdrop-blur-md"
       }`}
     >
-      <div className="flex items-center justify-start mt-0.5 ml-[-1rem]">
-        <a href="#" className="ml-1 sm:ml-0">
+      {/* Logo */}
+      <div className="flex items-center justify-start mt-0.5 ml-[-1.5rem]">
+        {" "}
+        {/* Adjusted margin here */}
+        <a href="#" className="sm:ml-0">
           <Image
             src="/images/jfoxs.png"
             alt="Joshua Mayhew fox logo"
@@ -46,11 +46,8 @@ const Navbar = () => {
         </a>
       </div>
 
-      <button
-        onClick={toggleMenu}
-        className="mt-2 ml-4 md:hidden"
-        alt="Menu Button"
-      >
+      {/* Menu Toggle Button */}
+      <button onClick={toggleMenu} className="mt-2 ml-4 md:hidden">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -67,25 +64,22 @@ const Navbar = () => {
         </svg>
       </button>
 
-      <div className="hidden md:flex">
-        <ul className="menu menu-horizontal px-1">
-          {sectionLinks.map((link) => (
-            <li key={link} className="m-1">
-              <a
-                href={`#${link}`}
-                onClick={handleLinkClick}
-                className="text-gray-400 hover:text-success hover:bg-primary-100 transition-all transform hover:scale-105 hover:shadow-md rounded-md py-4 text-xl font-bold text-center block w-full focus:outline-none focus:ring focus:ring-primary-200"
-              >
-                {link}
-              </a>
-            </li>
-          ))}
-        </ul>
+      <div className="hidden md:flex space-x-6 font-jetbrains">
+        {sectionLinks.map((link) => (
+          <a
+            key={link}
+            href={`#${link}`}
+            className="text-gray-400 hover:text-success hover:underline transition-colors duration-300 ease-out py-2 text-lg font-medium"
+          >
+            {link}
+          </a>
+        ))}
       </div>
 
+      {/* Side Menu (Mobile) */}
       {isOpen && (
         <div className="fixed inset-0 z-50 flex justify-end md:hidden bg-black bg-opacity-20">
-          {/* Side Menu */}
+          {/* Side Menu Content */}
           <div
             className={`bg-neutral text-white w-2/3 h-screen fixed right-0 top-0 flex flex-col justify-center items-center transition-transform ease-in-out duration-300 ${
               isOpen ? "translate-x-0" : "translate-x-full"
@@ -93,7 +87,7 @@ const Navbar = () => {
           >
             {/* Close Button */}
             <div className="p-4 absolute top-4 right-4">
-              <button onClick={toggleMenu} className="btn btn-square btn-ghost">
+              <button onClick={toggleMenu} className="bg-transparent">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -110,16 +104,14 @@ const Navbar = () => {
                 </svg>
               </button>
             </div>
-
             {/* Navigation Links */}
-            <nav className="flex-1 flex flex-col justify-center items-center px-4">
+            <nav className="flex-1 flex flex-col justify-center items-center space-y-4 px-4">
               {sectionLinks.map((link) => (
                 <a
                   key={link}
                   href={`#${link}`}
                   onClick={handleLinkClick}
-                  className="text-gray-400 hover:text-white py-4 text-2xl font-bold text-center"
-                  style={{ display: "block", width: "100%" }}
+                  className="text-gray-400 hover:text-success py-4 text-2xl font-bold text-center w-full"
                 >
                   {link}
                 </a>
@@ -131,5 +123,4 @@ const Navbar = () => {
     </div>
   );
 };
-
 export default Navbar;

@@ -49,7 +49,7 @@ const Navbar = () => {
         </a>
       </div>
 
-      <button onClick={toggleMenu} className="md:hidden">
+      <button onClick={toggleMenu} className=" md:hidden">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -87,7 +87,7 @@ const Navbar = () => {
         <div className="fixed inset-0 z-50 flex justify-end md:hidden bg-black bg-opacity-20">
           {/* Side Menu */}
           <div
-            className={`bg-gray-900 text-white w-1/2 h-screen fixed right-0 top-0 flex flex-col justify-center items-center transition-transform ease-in-out duration-300 ${
+            className={`bg-neutral text-white w-2/3 h-screen fixed right-0 top-0 flex flex-col justify-center items-center transition-transform ease-in-out duration-300 ${
               isOpen ? "translate-x-0" : "translate-x-full"
             }`}
           >
@@ -99,7 +99,7 @@ const Navbar = () => {
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
-                  className="h-6 w-6 text-gray-400 hover:text-gray-200"
+                  className="h-6 w-6 text-gray-400 hover:text-white"
                 >
                   <path
                     strokeLinecap="round"
@@ -118,7 +118,7 @@ const Navbar = () => {
                   key={link}
                   href={`#${link}`}
                   onClick={handleLinkClick}
-                  className="text-gray-400 hover:text-gray-100 py-4 text-2xl font-bold text-center"
+                  className="text-gray-400 hover:text-white py-4 text-2xl font-bold text-center"
                   style={{ display: "block", width: "100%" }}
                 >
                   {link}

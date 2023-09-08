@@ -23,6 +23,7 @@ export default function Home() {
         <Loading />
       ) : (
         <>
+          <Navbar />
           <section id="hero" className="relative h-screen bg-center bg-cover">
             <Image
               src="/images/workstation.jpg"
@@ -33,7 +34,6 @@ export default function Home() {
             />
             <div className="absolute inset-0 bg-base-100 bg-opacity-80 transition duration-500 ease-in-out"></div>
             <div className="absolute inset-0 bg-gradient-to-b from-transparent to-base-100">
-              <Navbar />
               <Hero />
             </div>
           </section>

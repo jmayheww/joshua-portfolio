@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 export const useNavBarEffects = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [isTopOfPage, setIsTopOfPage] = useState(true);
-  const [isLogoVisible, setIsLogoVisible] = useState(false);
 
   // Scroll listener useEffect
   useEffect(() => {
@@ -35,30 +34,5 @@ export const useNavBarEffects = () => {
     };
   }, []);
 
-  // Intersection observer useEffect
-  useEffect(() => {
-    const heroSection = document.getElementById("hero");
-    if (heroSection) {
-      const observer = new IntersectionObserver(
-        (entries) => {
-          if (!entries[0].isIntersecting) {
-            setIsLogoVisible(true);
-          } else {
-            setIsLogoVisible(false);
-          }
-        },
-        {
-          rootMargin: "-50% 0px -50% 0px",
-        }
-      );
-
-      observer.observe(heroSection);
-
-      return () => {
-        observer.disconnect();
-      };
-    }
-  }, []);
-
-  return { isVisible, isLogoVisible, isTopOfPage };
+  return { isVisible, isTopOfPage };
 };

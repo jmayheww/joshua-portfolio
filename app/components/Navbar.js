@@ -8,20 +8,15 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
-    if (!isOpen) {
-      setIsOpen(true);
-      document.body.style.overflow = "hidden"; // Disable scrolling
-    } else {
-      setIsOpen(false);
-      document.body.style.overflow = ""; // Enable scrolling
-    }
+    setIsOpen(!isOpen);
+    document.body.style.overflow = isOpen ? "" : "hidden";
   };
 
   const handleLinkClick = (e) => {
-    e.preventDefault(); // prevent the default link behavior
-    const targetSection = e.target.getAttribute("href"); // get the target section
-    window.location.hash = targetSection; // jump to the target section
-    toggleMenu(); // close the menu
+    e.preventDefault();
+    const targetSection = e.target.getAttribute("href");
+    window.location.hash = targetSection;
+    toggleMenu();
   };
 
   return (
@@ -78,39 +73,39 @@ const Navbar = () => {
         <div className="fixed inset-0 z-50 flex justify-end md:hidden bg-black bg-opacity-20">
           {/* Side Menu */}
           <div
-            className={`bg-gray-900 text-white w-1/2 h-screen fixed right-0 top-0 transform transition-transform ease-in-out duration-300 ${
+            className={`bg-gray-900 text-white w-1/2 h-screen fixed right-0 top-0 flex flex-col justify-center items-center transition-transform ease-in-out duration-300 ${
               isOpen ? "translate-x-0" : "translate-x-full"
             }`}
           >
             {/* Close Button */}
-            <button
-              onClick={toggleMenu}
-              className="absolute top-4 right-4 btn btn-square btn-ghost"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                className="h-6 w-6 text-gray-400 hover:text-gray-200"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            </button>
+            <div className="p-4 absolute top-4 right-4">
+              <button onClick={toggleMenu} className="btn btn-square btn-ghost">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  className="h-6 w-6 text-gray-400 hover:text-gray-200"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+            </div>
 
             {/* Navigation Links */}
-            <nav className="flex-1 flex flex-col justify-center items-center px-4 space-y-4">
+            <nav className="flex-1 flex flex-col justify-center items-center px-4">
               {sectionLinks.map((link) => (
                 <a
                   key={link}
                   href={`#${link}`}
                   onClick={handleLinkClick}
-                  className="text-gray-400 hover:text-gray-100 block py-1 text-lg font-medium text-center"
+                  className="text-gray-400 hover:text-gray-100 py-4 text-2xl font-bold text-center"
+                  style={{ display: "block", width: "100%" }}
                 >
                   {link}
                 </a>

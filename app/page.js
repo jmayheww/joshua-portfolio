@@ -9,6 +9,7 @@ import { Hero } from "./sections/Hero";
 import Navbar from "./components/Navbar";
 import { About } from "./sections/About";
 import { Work } from "./sections/Work";
+import { Contact } from "./sections/Contact";
 import Image from "next/image";
 
 export default function Home() {
@@ -47,6 +48,12 @@ export default function Home() {
           </section>
           <section id="work">
             <Work />
+          </section>
+          <section
+            id="contact"
+            className="py-20 bg-gradient-to-t from-neutral to-base-100 text-white"
+          >
+            <Contact />
           </section>
         </>
       )}

@@ -32,9 +32,9 @@ const Navbar = () => {
       }`}
     >
       {/* Logo */}
-      <div className="flex items-center justify-start mt-0.5 ml-[-1.5rem]">
+      <div className="flex items-center justify-start mt-0.5 ml-[-1rem] mr-4 md:mr-6">
         {" "}
-        {/* Adjusted margin here */}
+        {/* Adjusted margin */}
         <a href="#" className="sm:ml-0">
           <Image
             src="/images/jfoxs.png"
@@ -47,7 +47,7 @@ const Navbar = () => {
       </div>
 
       {/* Menu Toggle Button */}
-      <button onClick={toggleMenu} className="mt-2 ml-4 md:hidden">
+      <button onClick={toggleMenu} className="mt-2 ml-4 md:hidden mr-3">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -64,7 +64,10 @@ const Navbar = () => {
         </svg>
       </button>
 
-      <div className="hidden md:flex space-x-6 font-jetbrains">
+      {/* Nav Links with Increased Margin and Button Style */}
+      <div className="hidden md:flex space-x-6 font-jetbrains ml-4 mr-6">
+        {" "}
+        {/* Adjusted margins */}
         {sectionLinks.map((link) => (
           <a
             key={link}
@@ -74,6 +77,10 @@ const Navbar = () => {
             {link}
           </a>
         ))}
+        {/* Resume Button */}
+        <button className="py-2 px-4 text-lg font-medium border border-primary-500 rounded-md text-primary-500 transition-all duration-300 ease-out hover:bg-primary-500 hover:text-white hover:shadow-lg hover:border-transparent resume-button">
+          Resume
+        </button>
       </div>
 
       {/* Side Menu (Mobile) */}

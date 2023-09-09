@@ -131,8 +131,10 @@ const Navbar = () => {
               ))}
             </nav>
             {/* Resume Button */}
-            <div className="my-8 w-full flex justify-center">
-              <button className="m-2 py-3 px-6 text-lg font-medium border-2 border-gray-300 rounded-md text-gray-300 hover:border-success hover:text-success transition-transform duration-300 ease-out transform hover:scale-105 active:scale-95">
+            <div className="mb-14  w-full flex justify-center">
+              {" "}
+              {/* Reduced spacing from my-8 to my-4 */}
+              <button className="m-2 py-3 px-6 text-lg font-medium border-2 border-gray-300 rounded-md text-gray-300 hover:border-gray-400 hover:text-gray-400 transition-transform duration-300 ease-out transform hover:scale-105 active:scale-95">
                 Resume
               </button>
             </div>

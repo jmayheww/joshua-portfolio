@@ -16,22 +16,22 @@ export const typedAttr = [
 export const socialLinks = [
   {
     name: "GitHub",
-    url: "#your-github-link",
+    url: "https://github.com/jmayheww",
     Icon: FaGithub,
   },
   {
     name: "LinkedIn",
-    url: "#your-linkedin-link",
+    url: "https://www.linkedin.com/in/joshua-mayhew-dev/",
     Icon: FaLinkedin,
   },
   {
     name: "Instagram",
-    url: "#your-instagram-link",
+    url: "https://www.instagram.com/joshmayhem_vxx/",
     Icon: FaInstagram,
   },
   {
     name: "Dev.to",
-    url: "#your-devto-link", // Replace with your dev.to profile link
+    url: "https://dev.to/jmayheww",
     Icon: FaDev,
   },
 ];

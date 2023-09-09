@@ -79,12 +79,12 @@ const Navbar = () => {
         ))}
         {/* Resume Button */}
 
-        <button className="ml-4 py-2 px-5 text-lg font-medium border-2 border-gray-300 rounded-md text-gray-300 hover:bg-success hover:border-success hover:text-gray-800 transition-transform duration-300 ease-out transform hover:scale-105 active:scale-95">
+        <button className="ml-4 py-2 px-5 text-lg font-medium border-2 border-gray-300 rounded-md text-gray-300  hover:border-success hover:text-success transition-transform duration-300 ease-out transform hover:scale-105 active:scale-95">
           Resume
         </button>
       </div>
 
-      {/* // Side Menu (Mobile) */}
+      {/* Side Menu (Mobile) */}
       {isOpen && (
         <div className="fixed inset-0 z-50 flex justify-end md:hidden bg-black bg-opacity-20">
           {/* Side Menu Content */}
@@ -101,7 +101,7 @@ const Navbar = () => {
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
-                  className="h-10 w-10 text-success hover:text-white transition-colors duration-300 ease-out "
+                  className="h-10 w-10 text-gray-300 hover:text-success transition-colors duration-300 ease-out "
                 >
                   <path
                     strokeLinecap="round"
@@ -113,23 +113,29 @@ const Navbar = () => {
               </button>
             </div>
             {/* Navigation Links */}
-            <nav className="flex-1 flex flex-col justify-center items-center space-y-4 px-4">
+            <nav className="flex-1 flex flex-col justify-center items-center space-y-8 px-4">
+              {" "}
+              {/* Increased space-y-4 to space-y-8 for more spacing */}
               {sectionLinks.map((link) => (
                 <a
                   key={link}
                   href={`#${link}`}
                   aria-label={`#${link}`}
                   onClick={handleLinkClick}
-                  className="text-white hover:text-success py-2 text-xl font-medium text-center w-full"
+                  className="text-gray-300 hover:text-success py-2 text-xl font-medium text-center w-full"
                 >
                   {link}
                 </a>
               ))}
-              {/* Resume Button */}
-              <button className="mt-8 m-2 py-3 px-6 text-lg font-medium border-2 border-white rounded-md text-white hover:bg-success hover:text-white transition-all duration-300 ease-out">
+            </nav>
+            {/* Resume Button */}
+            <div className="mb-8 mt-auto w-full flex justify-center">
+              {" "}
+              {/* Positioned the resume button lower with distinct space */}
+              <button className="m-2 py-3 px-6 text-lg font-medium border-2 border-gray-300 rounded-md text-gray-300 hover:border-success hover:text-success transition-transform duration-300 ease-out transform hover:scale-105 active:scale-95">
                 Resume
               </button>
-            </nav>
+            </div>
           </div>
         </div>
       )}

@@ -79,9 +79,13 @@ const Navbar = () => {
         ))}
         {/* Resume Button */}
 
-        <button className="ml-4 py-2 px-5 text-lg font-medium border-2 border-gray-300 rounded-md text-gray-300  hover:border-success hover:text-success transition-transform duration-300 ease-out transform hover:scale-105 active:scale-95">
+        <a
+          href="/josh-mayhew-resume.pdf" // Update this with the correct path
+          download="josh-mayhew-resume.pdf" // Set the desired file name
+          className="ml-4 py-2 px-5 text-lg font-medium border-2 border-gray-300 rounded-md text-gray-300 hover:border-success hover:text-success transition-transform duration-300 ease-out transform hover:scale-105 active:scale-95"
+        >
           Resume
-        </button>
+        </a>
       </div>
 
       {/* Side Menu (Mobile) */}
@@ -131,9 +135,13 @@ const Navbar = () => {
               ))}
               {/* Resume Button */}
               <div className="my-4 w-full flex justify-center">
-                <button className="mt-4 m-2 py-3 px-6 text-lg font-medium border-2 border-gray-300 rounded-md text-gray-300 hover:border-success hover:text-success transition-transform duration-300 ease-out transform hover:scale-105 active:scale-95">
+                <a
+                  href="/josh-mayhew-resume.pdf" // Replace with the actual path to your resume on Vercel
+                  download="josh-mayhew-resume.pdf" // Specify the desired filename for the downloaded file
+                  className="mt-4 m-2 py-3 px-6 text-lg font-medium border-2 border-gray-300 rounded-md text-gray-300 hover:border-success hover:text-success transition-transform duration-300 ease-out transform hover:scale-105 active:scale-95"
+                >
                   Resume
-                </button>
+                </a>
               </div>
             </nav>
           </div>

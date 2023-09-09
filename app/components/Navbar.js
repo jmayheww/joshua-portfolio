@@ -45,15 +45,17 @@ const Navbar = () => {
           />
         </a>
       </div>
-
       {/* Menu Toggle Button */}
-      <button onClick={toggleMenu} className="mt-2 ml-4 md:hidden mr-3">
+      <button
+        onClick={toggleMenu}
+        className="mt-2 ml-4 md:hidden mr-3 transition-transform duration-300 ease-in-out transform hover:scale-110"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
-          className="h-12 w-12"
+          className="h-10 w-10"
         >
           <path
             strokeLinecap="round"
@@ -63,32 +65,30 @@ const Navbar = () => {
           />
         </svg>
       </button>
-
-      {/* Nav Links with Increased Margin and Button Style */}
+      {/* // Nav Links with Increased Margin and Button Style for larger screens */}
       <div className="hidden md:flex space-x-6 font-jetbrains ml-4 mr-6">
-        {" "}
-        {/* Adjusted margins */}
         {sectionLinks.map((link) => (
           <a
             key={link}
             href={`#${link}`}
-            className="text-gray-400 hover:text-success hover:underline transition-colors duration-300 ease-out py-2 text-lg font-medium"
+            aria-label={`#${link}`}
+            className="text-white hover:text-success transition-transform transform duration-150 ease-in-out hover:scale-95 py-2 text-lg font-medium"
           >
             {link}
           </a>
         ))}
         {/* Resume Button */}
-        <button className="py-2 px-4 text-lg font-medium border border-primary-500 rounded-md text-primary-500 transition-all duration-300 ease-out hover:bg-primary-500 hover:text-white hover:shadow-lg hover:border-transparent resume-button">
+        <button className="ml-4 py-2 px-6 text-lg font-medium border border-white rounded-md text-white hover:bg-success hover:border-success hover:text-gray-800 transition-all duration-300 ease-out transform hover:scale-95 active:scale-90">
           Resume
         </button>
       </div>
 
-      {/* Side Menu (Mobile) */}
+      {/* // Side Menu (Mobile) */}
       {isOpen && (
         <div className="fixed inset-0 z-50 flex justify-end md:hidden bg-black bg-opacity-20">
           {/* Side Menu Content */}
           <div
-            className={`bg-neutral text-white w-2/3 h-screen fixed right-0 top-0 flex flex-col justify-center items-center transition-transform ease-in-out duration-300 ${
+            className={`bg-neutral text-white w-2/3 h-screen fixed right-0 top-0 flex flex-col justify-between items-center transition-transform ease-in-out duration-300 ${
               isOpen ? "translate-x-0" : "translate-x-full"
             }`}
           >
@@ -100,7 +100,7 @@ const Navbar = () => {
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
-                  className="h-6 w-6 text-gray-400 hover:text-white"
+                  className="h-10 w-10 text-success hover:text-white transition-colors duration-300 ease-out "
                 >
                   <path
                     strokeLinecap="round"
@@ -117,12 +117,17 @@ const Navbar = () => {
                 <a
                   key={link}
                   href={`#${link}`}
+                  aria-label={`#${link}`}
                   onClick={handleLinkClick}
-                  className="text-gray-400 hover:text-success py-4 text-2xl font-bold text-center w-full"
+                  className="text-white hover:text-success py-4 text-2xl font-bold text-center w-full"
                 >
                   {link}
                 </a>
               ))}
+              {/* Resume Button */}
+              <button className=" mt-16 m-2 py-2 px-6 text-lg font-medium border-2 border-white rounded-md text-white hover:bg-success hover:text-white transition-all duration-300 ease-out">
+                Resume
+              </button>
             </nav>
           </div>
         </div>

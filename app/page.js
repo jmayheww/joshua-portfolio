@@ -11,6 +11,7 @@ import { About } from "./sections/About";
 import { Work } from "./sections/Work";
 import { Contact } from "./sections/Contact";
 import Image from "next/image";
+import { Footer } from "./components/Footer";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -55,6 +56,7 @@ export default function Home() {
           >
             <Contact />
           </section>
+          <Footer />
         </>
       )}
     </main>

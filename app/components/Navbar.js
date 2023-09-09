@@ -65,20 +65,21 @@ const Navbar = () => {
           />
         </svg>
       </button>
-      {/* // Nav Links with Increased Margin and Button Style for larger screens */}
+      {/* Nav Links */}
       <div className="hidden md:flex space-x-6 font-jetbrains ml-4 mr-6">
         {sectionLinks.map((link) => (
           <a
             key={link}
             href={`#${link}`}
             aria-label={`#${link}`}
-            className="text-white hover:text-success transition-transform transform duration-150 ease-in-out hover:scale-95 py-2 text-lg font-medium"
+            className="text-gray-300 hover:text-success hover:underline transition-colors duration-150 ease-in-out py-2 text-lg font-medium"
           >
             {link}
           </a>
         ))}
         {/* Resume Button */}
-        <button className="ml-4 py-2 px-6 text-lg font-medium border border-white rounded-md text-white hover:bg-success hover:border-success hover:text-gray-800 transition-all duration-300 ease-out transform hover:scale-95 active:scale-90">
+
+        <button className="ml-4 py-2 px-5 text-lg font-medium border-2 border-gray-300 rounded-md text-gray-300 hover:bg-success hover:border-success hover:text-gray-800 transition-transform duration-300 ease-out transform hover:scale-105 active:scale-95">
           Resume
         </button>
       </div>
@@ -119,13 +120,13 @@ const Navbar = () => {
                   href={`#${link}`}
                   aria-label={`#${link}`}
                   onClick={handleLinkClick}
-                  className="text-white hover:text-success py-4 text-2xl font-bold text-center w-full"
+                  className="text-white hover:text-success py-2 text-xl font-medium text-center w-full"
                 >
                   {link}
                 </a>
               ))}
               {/* Resume Button */}
-              <button className=" mt-16 m-2 py-2 px-6 text-lg font-medium border-2 border-white rounded-md text-white hover:bg-success hover:text-white transition-all duration-300 ease-out">
+              <button className="mt-8 m-2 py-3 px-6 text-lg font-medium border-2 border-white rounded-md text-white hover:bg-success hover:text-white transition-all duration-300 ease-out">
                 Resume
               </button>
             </nav>

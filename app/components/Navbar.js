@@ -116,7 +116,9 @@ const Navbar = () => {
               }`}
             >
               {/* Close Button */}
-              <div className="p-4 absolute top-4 right-4">
+              <div className="absolute top-4 right-[6%]">
+                {" "}
+                {/* Adjust the percentage as needed */}
                 <button onClick={toggleMenu} className="bg-transparent">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

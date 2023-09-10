@@ -32,6 +32,42 @@
   visibility: visible;
 }
 
+.nav-overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  background-color: rgba(0, 0, 0, 0.5);
+
+
+}
+
+/* By default, we set it to not display to ensure larger screens don't show it unless specified */
+.nav-overlay--open {
+  display: none;
+}
+
+/* When the screen size is at most 768px */
+@media (max-width: 768px) {
+  .nav-overlay--open {
+    display: block;
+
+  }
+
+
+}
+
+@media (min-width: 768px) {
+  body {
+    overflow: auto !important;
+  }
+
+}
+
+
 
 html {
   scroll-behavior: smooth;

@@ -11,7 +11,6 @@ const Navbar = () => {
     if (!isOpen) {
       setIsOpen(true);
       document.body.style.overflow = "hidden"; // Disable scrolling
-
       document.querySelector(".nav-overlay").classList.add("nav-overlay--open");
     } else {
       setIsOpen(false);
@@ -29,7 +28,10 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="nav-overlay z-40 md:hidden "></div>
+      <div
+        className="nav-overlay z-40 md:hidden "
+        onClick={() => toggleMenu()}
+      ></div>
       <div
         className={`navbar fixed top-0 z-40 w-full h-16 flex justify-between items-center transition-colors duration-300 ease-out ${
           isVisible ? "block" : "hidden"

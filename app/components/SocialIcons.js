@@ -8,7 +8,7 @@ export const SocialIcons = () => {
           key={link.name}
           href={link.url}
           aria-label={link.name}
-          className="text-gray-500 hover:text-gray-800 p-2 rounded"
+          className="text-white hover:text-success p-2 rounded"
           target="_blank"
           rel="noopener noreferrer"
         >

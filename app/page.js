@@ -41,18 +41,20 @@ export default function Home() {
           </section>
 
           <section
-            // ref={aboutRef}
             id="about"
             data-aos="fade-up"
+            className="px-4 md:px-16 lg:px-24"
           >
             <About />
           </section>
-          <section id="work">
+
+          <section id="work" className="px-4 md:px-16 lg:px-24">
             <Work />
           </section>
+
           <section
             id="contact"
-            className="py-20 bg-gradient-to-t from-neutral to-base-100 text-white"
+            className="py-20 bg-gradient-to-t from-neutral to-base-100 text-white px-4 md:px-16 lg:px-24"
           >
             <Contact />
           </section>

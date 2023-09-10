@@ -35,7 +35,7 @@ const Navbar = () => {
       <div className="flex items-center justify-start mt-0.5 ml-[-1rem] mr-4 md:mr-6">
         {" "}
         {/* Adjusted margin */}
-        <a href="#" className="sm:ml-0">
+        <a href="#" className="sm:ml-0" aria-label="Go to the top of the page">
           <Image
             src="/images/jfoxs.png"
             alt="Joshua Mayhew fox logo"
@@ -49,6 +49,7 @@ const Navbar = () => {
       <button
         onClick={toggleMenu}
         className="mt-2 ml-4 md:hidden mr-3 transition-transform duration-300 ease-in-out transform hover:scale-110"
+        aria-label="Toggle Menu"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -83,6 +84,7 @@ const Navbar = () => {
           href="/josh-mayhew-resume.pdf" // Update this with the correct path
           download="josh-mayhew-resume.pdf" // Set the desired file name
           className="ml-4 py-2 px-5 text-lg font-medium border-2 border-gray-300 rounded-md text-gray-300 hover:border-success hover:text-success transition-transform duration-300 ease-out transform hover:scale-105 active:scale-95"
+          aria-label="Download my resume"
         >
           Resume
         </a>

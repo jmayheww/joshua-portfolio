@@ -12,6 +12,7 @@ export const Contact = () => {
         <a
           href="mailto:joshsmayhew@gmail.com"
           className="btn btn-primary text-lg py-2 px-6 rounded-md hover:bg-opacity-80 mb-8"
+          aria-label="Email Me"
         >
           Email Me
         </a>

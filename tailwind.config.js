@@ -15,13 +15,14 @@ module.exports = {
         tighter: "5.1rem",
       },
       fontFamily: {
-        "space-mono": ["Space Mono", "monospace"],
-        inter: ["Inter", "sans-serif"],
-        "roboto-mono": ["Roboto Mono", "monospace"],
-        "fira-mono": ["Fira Mono", "monospace"],
+        display: ["JetBrains Mono", "monospace"],
+        body: ["Inter", "sans-serif"],
       },
+
       screens: {
         nm: "600px",
+        "fold-portrait": "280px",
+        "fold-landscape": "300px",
       },
       animation: {
         dropAndBounce: "dropAndBounce 1s forwards",

@@ -6,19 +6,16 @@ export const About = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center w-full max-w-5xl">
         {/* Text Content */}
         <div>
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-4">
-            Hello! I&apos;m Joshua.
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight mb-5 text-primary">
+            Who am I?
           </h2>
-          <p className="text-base md:text-lg mb-3">
+          <p className="text-base md:text-lg mb-5 leading-relaxed">
             My passion is building and designing exceptional digital
-            experiences.
+            experiences. I began experimenting with web technologies in my
+            teenage years, and since then I&apos;ve built a myriad of web
+            applications, platforms, and more.
           </p>
-          <p className="text-base md:text-lg mb-3">
-            I began experimenting with web technologies in my teenage years and
-            since then I&apos;ve built a myriad of web applications, platforms,
-            and more.
-          </p>
-          <p className="text-base md:text-lg">
+          <p className="text-base md:text-lg leading-relaxed">
             Away from the screen, I enjoy hiking, capturing the world through my
             lens, and diving into compelling narratives.
           </p>
@@ -26,13 +23,13 @@ export const About = () => {
 
         {/* Image */}
         <div className="order-first md:order-last">
-          <div className="relative w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 border-2 border-gray-300 rounded-lg hover:border-primary-500 transition-all duration-300">
+          <div className="relative w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 border-4 border-gray-300 rounded-full hover:border-primary-500 transition-all duration-300 transform hover:scale-105">
             <Image
               src="/images/headshot.jpg"
               alt="Joshua Mayhew headshot"
               layout="fill"
               objectFit="cover"
-              className="rounded-lg"
+              className="rounded-full"
               loading="lazy"
             />
           </div>

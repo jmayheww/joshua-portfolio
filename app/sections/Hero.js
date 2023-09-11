@@ -42,7 +42,7 @@ export const Hero = () => {
   text-sm md:text-lg
   bg-neutral text-white
   border border-primary-500
-  rounded-lg shadow-md
+  rounded-sm shadow-md
   transition-all transform
   hover:bg-primary hover:shadow-xl hover:-translate-y-1
   active:scale-95 focus:outline-none focus:ring focus:ring-primary-200
@@ -52,11 +52,11 @@ export const Hero = () => {
   return (
     <div className={containerClasses} ref={ref}>
       <div className={contentClasses}>
-        <p className="text-xl sm:text-2xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-4xl text-white font-jetbrains-mono">
+        <p className="text-xl sm:text-xl md:text-2xl lg:text-2xl xl:text-2xl 2xl:text-2xl text-white font-jetbrains-mono">
           Hey there, I&rsquo;m
         </p>
-        <h1 className="whitespace-nowrap text-4xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-extrabold font-jetbrains-mono leading-none">
-          Joshua <span className="text-success">Mayhew</span>
+        <h1 className="whitespace-nowrap fold-portrait:whitespace-normal fold-landscape:whitespace-nowrap text-4xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-extrabold font-jetbrains-mono leading-none">
+          Joshua <span className="text-success">Mayhew.</span>
         </h1>
 
         <div className="text-xl sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl leading-snug text-gray-300">

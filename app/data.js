@@ -29,6 +29,7 @@ export const socialLinks = [
     url: "https://www.instagram.com/joshmayhem_vxx/",
     Icon: FaInstagram,
   },
+
   {
     name: "Dev.to",
     url: "https://dev.to/jmayheww",

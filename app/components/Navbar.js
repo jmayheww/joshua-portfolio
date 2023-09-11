@@ -81,26 +81,25 @@ const Navbar = () => {
           </svg>
         </button>
         {/* Nav Links */}
-        <div className="hidden md:flex space-x-6 font-jetbrains ml-4 mr-6">
+        <div className="hidden md:flex space-x-6 font-inter ml-4 mr-6">
           {sectionLinks.map((link) => (
             <a
               key={link}
               href={`#${link}`}
               aria-label={`#${link}`}
-              className="text-gray-300 hover:text-success hover:underline transition-colors duration-150 ease-in-out py-2 text-lg font-medium"
+              className="text-gray-300 transition-transform duration-300 ease-out transform hover:scale-105 hover:text-success hover:shadow-md hover:underline"
             >
               {link}
             </a>
           ))}
           {/* Resume Button */}
-
           <a
-            href="/josh-mayhew-resume.pdf" // Update this with the correct path
-            download="josh-mayhew-resume.pdf" // Set the desired file name
-            className="ml-4 py-2 px-5 text-lg font-medium border-2 border-gray-300 rounded-md text-gray-300 hover:border-success hover:text-success transition-transform duration-300 ease-out transform hover:scale-105 active:scale-95"
+            href="/josh-mayhew-resume.pdf"
+            download="josh-mayhew-resume.pdf"
+            className="ml-4 py-1 px-5 text-md font-small border border-gray-300 rounded-sm text-gray-300 hover:border-success hover:text-success transition-transform duration-300 ease-out transform hover:scale-105 active:scale-95"
             aria-label="Download my resume"
           >
-            Resume
+            resume
           </a>
         </div>
 
@@ -137,7 +136,7 @@ const Navbar = () => {
                 </button>
               </div>
               {/* Navigation Links */}
-              <nav className="flex-1 flex flex-col justify-center items-center space-y-10 px-4">
+              <nav className="flex-1 flex flex-col justify-center items-center space-y-10 px-4 font-inter">
                 {" "}
                 {/* Increased spacing */}
                 {sectionLinks.map((link) => (
@@ -152,11 +151,11 @@ const Navbar = () => {
                   </a>
                 ))}
                 {/* Resume Button */}
-                <div className="my-4 w-full flex justify-center">
+                <div className="my-4 w-full flex justify-center rounded-sm">
                   <a
                     href="/josh-mayhew-resume.pdf" // Replace with the actual path to your resume on Vercel
                     download="josh-mayhew-resume.pdf" // Specify the desired filename for the downloaded file
-                    className="mt-4 m-2 py-3 px-6 text-lg font-medium border-2 border-gray-300 rounded-md text-gray-300 hover:border-success hover:text-success transition-transform duration-300 ease-out transform hover:scale-105 active:scale-95"
+                    className="mt-4 m-2 py-3 px-6 text-lg font-medium border-2 border-gray-300 rounded-sm text-gray-300 hover:border-success hover:text-success transition-transform duration-300 ease-out transform hover:scale-105 active:scale-95"
                   >
                     Resume
                   </a>

@@ -73,8 +73,23 @@ html {
   scroll-behavior: smooth;
 }
 
+.base-button {
+  padding: 12px 20px;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: background-color 0.3s, transform 0.3s;
+}
 
+.base-button:hover {
+  transform: translateY(-3px);
+  /* This gives the button a slight lift when hovered */
+}
 
+.base-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+  /* Adjust the color as per your needs */
+}
 
 
 

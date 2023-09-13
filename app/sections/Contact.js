@@ -11,12 +11,11 @@ export const Contact = () => {
         </p>
         <a
           href="mailto:joshsmayhew@gmail.com"
-          className="btn btn-primary text-lg py-2 px-6 rounded-md hover:bg-opacity-80 mb-8"
+          className="inline-block bg-primary text-white font-medium text-lg py-3 px-8 rounded-sm transition duration-300 hover:bg-opacity-80 mb-8 shadow-md"
           aria-label="Email Me"
         >
           Email Me
         </a>
-        <div className="flex space-x-4">{/* ... Social Icons Here */}</div>
       </div>
     </div>
   );

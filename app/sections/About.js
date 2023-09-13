@@ -2,39 +2,45 @@ import Image from "next/image";
 
 export const About = () => {
   return (
-    <section className="h-screen bg-base-100 flex justify-center items-center px-4 md:px-24">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center w-full max-w-5xl">
-        {/* Text Content */}
-        <div>
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight mb-5 text-primary">
-            Who am I?
-          </h2>
-          <p className="text-base md:text-lg mb-5 leading-relaxed">
-            My passion is building and designing exceptional digital
-            experiences. I began experimenting with web technologies in my
-            teenage years, and since then I&apos;ve built a myriad of web
-            applications, platforms, and more.
-          </p>
-          <p className="text-base md:text-lg leading-relaxed">
-            Away from the screen, I enjoy hiking, capturing the world through my
-            lens, and diving into compelling narratives.
-          </p>
-        </div>
+    <div className="relative py-12 bg-gray-100">
+      {/* Skewed Rectangle Background */}
+      <div className="absolute top-0 bottom-0 left-0 right-0 bg-gradient-to-r from-blue-400 to-blue-500 transform -skew-y-6 origin-bottom-left"></div>
 
-        {/* Image */}
-        <div className="order-first md:order-last">
-          <div className="relative w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 border-4 border-gray-300 rounded-full hover:border-primary-500 transition-all duration-300 transform hover:scale-105">
-            <Image
-              src="/images/headshot.jpg"
-              alt="Joshua Mayhew headshot"
-              layout="fill"
-              objectFit="cover"
-              className="rounded-full"
-              loading="lazy"
-            />
+      <div className="relative container mx-auto px-4">
+        <div className="flex flex-col md:flex-row items-center">
+          {/* Image (top for mobile, right for desktop) */}
+          <div className="order-1 md:order-2 w-full md:w-1/2 mb-8 md:mb-0">
+            <div className="flex justify-center md:justify-end">
+              <div className="w-64 h-64 relative overflow-hidden rounded-full shadow-xl">
+                <Image
+                  src="/path-to-your-image.jpg"
+                  alt="Your Portrait"
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* Text Content */}
+          <div className="order-2 md:order-1 w-full md:w-1/2 text-white">
+            <h2 className="text-3xl mb-4">About Me</h2>
+            <p className="mb-4">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit
+              amet condimentum orci. Vestibulum ante ipsum primis in faucibus
+              orci luctus et ultrices posuere cubilia curae; Vestibulum ante
+              ipsum primis in faucibus orci luctus et ultrices posuere cubilia
+              curae.
+            </p>
+            <p>
+              Phasellus euismod ante a mauris ultrices malesuada. Vestibulum
+              viverra purus nec est pellentesque, quis euismod nunc convallis.
+            </p>
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
+
+export default About;

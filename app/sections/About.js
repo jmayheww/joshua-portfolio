@@ -29,7 +29,7 @@ export const About = () => {
               Growing up during the early days of the internet, I was captivated
               not just by the prospect of playing iconic games like Starcraft
               online, but also, more broadly, by the evolving realms of online
-              discussion forums and budding e-commerce platforms. These weren't
+              discussion forums and budding e-commerce platforms. These werent
               just hobbies or fleeting pastimes; they definitively laid the
               groundwork for my understanding of user experience,
               problem-solving, and online community building.

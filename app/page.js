@@ -43,7 +43,7 @@ export default function Home() {
           <section
             id="about"
             data-aos="fade-up"
-            className="px-4 md:px-16 lg:px-24"
+            className="px-4 md:px-16 lg:px-24 bg-gradient-to-b from-base-100 to-base-150"
           >
             <About />
           </section>

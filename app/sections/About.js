@@ -2,45 +2,34 @@ import Image from "next/image";
 
 export const About = () => {
   return (
-    <div className="relative py-12 bg-gray-100">
-      {/* Skewed Rectangle Background */}
-      <div className="absolute top-0 bottom-0 left-0 right-0 bg-gradient-to-r from-blue-400 to-blue-500 transform -skew-y-6 origin-bottom-left"></div>
+    <section className="h-screen flex justify-center items-center px-4 sm:px-6 lg:px-10 bg-whatever-color-your-background-is">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center w-full max-w-5xl">
+        {/* Text Content */}
+        <div>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-jetbrains-mono tracking-tight mb-5 text-primary">
+            Digging Deeper
+          </h2>
+          <p className="text-sm sm:text-base md:text-lg leading-relaxed mb-4 font-jetbrains-mono text-gray-400">
+            As a developer, ... {/* Rest of the paragraph */}
+          </p>
+          <button className="mt-5 bg-primary hover:bg-primary-dark text-white px-5 py-2 rounded-lg transition-all duration-300">
+            Learn More
+          </button>
+        </div>
 
-      <div className="relative container mx-auto px-4">
-        <div className="flex flex-col md:flex-row items-center">
-          {/* Image (top for mobile, right for desktop) */}
-          <div className="order-1 md:order-2 w-full md:w-1/2 mb-8 md:mb-0">
-            <div className="flex justify-center md:justify-end">
-              <div className="w-64 h-64 relative overflow-hidden rounded-full shadow-xl">
-                <Image
-                  src="/path-to-your-image.jpg"
-                  alt="Your Portrait"
-                  layout="fill"
-                  objectFit="cover"
-                />
-              </div>
-            </div>
-          </div>
-
-          {/* Text Content */}
-          <div className="order-2 md:order-1 w-full md:w-1/2 text-white">
-            <h2 className="text-3xl mb-4">About Me</h2>
-            <p className="mb-4">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit
-              amet condimentum orci. Vestibulum ante ipsum primis in faucibus
-              orci luctus et ultrices posuere cubilia curae; Vestibulum ante
-              ipsum primis in faucibus orci luctus et ultrices posuere cubilia
-              curae.
-            </p>
-            <p>
-              Phasellus euismod ante a mauris ultrices malesuada. Vestibulum
-              viverra purus nec est pellentesque, quis euismod nunc convallis.
-            </p>
-          </div>
+        {/* Image Section */}
+        <div className="order-first md:order-last relative max-w-md mx-auto w-52 h-52 md:w-68 md:h-68 lg:w-84 lg:h-84 bg-whatever-color-your-background-is p-2">
+          <div className="absolute -bottom-6 -right-7 w-full h-full border-4 border-success rounded-sm z-0"></div>
+          <Image
+            src="/images/headshot.jpg"
+            alt="Developer Headshot"
+            width={320}
+            height={320}
+            layout="intrinsic"
+            className="relative rounded-sm object-cover z-10 filter grayscale transition-transform duration-300 hover:-translate-x-2 hover:-translate-y-2 hover:scale-105 hover:shadow-xl hover:filter-none hover:mix-blend-normal"
+          />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
-
-export default About;

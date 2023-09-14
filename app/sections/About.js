@@ -3,53 +3,58 @@ import { SectionHeader } from "../components/SectionHeader";
 
 export const About = () => {
   return (
-    <section className="flex flex-col justify-center items-center px-4 sm:px-6 lg:px-10 bg-whatever-color-your-background-is space-y-10">
+    <section className="flex flex-col justify-center items-center px-4 sm:px-6 lg:px-10 bg-whatever-color-your-background-is space-y-12">
       <SectionHeader title="About Me" />
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center w-full max-w-5xl">
         {/* Text Content */}
-        <div className="space-y-8">
+        <div className="space-y-10">
           <div>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-primary"></h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-white mb-4">
+              It's What I Do.
+            </h2>
+          </div>
+
+          <div>
             <p className="text-sm sm:text-base md:text-lg leading-relaxed font-jetbrains-mono text-gray-300">
-              <span className="text-primary">Clean </span> code.{" "}
-              <span className="text-primary">Intuitive </span>
-              design. {""}
-              <span className="text-primary">Unforgettable </span> digital
-              journeys.
-            </p>
-            <br />
-            <p className="text-sm sm:text-base md:text-lg leading-relaxed font-jetbrains-mono text-gray-300">
-              Its what I do.
+              From drafting legal documents to crafting lines of code, my
+              journey towards the digital world has been both unique and
+              enriching. As a former paralegal, I bring a distinctive analytical
+              edge to the world of software development. Precision, attention to
+              detail, and understanding nuance were essential in my previous
+              role and remain equally paramount in my applications today.
             </p>
           </div>
 
-          <div className="text-sm sm:text-base md:text-lg leading-relaxed font-jetbrains-mono text-gray-400 space-y-4">
-            <p>
-              Growing up during the early days of the internet, I was captivated
-              not just by the prospect of playing iconic games like Starcraft
-              online, but also, more broadly, by the evolving realms of online
-              discussion forums and budding e-commerce platforms. These werent
-              just hobbies or fleeting pastimes; they definitively laid the
-              groundwork for my understanding of user experience,
-              problem-solving, and online community building.
-            </p>
-            <p>
-              My adult years have seen a shift from being a digital consumer to
-              a digital creator. I see code as more than just syntax and rote
-              commands; it is a tool, a way to decisively shape and enhance
-              human interactions online. My diverse roles—from teaching to
-              entrepreneurship to legal work— additionally give me a distinct
-              and multi-dimensional lens for tackling difficult problems and
-              promoting meaningful human interactions, something that truly
-              guides and infuses itself in every line of code I write.
+          <div>
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold tracking-tight text-primary mb-4">
+              Specializing in Excellence
+            </h2>
+            <p className="text-sm sm:text-base md:text-lg leading-relaxed font-jetbrains-mono text-gray-400">
+              I strive for clean code, intuitive design, and unforgettable user
+              experiences. Every project I undertake benefits from my
+              comprehensive background, ensuring that solutions are not only
+              technically proficient but also meticulously crafted to meet
+              real-world challenges.
             </p>
           </div>
 
-          <p className="text-sm sm:text-base md:text-lg leading-relaxed font-jetbrains-mono text-gray-400">
-            Explore my portfolio, a blend of my lifelong tech journey with the
-            latest in web development. Let’s create digital magic together.
-          </p>
+          <div>
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold tracking-tight text-primary mb-4">
+              Blending Code & Purpose
+            </h2>
+            <p className="text-sm sm:text-base md:text-lg leading-relaxed font-jetbrains-mono text-gray-400">
+              I channel a universal ethos - a synergizing brew of innovation,
+              drive, and caffeinated creativity - into every project I
+              undertake. My aim? To craft digital solutions that genuinely
+              resonate with users while strategically elevating businesses.
+              <br />
+              Seeking a developer who seamlessly merges tech expertise with a
+              keen understanding of end-user needs and business objectives?
+              Let's connect. With each line of code, I'm driven by purpose,
+              always ready for the next challenge to make a meaningful impact.
+            </p>
+          </div>
         </div>
 
         {/* Image Section */}
@@ -58,7 +63,7 @@ export const About = () => {
           <div className="relative w-full h-full z-10 overflow-hidden rounded-sm">
             <Image
               src="/images/headshot.jpg"
-              alt="Developer Headshot"
+              alt="Software Engineer Headshot"
               width={320}
               height={320}
               layout="responsive"

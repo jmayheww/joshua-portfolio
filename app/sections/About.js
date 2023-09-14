@@ -18,16 +18,19 @@ export const About = () => {
         </div>
 
         {/* Image Section */}
-        <div className="order-first md:order-last relative max-w-md mx-auto w-52 h-52 md:w-68 md:h-68 lg:w-84 lg:h-84 bg-whatever-color-your-background-is p-2">
-          <div className="absolute -bottom-6 -right-7 w-full h-full border-4 border-success rounded-sm z-0"></div>
-          <Image
-            src="/images/headshot.jpg"
-            alt="Developer Headshot"
-            width={320}
-            height={320}
-            layout="intrinsic"
-            className="relative rounded-sm object-cover z-10 filter grayscale transition-transform duration-300 hover:-translate-x-2 hover:-translate-y-2 hover:scale-105 hover:shadow-xl hover:filter-none hover:mix-blend-normal"
-          />
+        <div className="order-first md:order-last relative max-w-md mx-auto w-52 h-52 md:w-68 md:h-68 lg:w-84 lg:h-84 p-2">
+          <div className="absolute -bottom-3 -right-4 w-full h-full border-4 border-success rounded-sm z-0"></div>
+          <div className="relative w-full h-full z-10 overflow-hidden rounded-sm">
+            <Image
+              src="/images/headshot.jpg"
+              alt="Developer Headshot"
+              width={320}
+              height={320}
+              layout="intrinsic"
+              className="transition-transform duration-300 hover:-translate-x-2 hover:-translate-y-2 hover:scale-105 hover:shadow-xl"
+            />
+            <div className="absolute top-0 left-0 w-full h-full bg-success mix-blend-multiply hover:opacity-0 transition-opacity duration-300"></div>
+          </div>
         </div>
       </div>
     </section>

@@ -15,7 +15,6 @@ import { Footer } from "./components/Footer";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
-  // const { heroRef, aboutRef, showLogo } = useShowNavBarLogo();
 
   useHandlePageLoad(() => setIsLoading(false));
 
@@ -26,7 +25,10 @@ export default function Home() {
       ) : (
         <>
           <Navbar />
-          <section id="hero" className="relative h-screen bg-center bg-cover ">
+          <section
+            id="hero"
+            className="relative min-h-screen bg-center bg-cover overflow-hidden"
+          >
             <Image
               src="/images/workstation.jpg"
               alt="Workstation"
@@ -43,18 +45,21 @@ export default function Home() {
           <section
             id="about"
             data-aos="fade-up"
-            className="px-4 md:px-16 lg:px-24 bg-gradient-to-b from-base-100 to-base-150"
+            className="py-8 md:py-16 px-4 md:px-16 lg:px-24 bg-gradient-to-b from-base-100 to-base-150 min-h-screen overflow-hidden"
           >
             <About />
           </section>
 
-          <section id="work" className="px-4 md:px-16 lg:px-24">
+          <section
+            id="work"
+            className="py-8 md:py-16 px-4 md:px-16 lg:px-24 min-h-screen overflow-hidden"
+          >
             <Work />
           </section>
 
           <section
             id="contact"
-            className="py-20 bg-gradient-to-t from-neutral to-base-100 text-white px-4 md:px-16 lg:px-24"
+            className="py-20 bg-gradient-to-t from-neutral to-base-100 text-white px-4 md:px-16 lg:px-24 min-h-screen overflow-hidden"
           >
             <Contact />
           </section>

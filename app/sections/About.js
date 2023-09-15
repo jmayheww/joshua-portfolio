@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { SectionHeader } from "../components/SectionHeader";
+import { techSkills } from "../data";
 
 export const About = () => {
   const paragraphClasses = "text-sm sm:text-base font-jetbrains-mono";
@@ -31,8 +32,8 @@ export const About = () => {
           <p
             className={`text-xl sm:text-2xl md:text-3xl text-white ${paragraphClasses} block md:hidden max-w-xs`}
           >
-            Code that's clean, designs that resonate, experience that lasts.{" "}
-            <span className="text-primary">It's what I do.</span>
+            Code that&rsquo;s clean, designs that resonate, experience that
+            lasts. <span className="text-primary">It&rsquo;s what I do.</span>
           </p>
 
           {/* Desktop Tagline */}
@@ -40,7 +41,7 @@ export const About = () => {
             <p
               className={`text-xl sm:text-2xl md:text-3xl text-white ${paragraphClasses} block md:hidden max-w-md mx-auto text-center`}
             >
-              Code that's clean.
+              Code that&rsquo;s clean.
             </p>
             <p
               className={`text-xl sm:text-2xl md:text-3xl text-white ${paragraphClasses}`}
@@ -55,7 +56,7 @@ export const About = () => {
             <p
               className={`text-xl sm:text-2xl md:text-3xl text-primary ${paragraphClasses}`}
             >
-              It's what I do.
+              It&rsquo;s what I do.
             </p>
           </div>
         </div>
@@ -89,6 +90,34 @@ export const About = () => {
           strategically elevating businesses.
         </p>
       </div>
+
+      <h3 className="text-lg sm:text-xl md:text-2xl font-inter tracking-tight text-primary mb-4">
+        A Full-Stack Skillset.
+      </h3>
+
+      {techSkills.map((skill) => (
+        <div
+          key={skill.category}
+          className="flex flex-col md:flex-row items-center justify-between w-full mb-4 md:mb-6"
+        >
+          <h4 className="text-base sm:text-lg md:text-xl font-inter tracking-tight text-white">
+            {skill.category}
+          </h4>
+          <div className="flex flex-row space-x-4">
+            {skill.items.map((item) => (
+              <div
+                key={item.name}
+                className="flex flex-col items-center justify-center"
+              >
+                {item.icon}
+                <p className="text-xs sm:text-sm md:text-base text-gray-400">
+                  {item.name}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
     </section>
   );
 };

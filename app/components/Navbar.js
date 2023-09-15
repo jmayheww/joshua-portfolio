@@ -38,7 +38,7 @@ const Navbar = () => {
         } ${
           isTopOfPage
             ? "bg-opacity-10 backdrop-blur-sm"
-            : "bg-opacity-90 backdrop-blur-md"
+            : "bg-opacity-90 backdrop-blur-sm"
         }`}
       >
         {/* Logo */}

@@ -9,6 +9,13 @@ export const Contact = () => {
           I&rsquo;m always open to new opportunities and collaborations. Feel
           free to reach out to me.
         </p>
+        {/* <p className="mt-4 text-sm sm:text-base md:text-lg leading-relaxed font-jetbrains-mono text-gray-400">
+          If you're seeking a developer who seamlessly merges tech expertise
+          with a keen understanding of end-user needs and business objectives,{" "}
+          <a href="/contact" className="underline text-primary">
+            let's connect
+          </a>
+        </p> */}
         <a
           href="mailto:joshsmayhew@gmail.com"
           className="inline-block bg-primary text-white font-medium text-lg py-3 px-8 rounded-sm transition duration-300 hover:bg-opacity-80 mb-8 shadow-md"

@@ -1,19 +1,4 @@
-import {
-  FaGithub,
-  FaLinkedin,
-  FaInstagram,
-  FaDev,
-  FaHtml5,
-  FaCss3,
-} from "react-icons/fa";
-import {
-  FaJs,
-  FaNode,
-  FaReact,
-  FaGem,
-  FaDatabase,
-  FaCode,
-} from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaInstagram, FaDev } from "react-icons/fa";
 
 export const sectionLinks = ["about", "work", "writing", "contact"];
 
@@ -53,28 +38,12 @@ export const socialLinks = [
 ];
 
 export const techSkills = [
-  {
-    category: "Front-End Development",
-    items: [
-      "JavaScript (ES6+)",
-      "React.js",
-      "HTML",
-      "CSS",
-      "SCSS",
-      "Tailwind CSS",
-      "Bootstrap",
-      "Styled-components",
-    ],
-    icon: <FaCode />,
-  },
-  {
-    category: "Back-End Development",
-    items: ["Node.js", "Ruby", "Ruby on Rails"],
-    icon: <FaGem />,
-  },
-  {
-    category: "Database",
-    items: ["SQL (MySQL, PostgreSQL, SQLite)"],
-    icon: <FaDatabase />,
-  },
+  "JavaScript",
+  "TypeScript",
+  "React",
+  "Next.js",
+  "Ruby",
+  "Ruby on Rails",
+  "SQL",
+  "Stripe",
 ];

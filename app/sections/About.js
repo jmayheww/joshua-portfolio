@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { SectionHeader } from "../components/SectionHeader";
-import { techSkills } from "../data";
+import { SkillsList } from "../components/SkillsList";
 
 export const About = () => {
   const paragraphClasses = "text-sm sm:text-base font-jetbrains-mono";
@@ -32,8 +32,11 @@ export const About = () => {
           <p
             className={`text-xl sm:text-2xl md:text-3xl text-white ${paragraphClasses} block md:hidden max-w-xs`}
           >
-            Code that&rsquo;s clean, designs that resonate, experience that
-            lasts. <span className="text-primary">It&rsquo;s what I do.</span>
+            Code that&rsquo;s <strong>clean</strong>, designs that{" "}
+            <strong>resonate</strong>, experience that <strong>lasts.</strong>{" "}
+            <span className="text-primary font-bold">
+              It&rsquo;s what I do.
+            </span>
           </p>
 
           {/* Desktop Tagline */}
@@ -91,33 +94,12 @@ export const About = () => {
         </p>
       </div>
 
-      <h3 className="text-lg sm:text-xl md:text-2xl font-inter tracking-tight text-primary mb-4">
-        A Full-Stack Skillset.
-      </h3>
-
-      {techSkills.map((skill) => (
-        <div
-          key={skill.category}
-          className="flex flex-col md:flex-row items-center justify-between w-full mb-4 md:mb-6"
-        >
-          <h4 className="text-base sm:text-lg md:text-xl font-inter tracking-tight text-white">
-            {skill.category}
-          </h4>
-          <div className="flex flex-row space-x-4">
-            {skill.items.map((item) => (
-              <div
-                key={item.name}
-                className="flex flex-col items-center justify-center"
-              >
-                {item.icon}
-                <p className="text-xs sm:text-sm md:text-base text-gray-400">
-                  {item.name}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      ))}
+      <div className="w-full">
+        <h3 className="text-lg sm:text-xl md:text-2xl font-inter tracking-tight text-primary mb-4">
+          Fully Stacked Toolkit.
+        </h3>
+        <SkillsList />
+      </div>
     </section>
   );
 };

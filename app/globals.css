@@ -42,7 +42,6 @@
 
   background-color: rgba(0, 0, 0, 0.5);
 
-
 }
 
 /* By default, we set it to not display to ensure larger screens don't show it unless specified */
@@ -90,6 +89,22 @@ html {
   box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
   /* Adjust the color as per your needs */
 }
+
+/* Skill Category Container */
+.bg-white.dark:bg-gray-900 {
+  cursor: pointer;
+}
+
+/* Skill Category Title */
+.text-lg.font-semibold {
+  font-weight: 600;
+}
+
+/* Skill Items */
+.text-sm.text-gray-600.dark:text-gray-300 {
+  margin-right: 8px;
+}
+
 
 
 

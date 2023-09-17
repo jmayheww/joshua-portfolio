@@ -59,7 +59,7 @@ export default function Home() {
 
           <section
             id="contact"
-            className="py-20 bg-gradient-to-t from-neutral to-base-100 text-white px-4 md:px-16 lg:px-24 min-h-screen overflow-hidden"
+            className="py-20 bg-gradient-to-t from-neutral to-base-100 text-white px-4 md:px-16 lg:px-24  overflow-hidden"
           >
             <Contact />
           </section>

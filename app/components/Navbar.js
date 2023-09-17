@@ -29,7 +29,7 @@ const Navbar = () => {
   return (
     <>
       <div
-        className="nav-overlay z-40 md:hidden "
+        className="nav-overlay z-40 md:hidden"
         onClick={() => toggleMenu()}
       ></div>
       <div

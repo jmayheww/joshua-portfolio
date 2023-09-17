@@ -42,7 +42,7 @@ export const About = () => {
           {/* Desktop Tagline */}
           <div className="hidden md:block">
             <p
-              className={`text-xl sm:text-2xl md:text-3xl text-white ${paragraphClasses} block md:hidden max-w-md mx-auto text-center`}
+              className={`text-xl sm:text-2xl md:text-3xl text-white ${paragraphClasses}`}
             >
               Code that&rsquo;s clean.
             </p>

@@ -1,38 +1,28 @@
 import { useEffect, useState } from "react";
 
-export const useNavBarEffects = () => {
+export const useNavBarEffects = (isOpen) => {
   const [isVisible, setIsVisible] = useState(true);
   const [isTopOfPage, setIsTopOfPage] = useState(true);
 
-  // Scroll listener useEffect
   useEffect(() => {
     let lastScrollTop = 0;
 
     const handleScroll = () => {
       const st = window.pageYOffset || document.documentElement.scrollTop;
 
-      // If scrolling down, and not already at the top, hide navbar
-      if (st > lastScrollTop && st > 0) {
-        setIsVisible(false);
-      } else {
+      if (isOpen) {
         setIsVisible(true);
+        return;
       }
 
-      if (st <= 0) {
-        setIsTopOfPage(true);
-      } else {
-        setIsTopOfPage(false);
-      }
-
-      lastScrollTop = st <= 0 ? 0 : st; // Reset lastScrollTop to 0 if it's negative
+      setIsVisible(st <= lastScrollTop || st <= 0);
+      setIsTopOfPage(st <= 0);
+      lastScrollTop = Math.max(st, 0);
     };
 
     window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [isOpen]);
 
   return { isVisible, isTopOfPage };
 };

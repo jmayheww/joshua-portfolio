@@ -1,3 +1,5 @@
+import { SectionHeader } from "../components/SectionHeader";
+
 export const Contact = () => {
   const buttonClasses = `
     inline-flex items-center justify-center
@@ -12,13 +14,17 @@ export const Contact = () => {
     font-inter font-bold
   `;
 
+  const paragraphClasses = `
+    text-base md:text-lg text-gray-400
+    mb-10 sm:mb-8 md:mb-10 lg:mb-12 xl:mb-14 2xl:mb-16
+    leading-relaxed
+  `;
+
   return (
-    <div className="flex flex-col items-center justify-center mt-12 mb-12 md:mt-16 md:mb-16">
-      <div className="text-center w-full max-w-lg px-4 md:px-6">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 tracking-tight">
-          What&rsquo;s Next?
-        </h2>
-        <p className="text-base md:text-lg text-gray-300 mb-6 leading-relaxed">
+    <section className="flex flex-col items-center py-12 px-4 sm:px-6 md:px-8 lg:px-8 space-y-4 sm:space-y-6 md:space-y-8 lg:space-y-10 max-w-4xl mx-auto">
+      <SectionHeader title="What's Next?" className="mb-4" />
+      <div className="text-center w-full max-w-lg px-2 sm:px-4 md:px-6">
+        <p className={paragraphClasses}>
           Open to{" "}
           <span className="text-primary">projects and opportunities</span>. Have
           an idea brewing or a problem that needs solving? Just looking to chat?{" "}
@@ -31,9 +37,8 @@ export const Contact = () => {
           aria-label="Email Me"
         >
           Say Hello
-          {/* Optional: Add an SVG icon here if you'd like */}
         </a>
       </div>
-    </div>
+    </section>
   );
 };

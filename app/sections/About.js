@@ -33,7 +33,7 @@ export const About = () => {
             className={`text-xl sm:text-2xl md:text-3xl text-white ${paragraphClasses} block md:hidden max-w-xs`}
           >
             Code that&rsquo;s <strong>clean</strong>, designs that{" "}
-            <strong>resonate</strong>, experience that <strong>lasts.</strong>{" "}
+            <strong>impact</strong>, experience that <strong>lasts.</strong>{" "}
             <span className="text-primary font-bold">
               It&rsquo;s what I do.
             </span>
@@ -49,7 +49,7 @@ export const About = () => {
             <p
               className={`text-xl sm:text-2xl md:text-3xl text-white ${paragraphClasses}`}
             >
-              Designs that resonate.
+              Designs that impact.
             </p>
             <p
               className={`text-xl sm:text-2xl md:text-3xl text-white ${paragraphClasses}`}
@@ -82,15 +82,15 @@ export const About = () => {
 
       <div>
         <h3 className="text-lg sm:text-xl md:text-2xl font-inter tracking-tight text-primary mb-4">
-          Brewing Code with Purpose.
+          Coding with Intention.
         </h3>
         <p
           className={`${paragraphClasses} md:text-lg leading-relaxed text-gray-400`}
         >
-          I channel a universal ethos - a synergized brew of innovation, drive,
+          I channel a cohesive vision - a synergized brew of innovation, drive,
           and caffeinated creativity - in every project I undertake. My aim? To
-          craft digital solutions that genuinely resonate with users while
-          strategically elevating businesses.
+          craft digital experiences that captivate and serve both users and
+          businesses.
         </p>
       </div>
 

@@ -56,8 +56,7 @@ export const projects = [
       demo: "https://infinite-eats.onrender.com/home",
     },
     image: "/images/infinite-features.JPG",
-    description:
-      "A dynamic inventory management system focusing on user experience, data security, and efficient transaction processes.",
+    description: `Infinite Eats is a dynamic inventory management system that champions user experience. Notably, it integrates the Stripe API for enhanced transaction safety, relies on Ruby on Rails with Bcrypt for fortified data security, and is deployed on Render with PostgreSQL for database efficiency.`,
     technologies: [
       "React.js",
       "Ruby on Rails",
@@ -65,11 +64,6 @@ export const projects = [
       "Bcrypt",
       "PostgreSQL",
       "Tailwind CSS",
-    ],
-    highlights: [
-      "Integrated Stripe API, enhancing user transactions' safety and commercial viability.",
-      "Developed a backend using Ruby on Rails with Bcrypt, ensuring fortified data encryption and user privacy.",
-      "Deployed the application on Render with PostgreSQL, achieving online robustness and database efficiency.",
     ],
   },
   {
@@ -79,14 +73,8 @@ export const projects = [
       demo: "Demo_URL_for_BookIt", // Replace with actual URL
     },
     image: "/path_to_book_it_image.jpg", // Replace with actual image path
-    description:
-      "A comprehensive hotel booking platform tailored to provide users with an efficient and enjoyable booking experience, leveraging the power of React.js and Ruby on Rails.",
+    description: `Book-It offers a comprehensive hotel booking experience tailored for efficiency. Users can intuitively browse hotels, customize reservations, and trust in Bcrypt's authentication for robust data security.`,
     technologies: ["React.js", "Ruby on Rails", "Bcrypt"],
-    highlights: [
-      "Crafted an intuitive hotel browsing system with React.js, enabling users to swiftly access essential details.",
-      "Innovated a dynamic booking feature, allowing users to customize reservations by dates and guests.",
-      "Incorporated Bcrypt for authentication, strengthening user data security and account management.",
-    ],
   },
   {
     title: "Nomad List",
@@ -95,17 +83,41 @@ export const projects = [
       demo: "Demo_URL_for_NomadList", // Replace with actual URL
     },
     image: "/path_to_nomad_list_image.jpg", // Replace with actual image path
-    description:
-      "A dedicated platform designed for digital nomads and travelers to assess and compare global cities based on in-depth quality-of-life metrics.",
+    description: `Nomad List serves as a go-to platform for digital nomads, offering city insights via the Teleport API. Users can compare cities with dual-views and find optimal destinations, especially with the rise of remote work.`,
     technologies: [
       "Teleport API",
       "Some_other_technology", // Replace with actual technology (if any)
     ],
-    highlights: [
-      "Utilized Teleport API, delivering detailed city insights for digital nomads and travelers.",
-      "Designed a dual-view for city comparisons, facilitating informed decision-making for users.",
-      "Curated engaging city profiles in response to the growth of remote work, aiding users in finding optimal destinations.",
-    ],
   },
-  // ... Add other projects in a similar format
+];
+
+export const articles = [
+  {
+    title:
+      "Swiping with Stripe: Simple and Secure Online Payment Handling Powered By Stripe",
+    description:
+      "This piece showcases the secure integration of Stripe's API into my app, Infinite Eats, for efficient user data management and payment processing. It emphasizes the importance of robust security and adaptability in the rapidly evolving digital space, enhancing both data protection and user experience.",
+  },
+  {
+    title:
+      "Securing the Rails: User Authentication and Bcrypt in Ruby on Rails",
+    description:
+      "In this piece, I provide an in-depth examination of secure user authentication using bcrypt within the Ruby on Rails framework. I detail password hashing and the implementation of secure sign-up, login, and logout flows. The importance of effective error handling is also covered. This project allows me to solidify my knowledge of Ruby on Rails, focusing on the critical aspect of user data security.",
+  },
+  {
+    title:
+      "Put this in your {app} and {control} it, or how Sinatra serenades our data",
+    description:
+      "In Phase 3 of my journey at Flatiron School, I authored an article, 'Put this in your {app} and {control} it, or how Sinatra serenades our data', focused on the principles of MVC through the lens of Ruby. Using a shopping cart illustration, I clarified the key roles and interactions within MVC - Model, View, and Controller. This served to strengthen my own understanding while enabling me to break down complex topics for others, thus highlighting my skills as both a programmer and a communicator.",
+  },
+  {
+    title: "I do declare(ative), React.js is good, clean fun!",
+    description:
+      "In Phase 2 at Flatiron School, I deepened my understanding of React.js and documented my journey in a tutorial titled 'I do declare(ative), React.js is good, clean fun!'. I broke down the shift from imperative to declarative programming with React, providing clear examples. My ability to distill complex concepts into digestible content underscores my grasp of React.js, reinforcing my goal of simplifying tech knowledge for others.",
+  },
+  {
+    title: "go fetch()",
+    description:
+      "As part of my Phase 1 JavaScript project at Flatiron School, I wrote a tutorial called 'go fetch()', aimed at beginners in web development. The article details the Fetch API, specifically GET requests, with examples from my own project. This work exemplifies my ability to translate complex concepts into accessible content, contributing to the learning culture in software development.",
+  },
 ];

@@ -2,49 +2,52 @@ import Image from "next/image";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 export const ProjectCard = ({ project }) => (
-  <div className="card w-96 glass bg-neutral rounded-md shadow-xl transform transition-transform duration-200 ">
-    <figure className="relative overflow-hidden rounded-t-lg">
+  <div className="card flex flex-col md:flex-row bg-neutral rounded-sm shadow-md transform transition-transform duration-200 space-y-4 md:space-y-0 md:space-x-4 p-4 hover:scale-105">
+    {/* Image Section */}
+    <figure className="flex-none w-full md:w-1/3 overflow-hidden rounded-lg mb-4 md:mb-0">
       <Image
         src={project.image}
         alt={project.title}
         layout="responsive"
         width={400}
-        height={200}
+        height={250}
         objectFit="cover"
       />
     </figure>
-    <div className="card-body p-4">
-      <h2 className="card-title text-lg font-semibold mb-2">
-        <a
-          href={project.links.demo}
-          target="_blank"
-          rel="noreferrer"
-          className="hover:underline hover:text-primary transition-colors"
-        >
-          {project.title}
-        </a>
-      </h2>
-      <p className="text-sm mb-2">{project.description}</p>
 
-      {/* Displaying Tech Skills */}
-      <div className="mt-2 flex flex-wrap gap-2 mb-4">
-        {project.technologies.map((tech) => (
-          <span
-            key={tech}
-            className="text-xs font-mono bg-gray-800 hover:bg-primary text-white py-0.5 px-2 rounded-sm"
+    {/* Content Section */}
+    <div className="flex flex-col justify-between flex-grow space-y-4">
+      <div>
+        <h2 className="card-title text-lg font-semibold mb-2">
+          <a
+            href={project.links.demo}
+            target="_blank"
+            rel="noreferrer"
+            className="hover:underline hover:text-primary transition-colors"
           >
-            {tech}
-          </span>
-        ))}
+            {project.title}
+          </a>
+        </h2>
+        <p className="text-sm mb-4">{project.description}</p>
+        <div className="flex flex-wrap gap-2">
+          {project.technologies.map((tech) => (
+            <span
+              key={tech}
+              className="text-xs font-mono bg-gray-800 hover:bg-primary text-white py-0.5 px-2 rounded-sm"
+            >
+              {tech}
+            </span>
+          ))}
+        </div>
       </div>
 
-      <div className="card-actions flex justify-end">
+      <div className="card-actions flex justify-end space-x-4">
         {project.links.github && (
           <a
             href={project.links.github}
             target="_blank"
             rel="noreferrer"
-            className="text-gray-400 hover:text-success mr-4 transition-colors"
+            className="text-gray-400 hover:text-success transition-colors"
           >
             <FaGithub className="w-5 h-5" />
           </a>

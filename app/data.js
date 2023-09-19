@@ -52,18 +52,19 @@ export const projects = [
   {
     title: "Infinite Eats",
     links: {
-      github: "#",
-      demo: "#",
+      github: "https://github.com/jmayheww/infinite-eats",
+      demo: "https://infinite-eats.onrender.com/home",
     },
     image: "/images/infinite-features.JPG",
     description:
       "A dynamic inventory management system focusing on user experience, data security, and efficient transaction processes.",
     technologies: [
-      "Stripe API",
+      "React.js",
       "Ruby on Rails",
+      "Stripe API",
       "Bcrypt",
       "PostgreSQL",
-      "Render",
+      "Tailwind CSS",
     ],
     highlights: [
       "Integrated Stripe API, enhancing user transactions' safety and commercial viability.",
@@ -74,7 +75,7 @@ export const projects = [
   {
     title: "Book-It",
     links: {
-      github: "Github_URL_for_BookIt", // Replace with actual URL
+      github: "https://github.com/jmayheww/book-it-app", // Replace with actual URL
       demo: "Demo_URL_for_BookIt", // Replace with actual URL
     },
     image: "/path_to_book_it_image.jpg", // Replace with actual image path
@@ -90,7 +91,7 @@ export const projects = [
   {
     title: "Nomad List",
     links: {
-      github: "Github_URL_for_NomadList", // Replace with actual URL
+      github: "https://github.com/jmayheww/phase-1-project-NomadListApp", // Replace with actual URL
       demo: "Demo_URL_for_NomadList", // Replace with actual URL
     },
     image: "/path_to_nomad_list_image.jpg", // Replace with actual image path

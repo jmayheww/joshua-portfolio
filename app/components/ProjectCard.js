@@ -1,43 +1,50 @@
 import Image from "next/image";
-import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
-
-const paragraphClasses = "text-sm sm:text-base font-jetbrains-mono";
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 export const ProjectCard = ({ project }) => (
-  <div className="transition-transform transform hover:-translate-y-2 hover:shadow-xl rounded-md p-4 bg-opacity-60 backdrop-blur-md hover:bg-opacity-70 hover:bg-gray-800">
-    <div
-      className="relative rounded-md overflow-hidden mb-4"
-      style={{ width: "100%", height: "200px", position: "relative" }}
-    >
-      <div className="absolute inset-0 bg-black opacity-10 z-20"></div>
+  <div className="card w-96 glass bg-neutral rounded-md shadow-xl transform transition-transform duration-200 ">
+    <figure className="relative overflow-hidden rounded-t-lg">
       <Image
         src={project.image}
         alt={project.title}
         layout="responsive"
-        width={200}
-        height={100}
+        width={400}
+        height={200}
         objectFit="cover"
-        className="z-10"
       />
-    </div>
-    <div className="flex justify-between items-center mb-4">
-      <h3 className="text-xl font-bold mb-3 text-gray-300">
+    </figure>
+    <div className="card-body p-4">
+      <h2 className="card-title text-lg font-semibold mb-2">
         <a
           href={project.links.demo}
           target="_blank"
           rel="noreferrer"
-          className="hover:underline hover:text-success"
+          className="hover:underline hover:text-primary transition-colors"
         >
           {project.title}
         </a>
-      </h3>
-      <div className="flex space-x-4">
+      </h2>
+      <p className="text-sm mb-2">{project.description}</p>
+
+      {/* Displaying Tech Skills */}
+      <div className="mt-2 flex flex-wrap gap-2 mb-4">
+        {project.technologies.map((tech) => (
+          <span
+            key={tech}
+            className="text-xs font-mono bg-gray-800 hover:bg-primary text-white py-0.5 px-2 rounded-sm"
+          >
+            {tech}
+          </span>
+        ))}
+      </div>
+
+      <div className="card-actions flex justify-end">
         {project.links.github && (
           <a
             href={project.links.github}
             target="_blank"
             rel="noreferrer"
-            className="text-gray-400 hover:text-success"
+            className="text-gray-400 hover:text-success mr-4 transition-colors"
           >
             <FaGithub className="w-5 h-5" />
           </a>
@@ -47,25 +54,12 @@ export const ProjectCard = ({ project }) => (
             href={project.links.demo}
             target="_blank"
             rel="noreferrer"
-            className="text-gray-400 hover:text-success"
+            className="text-gray-400 hover:text-success transition-colors"
           >
             <FaExternalLinkAlt className="w-5 h-5" />
           </a>
         )}
       </div>
     </div>
-    <p className={`${paragraphClasses} text-base mb-6`}>
-      {project.description}
-    </p>
-    <ul className="flex flex-wrap gap-4">
-      {project.technologies.map((tech) => (
-        <li
-          key={tech}
-          className="text-xs font-mono bg-gray-800 hover:bg-gray-700 text-white py-0.5 px-2 rounded-sm"
-        >
-          {tech}
-        </li>
-      ))}
-    </ul>
   </div>
 );

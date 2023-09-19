@@ -9,6 +9,7 @@ import { Hero } from "./sections/Hero";
 import Navbar from "./components/Navbar";
 import { About } from "./sections/About";
 import { Work } from "./sections/Work";
+import { Writing } from "./sections/Writing";
 import { Contact } from "./sections/Contact";
 import Image from "next/image";
 import { Footer } from "./components/Footer";
@@ -55,6 +56,13 @@ export default function Home() {
             className="py-8 md:py-16 px-4 md:px-16 lg:px-24 min-h-screen overflow-hidden"
           >
             <Work />
+          </section>
+
+          <section
+            id="writing"
+            className="py-8 md:py-16 px-4 md:px-16 lg:px-24 min-h-screen overflow-hidden"
+          >
+            <Writing />
           </section>
 
           <section

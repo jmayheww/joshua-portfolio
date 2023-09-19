@@ -7,7 +7,7 @@ export const About = () => {
 
   return (
     <section className="flex flex-col items-center py-16 px-4 sm:px-6 md:px-8 lg:px-8 space-y-4 sm:space-y-6 md:space-y-12 lg:space-y-16 max-w-4xl mx-auto">
-      <SectionHeader title="About Me" />
+      <SectionHeader title="About" />
 
       <div className="flex flex-col md:flex-row w-full items-start md:space-x-10">
         {/* Portrait */}

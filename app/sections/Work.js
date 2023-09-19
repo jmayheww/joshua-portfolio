@@ -12,7 +12,7 @@ const fadeIn = {
 export const Work = () => {
   return (
     <section className="flex flex-col items-center py-12 px-4 ... max-w-screen-xl mx-auto">
-      <SectionHeader title="Projects" className="mb-4" />
+      <SectionHeader title="Work" className="mb-4" />
       <a
         href="/archive"
         className="text-xs font-mono text-gray-400 hover:underline hover:text-success mb-4"

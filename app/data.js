@@ -47,3 +47,29 @@ export const techSkills = [
   "SQL",
   "Stripe",
 ];
+
+export const projects = [
+  {
+    title: "Infinite Eats",
+    links: {
+      github: "#",
+      demo: "#",
+    },
+    image: "/images/infinite-features.JPG",
+    description:
+      "A dynamic inventory management system focusing on user experience, data security, and efficient transaction processes.",
+    technologies: [
+      "Stripe API",
+      "Ruby on Rails",
+      "Bcrypt",
+      "PostgreSQL",
+      "Render",
+    ],
+    highlights: [
+      "Integrated Stripe API, enhancing user transactions' safety and commercial viability.",
+      "Developed a backend using Ruby on Rails with Bcrypt, ensuring fortified data encryption and user privacy.",
+      "Deployed the application on Render with PostgreSQL, achieving online robustness and database efficiency.",
+    ],
+  },
+  // ... Add other projects in a similar format
+];

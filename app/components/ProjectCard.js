@@ -4,21 +4,21 @@ import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 export const ProjectCard = ({ project }) => (
   <div className="card flex flex-col md:flex-row bg-neutral rounded-sm shadow-md transform transition-transform duration-200 space-y-4 md:space-y-0 md:space-x-4 p-4 hover:scale-105">
     {/* Image Section */}
-    <figure className="flex-none w-full md:w-1/3 overflow-hidden rounded-sm mb-4 md:mb-0">
+    <figure className="flex-none w-full md:w-1/2 overflow-hidden rounded-sm">
       <Image
         src={project.image}
         alt={project.title}
         layout="responsive"
-        width={400}
-        height={250}
+        width={1600} // Adjusted for a 16:9 aspect ratio
+        height={900}
         objectFit="cover"
       />
     </figure>
 
     {/* Content Section */}
-    <div className="flex flex-col justify-between flex-grow space-y-4">
+    <div className="flex flex-col justify-between flex-grow space-y-4 md:space-y-2">
       <div>
-        <h2 className="card-title text-lg font-semibold mb-2 bg-gradient-to-r from-primary to-neutral font-jetbrains-mono font-bold p-2 rounded-sm">
+        <h2 className="text-lg md:text-xl font-semibold mb-2 bg-gradient-to-r from-primary to-neutral font-mono font-bold p-2 rounded-lg">
           <a
             href={project.links.demo}
             target="_blank"
@@ -28,12 +28,12 @@ export const ProjectCard = ({ project }) => (
             {project.title}
           </a>
         </h2>
-        <p className="text-sm mb-4">{project.description}</p>
+        <p className="text-sm md:text-base mb-4">{project.description}</p>
         <div className="flex flex-wrap gap-2">
           {project.technologies.map((tech) => (
             <span
               key={tech}
-              className="text-xs font-mono bg-gray-800 hover:bg-primary text-white py-0.5 px-2 rounded-sm"
+              className="text-xs md:text-sm font-mono bg-gray-800 hover:bg-primary text-white py-0.5 px-2 rounded-lg"
             >
               {tech}
             </span>
@@ -41,15 +41,15 @@ export const ProjectCard = ({ project }) => (
         </div>
       </div>
 
-      <div className="card-actions flex justify-end space-x-4">
+      <div className="flex justify-end space-x-4">
         {project.links.github && (
           <a
             href={project.links.github}
             target="_blank"
             rel="noreferrer"
-            className="text-gray-400 hover:text-success transition-colors"
+            className="text-gray-400 hover:text-success transition-colors p-2 rounded-lg"
           >
-            <FaGithub className="w-5 h-5" />
+            <FaGithub className="w-6 h-6" />
           </a>
         )}
         {project.links.demo && (
@@ -57,9 +57,9 @@ export const ProjectCard = ({ project }) => (
             href={project.links.demo}
             target="_blank"
             rel="noreferrer"
-            className="text-gray-400 hover:text-success transition-colors"
+            className="text-gray-400 hover:text-success transition-colors p-2 rounded-lg"
           >
-            <FaExternalLinkAlt className="w-5 h-5" />
+            <FaExternalLinkAlt className="w-6 h-6" />
           </a>
         )}
       </div>

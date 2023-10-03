@@ -55,8 +55,13 @@ export const projects = [
       github: "https://github.com/jmayheww/infinite-eats",
       demo: "https://infinite-eats.onrender.com/home",
     },
-    image: "/images/infinite-features.JPG",
-    description: `Infinite Eats - A dynamic inventory management system built with React.js and Ruby on Rails. Empowering users with informed purchase decisions, streamlining stock control, ensuring user data privacy with robust authentication, and enabling secure transactions through Stripe API integration.`,
+    image:
+      "https://res.cloudinary.com/daq5feofb/image/upload/v1696322541/welcome_infinite_mfsazb.jpg",
+    mobileMockup:
+      "https://res.cloudinary.com/daq5feofb/image/upload/v1696322541/welcome_infinite_mfsazb.jpg",
+    desktopMockup:
+      "https://res.cloudinary.com/daq5feofb/image/upload/v1696319322/infinite-features_ms6lqd.jpg",
+    description: `Infinite Eats - A dynamic inventory management system built with React.js and Ruby on Rails. Empowering users with informed purchase decisions, streamlining stock control, safeguarding user data and privacy with robust user authentication, and facilitating secure transactions through Stripe API integration.`,
     technologies: [
       "React.js",
       "Ruby on Rails",

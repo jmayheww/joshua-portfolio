@@ -56,7 +56,7 @@ export const projects = [
       demo: "https://infinite-eats.onrender.com/home",
     },
     image: "/images/infinite-features.JPG",
-    description: `Infinite Eats is a dynamic inventory management system that champions user experience. Notably, it integrates the Stripe API for enhanced transaction safety, relies on Ruby on Rails with Bcrypt for fortified data security, and is deployed on Render with PostgreSQL for database efficiency.`,
+    description: `Infinite Eats - A dynamic inventory management system built with React.js and Ruby on Rails. Empowering users with informed purchase decisions, streamlining stock control, ensuring user data privacy with robust authentication, and enabling secure transactions through Stripe API integration.`,
     technologies: [
       "React.js",
       "Ruby on Rails",
@@ -66,6 +66,7 @@ export const projects = [
       "Tailwind CSS",
     ],
   },
+
   {
     title: "Murder Mystery",
     links: {
@@ -74,7 +75,7 @@ export const projects = [
     },
     image: "/Image_URL", // Replace with actual image URL
     description:
-      "A captivating web-based murder mystery game developed as a paid contract project for a local educator. This interactive application challenges players to solve a complex murder case by gathering clues, interacting with in-game characters, and using deductive reasoning. It was designed to enhance the educator's IELTS curriculum, offering students an engaging and educational experience. Developed using TypeScript and Next.js, it features a sleek user interface with seamless user authentication powered by Clerk and a secure database managed by Convex.",
+      "Experience the thrill of Murder Mystery: a captivating web app crafted for live-streamed events. Participants engage in interactive decision-making, collaborate in teams, and receive real-time evidence updates. This project, undertaken as a freelance contract for an education industry client, has been implemented as part of an established IELTS curriculum, delivering immersive and educational experiences to over 200 students.",
     technologies: [
       "React",
       "TypeScript",
@@ -92,8 +93,8 @@ export const projects = [
       demo: "Demo_URL_for_BookIt", // Replace with actual URL
     },
     image: "/path_to_book_it_image.jpg", // Replace with actual image path
-    description: `Book-It offers a comprehensive hotel booking experience tailored for efficiency. Users can intuitively browse hotels, customize reservations, and trust in Bcrypt's authentication for robust data security.`,
-    technologies: ["React.js", "Ruby on Rails", "Bcrypt"],
+    description: `Book-It offers a comprehensive hotel booking experience tailored for efficiency. Users can intuitively browse hotels, customize reservations, and trust in Bcrypt's authentication for robust data security. `,
+    technologies: ["React.js", "Ruby on Rails", "Bcrypt", "PostgreSQL"],
   },
   {
     title: "Nomad List",
@@ -102,11 +103,9 @@ export const projects = [
       demo: "Demo_URL_for_NomadList", // Replace with actual URL
     },
     image: "/path_to_nomad_list_image.jpg", // Replace with actual image path
-    description: `Nomad List serves as a go-to platform for digital nomads, offering city insights via the Teleport API. Users can compare cities with dual-views and find optimal destinations, especially with the rise of remote work.`,
-    technologies: [
-      "Teleport API",
-      "Some_other_technology", // Replace with actual technology (if any)
-    ],
+    description:
+      "Nomad List is a practical and powerful guide for digital nomads. Utilizing the Teleport API, Nomad List provides users with itemized quality of life metrics that enable more comprehensive and informed decisions about where to live, work, and travel. Nomad List is an essential tool for any nomad in the remote work era.",
+    technologies: ["Teleport API", "JavaScript", "HTML", "CSS"],
   },
 ];
 

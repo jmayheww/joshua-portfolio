@@ -67,6 +67,25 @@ export const projects = [
     ],
   },
   {
+    title: "Murder Mystery",
+    links: {
+      github: "https://github.com/jamesMAwalker/murder-mystery",
+      demo: "https://murder-mystery-ielts.vercel.app/",
+    },
+    image: "/Image_URL", // Replace with actual image URL
+    description:
+      "A captivating web-based murder mystery game developed as a paid contract project for a local educator. This interactive application challenges players to solve a complex murder case by gathering clues, interacting with in-game characters, and using deductive reasoning. It was designed to enhance the educator's IELTS curriculum, offering students an engaging and educational experience. Developed using TypeScript and Next.js, it features a sleek user interface with seamless user authentication powered by Clerk and a secure database managed by Convex.",
+    technologies: [
+      "React",
+      "TypeScript",
+      "Next.js",
+      "Clerk (User Authentication)",
+      "Convex (Database)",
+      "Tailwind CSS",
+    ],
+  },
+
+  {
     title: "Book-It",
     links: {
       github: "https://github.com/jmayheww/book-it-app", // Replace with actual URL

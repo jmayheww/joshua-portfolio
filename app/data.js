@@ -96,9 +96,10 @@ export const projects = [
     title: "Book-It",
     links: {
       github: "https://github.com/jmayheww/book-it-app", // Replace with actual URL
-      demo: "Demo_URL_for_BookIt", // Replace with actual URL
+      demo: "https://www.youtube.com/watch?v=3mr2V_yodfk", // Replace with actual URL
     },
-    image: "/path_to_book_it_image.jpg", // Replace with actual image path
+    mobileMockup: "",
+    desktopMockup: "", // Replace with actual image path
     description: `Book-It offers a comprehensive hotel booking experience tailored for efficiency. Users can intuitively browse hotels, customize reservations, and trust in Bcrypt's authentication for robust data security. `,
     technologies: ["React.js", "Ruby on Rails", "Bcrypt", "PostgreSQL"],
   },
@@ -106,9 +107,11 @@ export const projects = [
     title: "Nomad List",
     links: {
       github: "https://github.com/jmayheww/phase-1-project-NomadListApp", // Replace with actual URL
-      demo: "Demo_URL_for_NomadList", // Replace with actual URL
+      demo: "https://github.com/jmayheww/phase-1-project-NomadListApp", // Replace with actual URL
     },
-    image: "/path_to_nomad_list_image.jpg", // Replace with actual image path
+    mobileMockup: "",
+    desktopMockup:
+      "https://res.cloudinary.com/daq5feofb/image/upload/v1696407724/nomad-amster_i1bwy8.jpg", // Replace with actual image path
     description:
       "Nomad List is a practical and powerful guide for digital nomads. Utilizing the Teleport API, Nomad List provides users with itemized quality of life metrics that enable more comprehensive and informed decisions about where to live, work, and travel. Nomad List is an essential tool for any nomad in the remote work era.",
     technologies: ["Teleport API", "JavaScript", "HTML", "CSS"],

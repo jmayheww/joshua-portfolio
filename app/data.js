@@ -55,8 +55,6 @@ export const projects = [
       github: "https://github.com/jmayheww/infinite-eats",
       demo: "https://infinite-eats.onrender.com/home",
     },
-    image:
-      "https://res.cloudinary.com/daq5feofb/image/upload/v1696322541/welcome_infinite_mfsazb.jpg",
     mobileMockup:
       "https://res.cloudinary.com/daq5feofb/image/upload/v1696322541/welcome_infinite_mfsazb.jpg",
     desktopMockup:
@@ -78,7 +76,10 @@ export const projects = [
       github: "https://github.com/jamesMAwalker/murder-mystery",
       demo: "https://murder-mystery-ielts.vercel.app/",
     },
-    image: "/Image_URL", // Replace with actual image URL
+    mobileMockup:
+      "https://res.cloudinary.com/daq5feofb/image/upload/v1696400738/Screenshot_20231004_131833_Chrome_notqqs.jpg",
+    desktopMockup:
+      "https://res.cloudinary.com/daq5feofb/image/upload/v1696400962/mm_home_xbe4te.jpg",
     description:
       "Experience the thrill of Murder Mystery: a captivating web app crafted for live-streamed events. Participants engage in interactive decision-making, collaborate in teams, and receive real-time evidence updates. This project, undertaken as a freelance contract for an education industry client, has been implemented as part of an established IELTS curriculum, delivering immersive and educational experiences to over 200 students.",
     technologies: [

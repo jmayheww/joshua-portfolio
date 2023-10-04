@@ -1,4 +1,5 @@
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+
 export const ProjectCard = ({ project }) => (
   <div className="card bg-neutral rounded-lg shadow-md transition-transform duration-200 hover:scale-105 hover:shadow-lg p-4 md:p-6">
     {/* --- Image Section --- */}
@@ -9,21 +10,23 @@ export const ProjectCard = ({ project }) => (
           src={project.desktopMockup}
           alt={project.title}
           className="object-fit object-center w-full h-full rounded-sm"
+          loading="lazy"
         />
       </div>
 
       {/* Mobile Mockup - Overlay */}
-      <div className="mobile-mockup absolute bottom-0 right-0 w-1/5 md:w-1/6 lg:w-1/8 xl:w-1/10 2xl:w-1/12 z-20 rounded-md shadow-xl border-4 border-gray-800">
+      <div className="mobile-mockup absolute bottom-[-2px] right-[-1px] w-1/5 md:w-1/6 lg:w-1/8 xl:w-1/10 2xl:w-1/12 z-20 rounded-md shadow-xl border-4 border-gray-800">
         <img
           src={project.mobileMockup}
-          alt={project.title}
+          alt={`${project.title} - Mobile View`}
           className="object-fit object-center w-full h-full rounded-sm"
+          loading="lazy"
         />
       </div>
     </figure>
 
     {/* --- Content Section --- */}
-    <div className="flex flex-col justify-between space-y-4">
+    <article className="flex flex-col justify-between space-y-4">
       {/* Content Details */}
       <div>
         <h2 className="text-xl font-semibold mb-2 bg-gradient-to-r from-primary to-neutral font-mono font-bold p-2 rounded-sm">
@@ -43,7 +46,7 @@ export const ProjectCard = ({ project }) => (
           {project.technologies.map((tech) => (
             <span
               key={tech}
-              className="text-xs font-mono bg-gray-800 hover:bg-primary text-white py-1 px-2.5 rounded-full"
+              className="text-xs font-mono bg-gray-800 hover:bg-primary text-white py-1 px-2.5 rounded-sm transition-transform duration-200 hover:scale-105"
             >
               {tech}
             </span>
@@ -52,15 +55,18 @@ export const ProjectCard = ({ project }) => (
       </div>
 
       {/* Project Links */}
-      <div className="flex space-x-4">
+      <div className="flex justify-end space-x-4">
+        {" "}
+        {/* Added 'justify-end' */}
         {project.links.github && (
           <a
             href={project.links.github}
             target="_blank"
             rel="noreferrer"
-            className="text-gray-500 hover:text-success transition-colors p-2 rounded-full hover:bg-gray-100"
+            aria-label="GitHub Repository"
+            className="bg-gray-800 hover:bg-primary p-2 rounded-md transition-colors duration-200"
           >
-            <FaGithub className="w-5 h-5" />
+            <FaGithub className="w-5 h-5 text-white" />
           </a>
         )}
         {project.links.demo && (
@@ -68,12 +74,13 @@ export const ProjectCard = ({ project }) => (
             href={project.links.demo}
             target="_blank"
             rel="noreferrer"
-            className="text-gray-500 hover:text-success transition-colors p-2 rounded-full hover:bg-gray-100"
+            aria-label="Live Demo"
+            className="bg-gray-800 hover:bg-primary p-2 rounded-md transition-colors duration-200"
           >
-            <FaExternalLinkAlt className="w-5 h-5" />
+            <FaExternalLinkAlt className="w-5 h-5 text-white" />
           </a>
         )}
       </div>
-    </div>
+    </article>
   </div>
 );

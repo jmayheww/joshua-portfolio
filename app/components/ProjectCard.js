@@ -1,49 +1,49 @@
-import Image from "next/image";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
-
 export const ProjectCard = ({ project }) => (
-  <a
-    href={project.links.demo}
-    target="_blank"
-    rel="noreferrer"
-    className="card flex flex-col md:flex-row bg-neutral rounded-sm shadow-md transform transition-transform duration-200 space-y-4 md:space-y-0 md:space-x-4 p-4 hover:scale-105"
-  >
-    {/* Image Section */}
-    <figure className="flex-none w-full md:w-1/2 overflow-hidden rounded-sm h-auto relative">
-      <div className="mockup-phone absolute right-1 top-1/2 transform -translate-y-1/2 h-full w-auto aspect-[9/16] z-10 bg-black shadow-lg rounded-md border-2 border-gray-700 flex flex-col justify-center items-center">
-        <div className="display">
-          <div className="artboard artboard-demo phone-1">
-            <img
-              src={project.mobileMockup}
-              alt={project.title}
-              className="absolute inset-0 object-fill w-full h-full z-10"
-            ></img>
-          </div>
-        </div>
+  <div className="card bg-neutral rounded-lg shadow-md transition-transform duration-200 hover:scale-105 hover:shadow-lg p-4 md:p-6">
+    {/* --- Image Section --- */}
+    <figure className="relative w-full aspect-w-16 aspect-h-9 md:aspect-w-4 md:aspect-h-3 lg:aspect-w-16 lg:aspect-h-9 xl:aspect-w-4 xl:aspect-h-3 rounded-sm overflow-hidden mb-4">
+      {/* Desktop Mockup */}
+      <div className="mockup-desktop w-full h-full">
+        <img
+          src={project.desktopMockup}
+          alt={project.title}
+          className="object-fit object-center w-full h-full rounded-sm"
+        />
       </div>
-      <div className="mockup-desktop border-black bg-primary absolute inset-0 h-full w-auto aspect-[20/9] shadow-lg">
-        <div className="flex justify-center items-center h-full">
-          <img
-            src={project.desktopMockup}
-            alt={project.title}
-            className="absolute inset-0 object-cover w-full h-full"
-          ></img>
-        </div>
+
+      {/* Mobile Mockup - Overlay */}
+      <div className="mobile-mockup absolute bottom-0 right-0 w-1/5 md:w-1/6 lg:w-1/8 xl:w-1/10 2xl:w-1/12 z-20 rounded-md shadow-xl border-4 border-gray-800">
+        <img
+          src={project.mobileMockup}
+          alt={project.title}
+          className="object-fit object-center w-full h-full rounded-sm"
+        />
       </div>
     </figure>
 
-    {/* Content Section */}
-    <div className="flex flex-col justify-between flex-grow space-y-4 md:space-y-2">
+    {/* --- Content Section --- */}
+    <div className="flex flex-col justify-between space-y-4">
+      {/* Content Details */}
       <div>
-        <h2 className="text-lg md:text-xl font-semibold mb-2 bg-gradient-to-r from-primary to-neutral font-mono font-bold p-2 rounded-lg">
-          {project.title}
+        <h2 className="text-xl font-semibold mb-2 bg-gradient-to-r from-primary to-neutral font-mono font-bold p-2 rounded-sm">
+          <a
+            href={project.links.demo}
+            target="_blank"
+            rel="noreferrer"
+            className="hover:underline hover:text-success transition-colors duration-200"
+          >
+            {project.title}
+          </a>
         </h2>
-        <p className="text-sm md:text-base mb-4">{project.description}</p>
-        <div className="flex flex-wrap gap-2">
+        <p className="text-base mb-4">{project.description}</p>
+
+        {/* Technologies */}
+        <div className="flex flex-wrap gap-2 mb-4">
           {project.technologies.map((tech) => (
             <span
               key={tech}
-              className="text-xs md:text-sm font-mono bg-gray-800 hover:bg-primary text-white py-0.5 px-2 rounded-lg"
+              className="text-xs font-mono bg-gray-800 hover:bg-primary text-white py-1 px-2.5 rounded-full"
             >
               {tech}
             </span>
@@ -51,15 +51,16 @@ export const ProjectCard = ({ project }) => (
         </div>
       </div>
 
-      <div className="flex justify-end space-x-4">
+      {/* Project Links */}
+      <div className="flex space-x-4">
         {project.links.github && (
           <a
             href={project.links.github}
             target="_blank"
             rel="noreferrer"
-            className="text-gray-400 hover:text-success transition-colors p-2 rounded-lg"
+            className="text-gray-500 hover:text-success transition-colors p-2 rounded-full hover:bg-gray-100"
           >
-            <FaGithub className="w-6 h-6" />
+            <FaGithub className="w-5 h-5" />
           </a>
         )}
         {project.links.demo && (
@@ -67,12 +68,12 @@ export const ProjectCard = ({ project }) => (
             href={project.links.demo}
             target="_blank"
             rel="noreferrer"
-            className="text-gray-400 hover:text-success transition-colors p-2 rounded-lg"
+            className="text-gray-500 hover:text-success transition-colors p-2 rounded-full hover:bg-gray-100"
           >
-            <FaExternalLinkAlt className="w-6 h-6" />
+            <FaExternalLinkAlt className="w-5 h-5" />
           </a>
         )}
       </div>
     </div>
-  </a>
+  </div>
 );

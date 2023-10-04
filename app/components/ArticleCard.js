@@ -1,49 +1,36 @@
+import { FaArrowRight } from "react-icons/fa";
+
 export const ArticleCard = ({ article }) => {
-  const cardClasses = `
-        m-4
-        max-w-3xl
-        mx-auto
-        rounded-sm
-        shadow-lg
-        overflow-hidden
-        hover:shadow-xl hover:scale-105
-        transition-shadow duration-300
-        bg-neutral
-        text-white
-        transform transition-transform duration-200  // Add transition for the transform property
-      `;
-
-  const headerClasses = `
-        p-4
-        bg-gradient-to-r
-        from-primary
-        to-neutral
-        font-jetbrains-mono
-        font-bold
-      `;
-
-  const contentClasses = `
-        p-4
-        font-jetbrains-mono
-        text-gray-300
-      `;
-
-  const linkClasses = `
-        text-success
-        hover:underline
-        transition-colors
-        duration-300
-      `;
-
   return (
-    <div className={cardClasses}>
-      <div className={headerClasses}>
-        <h3 className="text-xl">{article.title}</h3>
-      </div>
-      <div className={contentClasses}>
-        <p className="mb-4">{article.description}</p>
-        <a href={article.link} className={linkClasses}>
-          Read More
+    <div className="m-4 max-w-3xl mx-auto rounded-lg shadow-md hover:shadow-xl transform hover:scale-105 transition-all duration-300 bg-neutral text-white">
+      {/* Image */}
+      {article.image && (
+        <div className="relative h-48 rounded-t-lg overflow-hidden">
+          <img
+            src={article.image}
+            alt={article.title}
+            className="object-cover h-full w-full"
+          />
+        </div>
+      )}
+
+      {/* Content */}
+      <div className="p-4">
+        {/* Title with Gradient */}
+        <h3 className="text-xl font-bold mb-2 bg-gradient-to-r from-primary to-neutral p-2 rounded-sm inline-block">
+          {article.title}
+        </h3>
+
+        {/* Description */}
+        <p className="mb-4 text-gray-300">{article.description}</p>
+
+        {/* Read More Link */}
+        <a
+          href={article.link}
+          className="flex items-center text-success hover:text-white transition-colors duration-300"
+        >
+          View Article
+          <FaArrowRight className="ml-2" />
         </a>
       </div>
     </div>

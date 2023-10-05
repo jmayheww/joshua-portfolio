@@ -46,28 +46,28 @@ export default function Home() {
           <section
             id="about"
             data-aos="fade-up"
-            className="py-8 md:py-16 px-4 md:px-16 lg:px-24 bg-gradient-to-b from-base-100 to-base-150 min-h-screen overflow-hidden"
+            className="py-2 md:py-16 px-4 md:px-16 lg:px-24 bg-gradient-to-b from-base-100 to-base-150 min-h-screen overflow-hidden"
           >
             <About />
           </section>
 
           <section
             id="work"
-            className="py-8 md:py-16 px-4 md:px-16 lg:px-24 min-h-screen overflow-hidden"
+            className="py-2 md:py-16 px-4 md:px-16 lg:px-24 min-h-screen overflow-hidden"
           >
             <Work />
           </section>
 
           <section
             id="writing"
-            className="py-8 md:py-16 px-4 md:px-16 lg:px-24 min-h-screen overflow-hidden"
+            className="py-2 md:py-16 px-4 md:px-16 lg:px-24 min-h-screen overflow-hidden"
           >
             <Writing />
           </section>
 
           <section
             id="contact"
-            className="py-20 bg-gradient-to-t from-neutral to-base-100 text-white px-4 md:px-16 lg:px-24  overflow-hidden"
+            className="py-2 md:py-16 bg-gradient-to-t from-neutral to-base-100 text-white px-4 md:px-16 lg:px-24  overflow-hidden"
           >
             <Contact />
           </section>

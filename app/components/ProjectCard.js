@@ -34,14 +34,7 @@ export const ProjectCard = ({ project }) => (
       {/* Content Details */}
       <div>
         <h2 className="text-xl font-semibold mb-2 bg-gradient-to-r from-primary to-neutral font-mono font-bold p-2 rounded-sm">
-          <a
-            href={project.links.demo}
-            target="_blank"
-            rel="noreferrer"
-            className="hover:underline hover:text-success transition-colors duration-200"
-          >
-            {project.title}
-          </a>
+          {project.title}
         </h2>
         <p className="text-gray-300 mb-4 leading-relaxed">
           {project.description}
@@ -51,7 +44,7 @@ export const ProjectCard = ({ project }) => (
           {project.technologies.map((tech) => (
             <span
               key={tech}
-              className="text-xs font-mono bg-gray-800 hover:bg-primary text-white py-0.5 px-2 rounded-sm transition-transform duration-200 hover:scale-105"
+              className="text-xs font-mono bg-gray-800 hover:bg-primary text-white py-0.5 px-2 rounded-sm transition-transform duration-200 "
             >
               {tech}
             </span>

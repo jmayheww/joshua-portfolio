@@ -50,6 +50,27 @@ export const techSkills = [
 
 export const projects = [
   {
+    title: "Murder Mystery",
+    links: {
+      github: "https://github.com/jamesMAwalker/murder-mystery",
+      demo: "https://murder-mystery-ielts.vercel.app/",
+    },
+    mobileMockup:
+      "https://res.cloudinary.com/daq5feofb/image/upload/v1696400738/Screenshot_20231004_131833_Chrome_notqqs.jpg",
+    desktopMockup:
+      "https://res.cloudinary.com/daq5feofb/image/upload/v1696400962/mm_home_xbe4te.jpg",
+    description:
+      "Experience the thrill of Murder Mystery: a captivating web app crafted for live-streamed events with mobile in mind. Participants engage in interactive decision-making, collaborate in teams, and receive real-time evidence updates. This project, undertaken as a freelance contract for an education industry client, has been implemented as part of an established IELTS curriculum, delivering immersive and educational experiences to over 200 students.",
+    technologies: [
+      "React",
+      "TypeScript",
+      "Next.js",
+      "Clerk (User Authentication)",
+      "Convex (Database)",
+      "Tailwind CSS",
+    ],
+  },
+  {
     title: "Infinite Eats",
     links: {
       github: "https://github.com/jmayheww/infinite-eats",
@@ -68,40 +89,6 @@ export const projects = [
       "PostgreSQL",
       "Tailwind CSS",
     ],
-  },
-
-  {
-    title: "Murder Mystery",
-    links: {
-      github: "https://github.com/jamesMAwalker/murder-mystery",
-      demo: "https://murder-mystery-ielts.vercel.app/",
-    },
-    mobileMockup:
-      "https://res.cloudinary.com/daq5feofb/image/upload/v1696400738/Screenshot_20231004_131833_Chrome_notqqs.jpg",
-    desktopMockup:
-      "https://res.cloudinary.com/daq5feofb/image/upload/v1696400962/mm_home_xbe4te.jpg",
-    description:
-      "Experience the thrill of Murder Mystery: a captivating web app crafted for live-streamed events. Participants engage in interactive decision-making, collaborate in teams, and receive real-time evidence updates. This project, undertaken as a freelance contract for an education industry client, has been implemented as part of an established IELTS curriculum, delivering immersive and educational experiences to over 200 students.",
-    technologies: [
-      "React",
-      "TypeScript",
-      "Next.js",
-      "Clerk (User Authentication)",
-      "Convex (Database)",
-      "Tailwind CSS",
-    ],
-  },
-
-  {
-    title: "Book-It",
-    links: {
-      github: "https://github.com/jmayheww/book-it-app", // Replace with actual URL
-      demo: "https://www.youtube.com/watch?v=3mr2V_yodfk", // Replace with actual URL
-    },
-    mobileMockup: "",
-    desktopMockup: "", // Replace with actual image path
-    description: `Book-It offers a comprehensive hotel booking experience tailored for efficiency. Users can intuitively browse hotels, customize reservations, and trust in Bcrypt's authentication for robust data security. `,
-    technologies: ["React.js", "Ruby on Rails", "Bcrypt", "PostgreSQL"],
   },
   {
     title: "Nomad List",
@@ -136,15 +123,5 @@ export const articles = [
       "Put this in your {app} and {control} it, or how Sinatra serenades our data",
     description:
       "In Phase 3 of my journey at Flatiron School, I authored an article, 'Put this in your {app} and {control} it, or how Sinatra serenades our data', focused on the principles of MVC through the lens of Ruby. Using a shopping cart illustration, I clarified the key roles and interactions within MVC - Model, View, and Controller. This served to strengthen my own understanding while enabling me to break down complex topics for others, thus highlighting my skills as both a programmer and a communicator.",
-  },
-  {
-    title: "I do declare(ative), React.js is good, clean fun!",
-    description:
-      "In Phase 2 at Flatiron School, I deepened my understanding of React.js and documented my journey in a tutorial titled 'I do declare(ative), React.js is good, clean fun!'. I broke down the shift from imperative to declarative programming with React, providing clear examples. My ability to distill complex concepts into digestible content underscores my grasp of React.js, reinforcing my goal of simplifying tech knowledge for others.",
-  },
-  {
-    title: "go fetch()",
-    description:
-      "As part of my Phase 1 JavaScript project at Flatiron School, I wrote a tutorial called 'go fetch()', aimed at beginners in web development. The article details the Fetch API, specifically GET requests, with examples from my own project. This work exemplifies my ability to translate complex concepts into accessible content, contributing to the learning culture in software development.",
   },
 ];

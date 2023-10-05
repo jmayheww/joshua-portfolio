@@ -1,3 +1,4 @@
+import React from "react";
 import { techSkills } from "../data";
 
 export const SkillsList = () => {

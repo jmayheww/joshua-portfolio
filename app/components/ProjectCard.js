@@ -1,7 +1,7 @@
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 export const ProjectCard = ({ project }) => (
-  <div className="card bg-neutral rounded-lg shadow-md transition-transform duration-200 hover:scale-105 hover:shadow-lg p-4 md:p-6 mx-auto lg:max-w-3xl">
+  <div className="card bg-neutral rounded-sm shadow-md transition-transform duration-200 p-4 md:p-6 mx-auto lg:max-w-3xl">
     {/* The 'mx-auto' centers the card, and 'lg:max-w-3xl' limits its width on larger screens. Adjust '3xl' to your preference. */}
     {/* --- Image Section --- */}
     <figure className="relative w-full aspect-w-16 aspect-h-9 md:aspect-w-4 md:aspect-h-3 lg:aspect-w-16 lg:aspect-h-9 xl:aspect-w-4 xl:aspect-h-3 rounded-sm overflow-hidden mb-4">
@@ -43,21 +43,21 @@ export const ProjectCard = ({ project }) => (
             {project.title}
           </a>
         </h2>
-        <p className="text-base mb-4">{project.description}</p>
-
+        <p className="text-gray-300 mb-4 leading-relaxed">
+          {project.description}
+        </p>{" "}
         {/* Technologies */}
-        <div className="flex flex-wrap gap-2 mb-4">
+        <div className="flex flex-wrap gap-2 mb-2">
           {project.technologies.map((tech) => (
             <span
               key={tech}
-              className="text-xs font-mono bg-gray-800 hover:bg-primary text-white py-1 px-2.5 rounded-sm transition-transform duration-200 hover:scale-105"
+              className="text-xs font-mono bg-gray-800 hover:bg-primary text-white py-0.5 px-2 rounded-sm transition-transform duration-200 hover:scale-105"
             >
               {tech}
             </span>
           ))}
         </div>
       </div>
-
       {/* Project Links */}
       <div className="flex justify-end space-x-4">
         {/* Added 'justify-end' to move the buttons to the right */}

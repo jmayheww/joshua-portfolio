@@ -30,11 +30,11 @@ export const About = () => {
         <div className="flex flex-col space-y-4 w-full md:w-2/3 text-left md:pl-10">
           {/* Mobile Tagline */}
           <p
-            className={`text-xl sm:text-2xl md:text-3xl text-white ${paragraphClasses} block md:hidden max-w-xs`}
+            className={`text-xl text-white ${paragraphClasses} mx-auto max-w-xs text-center  block md:hidden max-w-xs`}
           >
             Code that&rsquo;s <strong>clean</strong>, designs that{" "}
-            <strong>impact</strong>, experience that <strong>lasts.</strong>{" "}
-            <span className="text-primary font-bold">
+            <strong>impact</strong>, experience that <strong>lasts.</strong>
+            <span className="block text-primary font-bold mt-2">
               It&rsquo;s what I do.
             </span>
           </p>
@@ -67,7 +67,7 @@ export const About = () => {
 
       {/* More About Text */}
       <div>
-        <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-inter tracking-tight text-white mb-4">
+        <h3 className="text-lg sm:text-xl md:text-2xl  font-inter tracking-tight text-white mb-2 mt-2">
           Paralegal to Programmer
         </h3>
         <p
@@ -81,11 +81,11 @@ export const About = () => {
       </div>
 
       <div>
-        <h3 className="text-lg sm:text-xl md:text-2xl font-inter tracking-tight text-primary mb-4">
+        <h3 className="text-lg sm:text-xl md:text-2xl font-inter tracking-tight text-white mb-2 ">
           Coding with Intention.
         </h3>
         <p
-          className={`${paragraphClasses} md:text-lg leading-relaxed text-gray-400`}
+          className={`${paragraphClasses} md:text-lg leading-relaxed text-gray-300`}
         >
           I channel a cohesive vision - a synergized brew of innovation, drive,
           and caffeinated creativity - in every project I undertake. My aim? To
@@ -95,7 +95,7 @@ export const About = () => {
       </div>
 
       <div className="w-full">
-        <h3 className="text-lg sm:text-xl md:text-2xl font-inter tracking-tight text-primary mb-4">
+        <h3 className="text-lg sm:text-xl md:text-2xl font-inter tracking-tight text-primary mb-4 mt-2">
           Fully Stacked Toolkit.
         </h3>
         <SkillsList />

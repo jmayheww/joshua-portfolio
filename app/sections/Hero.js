@@ -71,6 +71,8 @@ export const Hero = () => {
           businesses. Let&rsquo;s{" "}
           <a
             href="mailto:joshsmayhew@gmail.com"
+            target="_blank"
+            rel="noreferrer"
             className="text-success hover:underline"
           >
             connect

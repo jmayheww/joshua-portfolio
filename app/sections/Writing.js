@@ -4,14 +4,8 @@ import { articles } from "../data";
 
 export const Writing = () => {
   return (
-    <section className="flex flex-col items-center py-12 px-4 max-w-screen-xl mx-auto">
-      <SectionHeader title="Writing" className="mb-4" />
-      <a
-        href="/archive"
-        className="text-xs font-mono text-gray-400 hover:underline hover:text-success mb-4"
-      >
-        view the archive
-      </a>
+    <section className="flex flex-col items-center py-16 px-4 sm:px-6 md:px-8 lg:px-8 space-y-2 sm:space-y-4 md:space-y-8 lg:space-y-12 max-w-4xl mx-auto">
+      <SectionHeader title="Writing" className="mb-2" />
 
       <div className="w-full grid grid-cols-1 gap-8">
         {articles.map((article) => (

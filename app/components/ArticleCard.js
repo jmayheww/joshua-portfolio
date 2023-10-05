@@ -2,32 +2,34 @@ import { FaArrowRight } from "react-icons/fa";
 
 export const ArticleCard = ({ article }) => {
   return (
-    <div className="m-4 max-w-3xl mx-auto rounded-lg shadow-md hover:shadow-xl transform hover:scale-105 transition-all duration-300 bg-neutral text-white">
+    <div className="card bg-neutral rounded-sm shadow-md  p-4 md:p-6 mx-auto lg:max-w-3xl">
       {/* Image */}
       {article.image && (
-        <div className="relative h-48 rounded-t-lg overflow-hidden">
+        <div className="relative w-full aspect-w-16 aspect-h-9 md:aspect-w-4 md:aspect-h-3 lg:aspect-w-16 lg:aspect-h-9 xl:aspect-w-4 xl:aspect-h-3 rounded-t-lg overflow-hidden mb-4">
           <img
             src={article.image}
             alt={article.title}
-            className="object-cover h-full w-full"
+            className="object-cover object-center w-full h-full"
           />
         </div>
       )}
 
       {/* Content */}
-      <div className="p-4">
+      <div className="space-y-4">
         {/* Title with Gradient */}
-        <h3 className="text-xl font-bold mb-2 bg-gradient-to-r from-primary to-neutral p-2 rounded-sm inline-block">
+        <h3 className="text-xl font-semibold mb-2 bg-gradient-to-r from-primary to-neutral font-mono font-bold p-2 rounded-sm">
           {article.title}
         </h3>
 
         {/* Description */}
-        <p className="mb-4 text-gray-300">{article.description}</p>
+        <p className="text-gray-300 mb-4 font-inter text-gray-300 leading-relaxed">
+          {article.description}
+        </p>
 
         {/* Read More Link */}
         <a
           href={article.link}
-          className="flex items-center text-success hover:text-white transition-colors duration-300"
+          className="flex items-center text-success font-mono hover:underline transition-colors duration-200"
         >
           View Article
           <FaArrowRight className="ml-2" />

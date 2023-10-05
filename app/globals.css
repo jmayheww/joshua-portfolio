@@ -49,6 +49,7 @@
   display: none;
 }
 
+
 /* When the screen size is at most 768px */
 @media (max-width: 768px) {
   .nav-overlay--open {
@@ -58,12 +59,20 @@
 
 }
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   body {
     overflow: auto !important;
   }
 
+} */
+
+@media (min-width: 768px) {
+  body {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
 }
+
 
 
 html {

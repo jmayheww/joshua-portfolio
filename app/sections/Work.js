@@ -11,14 +11,8 @@ const fadeIn = {
 
 export const Work = () => {
   return (
-    <section className="py-12 px-4 max-w-screen-xl mx-auto">
-      <SectionHeader title="Work" className="mb-8 text-center" />
-      <a
-        href="/archive"
-        className="text-xs font-mono text-gray-400 hover:underline hover:text-success mb-8 block text-center"
-      >
-        View the archive
-      </a>
+    <section className="flex flex-col items-center py-16 px-4 sm:px-6 md:px-8 lg:px-8 space-y-2 sm:space-y-4 md:space-y-8 lg:space-y-12 max-w-4xl mx-auto">
+      <SectionHeader title="Work" className="mb-2" />
 
       <div className="grid grid-cols-1 gap-8">
         {projects.map((project, index) => (
@@ -28,9 +22,6 @@ export const Work = () => {
             delay={index * 0.1}
           />
         ))}
-        <h3 className="text-xl font-semibold tracking-tight text-center">
-          Crafting Experiences.
-        </h3>
       </div>
     </section>
   );

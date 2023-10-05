@@ -83,7 +83,7 @@ export const About = () => {
 
       <div>
         <h3 className="text-lg sm:text-2xl md:text-2xl font-inter tracking-tight text-white mb-2 mt-2">
-          Coding with Intention.
+          Coding with Intention
         </h3>
         <p
           className={`${paragraphClasses} md:text-lg leading-relaxed text-gray-300`}

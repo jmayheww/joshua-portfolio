@@ -1,15 +1,24 @@
 import { FaArrowRight } from "react-icons/fa";
 
 export const ArticleCard = ({ article }) => {
+  const getOptimizedImage = (url) => {
+    // Assuming your cloudinary base URL is 'https://res.cloudinary.com/daq5feofb/image/upload/'
+    const baseURL = "https://res.cloudinary.com/daq5feofb/image/upload/";
+    const transformations = "w_500,h_300,c_fill,q_auto/"; // Adjust width (w_) and height (h_) as per requirements
+    const imagePath = url.replace(baseURL, "");
+    return baseURL + transformations + imagePath;
+  };
+
   return (
     <div className="card bg-neutral rounded-sm shadow-md  p-4 md:p-6 mx-auto lg:max-w-3xl">
       {/* Image */}
       {article.image && (
         <div className="relative w-full aspect-w-16 aspect-h-9 md:aspect-w-4 md:aspect-h-3 lg:aspect-w-16 lg:aspect-h-9 xl:aspect-w-4 xl:aspect-h-3 rounded-t-sm overflow-hidden mb-4">
           <img
-            src={article.image}
+            src={getOptimizedImage(article.image)}
             alt={article.title}
             className="object-cover object-center w-full h-full"
+            loading="lazy"
           />
         </div>
       )}

@@ -5,7 +5,7 @@ export const ArticleCard = ({ article }) => {
     <div className="card bg-neutral rounded-sm shadow-md  p-4 md:p-6 mx-auto lg:max-w-3xl">
       {/* Image */}
       {article.image && (
-        <div className="relative w-full aspect-w-16 aspect-h-9 md:aspect-w-4 md:aspect-h-3 lg:aspect-w-16 lg:aspect-h-9 xl:aspect-w-4 xl:aspect-h-3 rounded-t-lg overflow-hidden mb-4">
+        <div className="relative w-full aspect-w-16 aspect-h-9 md:aspect-w-4 md:aspect-h-3 lg:aspect-w-16 lg:aspect-h-9 xl:aspect-w-4 xl:aspect-h-3 rounded-t-sm overflow-hidden mb-4">
           <img
             src={article.image}
             alt={article.title}
@@ -30,6 +30,8 @@ export const ArticleCard = ({ article }) => {
         <a
           href={article.link}
           className="flex items-center text-success font-mono hover:underline transition-colors duration-200"
+          target="_blank"
+          rel="noreferrer"
         >
           View Article
           <FaArrowRight className="ml-2" />

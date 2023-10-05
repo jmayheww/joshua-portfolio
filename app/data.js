@@ -111,17 +111,26 @@ export const articles = [
       "Swiping with Stripe: Simple and Secure Online Payment Handling Powered By Stripe",
     description:
       "This piece showcases the secure integration of Stripe's API into my app, Infinite Eats, for efficient user data management and payment processing. It emphasizes the importance of robust security and adaptability in the rapidly evolving digital space, enhancing both data protection and user experience.",
+    link: "https://dev.to/jmayheww/swiping-with-stripe-simple-and-secure-online-payment-handling-powered-by-stripe-34ll",
+    image:
+      "https://res.cloudinary.com/daq5feofb/image/upload/v1696497485/7d8eaneivzxe95rgkdcx_wrpgkg.gif",
   },
   {
     title:
       "Securing the Rails: User Authentication and Bcrypt in Ruby on Rails",
     description:
       "In this piece, I provide an in-depth examination of secure user authentication using bcrypt within the Ruby on Rails framework. I detail password hashing and the implementation of secure sign-up, login, and logout flows. The importance of effective error handling is also covered. This project allows me to solidify my knowledge of Ruby on Rails, focusing on the critical aspect of user data security.",
+    link: "https://dev.to/jmayheww/securing-the-rails-user-authentication-and-bcrypt-in-ruby-on-rails-21d7",
+    image:
+      "https://res.cloudinary.com/daq5feofb/image/upload/v1696497501/v510hqyyesosb4bnn1ni_tbenpa.jpg",
   },
   {
     title:
       "Put this in your {app} and {control} it, or how Sinatra serenades our data",
     description:
       "In Phase 3 of my journey at Flatiron School, I authored an article, 'Put this in your {app} and {control} it, or how Sinatra serenades our data', focused on the principles of MVC through the lens of Ruby. Using a shopping cart illustration, I clarified the key roles and interactions within MVC - Model, View, and Controller. This served to strengthen my own understanding while enabling me to break down complex topics for others, thus highlighting my skills as both a programmer and a communicator.",
+    link: "https://dev.to/jmayheww/put-this-in-your-app-and-control-it-or-how-sinatra-serenades-our-data-54h8",
+    image:
+      "https://res.cloudinary.com/daq5feofb/image/upload/v1696497464/g4j51krgifyxbt1o2ha7_nzulet.png",
   },
 ];

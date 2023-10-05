@@ -6,7 +6,7 @@ export const About = () => {
   const paragraphClasses = "text-sm sm:text-base font-jetbrains-mono";
 
   return (
-    <section className="flex flex-col items-center py-16 px-4 sm:px-6 md:px-8 lg:px-8 space-y-4 sm:space-y-6 md:space-y-12 lg:space-y-16 max-w-4xl mx-auto">
+    <section className="flex flex-col items-center py-16 px-8 sm:px-6 md:px-8 lg:px-8 space-y-4 sm:space-y-6 md:space-y-12 lg:space-y-16 max-w-4xl mx-auto">
       <SectionHeader title="About" />
 
       <div className="flex flex-col md:flex-row w-full items-start md:space-x-10">
@@ -67,7 +67,7 @@ export const About = () => {
 
       {/* More About Text */}
       <div>
-        <h3 className="text-lg sm:text-xl md:text-2xl  font-inter tracking-tight text-white mb-2 mt-2">
+        <h3 className="text-lg sm:text-2xl md:text-2xl font-inter tracking-tight text-white mb-2 mt-2">
           Paralegal to Programmer
         </h3>
         <p
@@ -81,7 +81,7 @@ export const About = () => {
       </div>
 
       <div>
-        <h3 className="text-lg sm:text-xl md:text-2xl font-inter tracking-tight text-white mb-2 ">
+        <h3 className="text-lg sm:text-2xl md:text-2xl font-inter tracking-tight text-white mb-2 mt-2">
           Coding with Intention.
         </h3>
         <p

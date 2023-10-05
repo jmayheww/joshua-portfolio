@@ -34,6 +34,8 @@ export const Contact = () => {
         <a
           href="mailto:joshsmayhew@gmail.com"
           className={buttonClasses}
+          target="_blank"
+          rel="noreferrer"
           aria-label="Email Me"
         >
           Say Hello

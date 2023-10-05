@@ -29,12 +29,13 @@ export const About = () => {
         {/* Tagline */}
         <div className="flex flex-col space-y-4 w-full md:w-2/3 text-left md:pl-10">
           {/* Mobile Tagline */}
+
           <p
-            className={`text-xl text-white ${paragraphClasses} mx-auto max-w-xs text-center  block md:hidden max-w-xs`}
+            className={`text-lg sm:text-xl text-white ${paragraphClasses} mx-auto max-w-xs text-center block md:hidden max-w-xs`}
           >
             Code that&rsquo;s <strong>clean</strong>, designs that{" "}
             <strong>impact</strong>, experience that <strong>lasts.</strong>
-            <span className="block text-primary font-bold mt-2">
+            <span className="block text-primary font-bold mt-2 text-xl">
               It&rsquo;s what I do.
             </span>
           </p>

@@ -4,36 +4,30 @@ A hub where I blend code and coffee to craft captivating digital experiences.
 
 ![Website Preview](public/images/joshlandingshot.JPG)
 
-## 🚀 Quick Overview
+## 🚀 Overview
 
-- **[Hero](#hero)**: An impactful introduction, capturing the essence of who I am - a developer with a penchant for crafting code that works. The dynamic typing effect adds an engaging touch to the visitor's experience.
+My portfolio showcases various facets of my developer journey and expertise:
 
-- **[About](#about)**: A deep dive into my journey from paralegal to programmer. This section not only highlights my coding skills but also the analytical edge I've honed over the years. Learn about my design philosophy, experience, and the tools I wield to bring my projects to life.
-
-- **[Work](#work)**: A showcase of my most notable projects, highlighting the breadth and depth of my skills as a full-stack developer. Each project is presented with meticulous detail, allowing visitors to grasp the essence of each venture.
-
-- **[Writing](#writing)**: My space to share thoughts, tutorials, and insights. Dive deep into my articles, covering a range of tech topics, and get a feel for my voice as a developer and writer.
-
-- **[Contact](#contact)**: Interested in collaborating, or just in the mood for a chat? My inbox is always open. Let's connect where caffeine meets creativity.
+- **Hero**: A captivating introduction reflecting my identity as a developer.
+- **About**: Delving into my transition from paralegal to programmer and the skills I've honed.
+- **Work**: A selection of my notable projects, emphasizing my versatility as a full-stack developer.
+- **Writing**: Insights, tutorials, and thoughts shared through my written articles.
+- **Contact**: An open invitation to connect, collaborate, and caffeinate.
 
 ## 🎨 Design Philosophy
 
-Inspired by Brittany Chiang's design patterns, I aimed for a blend of minimalism and vibrancy. My primary goal is to ensure every visitor not only gains insight into my professional capabilities but also feels the passion I pour into every project.
+Inspired by Brittany Chiang's design patterns, I embraced a fusion of minimalism and vibrancy. The objective is to provide visitors with a clear insight into my professional capabilities, underscored by the passion I pour into all of my projects.
 
 ## 🛠️ Tech Stack
 
-- **React.js/Next.js**: For its powerful features, such as server-side rendering and static site generation, enhancing the performance and user experience of my portfolio.
+- **React.js/Next.js**: Leveraging powerful features such as server-side rendering and static site generation to enhance both performance and user experience.
 
-- **TailwindCSS/DaisyUI**: Leveraging its utility-first approach for rapid UI development without compromising on design customization.
-
-## 🌐 Live Site
-
-Check out the live site hosted on [Vercel](https://joshmayhew.dev).
+- **TailwindCSS/DaisyUI**: Utilizing a utility-first approach for swift UI development while maintaining design flexibility.
 
 ## 🙏 Acknowledgments
 
-Huge shoutout to Brittany Chiang for her inspiring designs and the open-source community for the myriad of resources that have been indispensable throughout my development journey.
+A heartfelt nod to Brittany Chiang for her inspiring designs. Immense gratitude also goes to the open-source community for the invaluable resources that guided my development journey.
 
 ## 📜 License
 
-© 2023 Joshua Mayhew. All rights reserved. Any reproduction, duplication, or distribution of the content is strictly prohibited without the written consent of the author.
+© 2023 Joshua Mayhew. All rights reserved. Unauthorized reproduction, duplication, or distribution of the content is strictly prohibited.

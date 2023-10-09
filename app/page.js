@@ -5,6 +5,8 @@ import { useState } from "react";
 import { useHandlePageLoad } from "./hooks/useHandlePageLoad";
 import Loading from "./loading";
 
+import GoogleAnalytics from "./components/GoogleAnalytics";
+
 import { Hero } from "./sections/Hero";
 import Navbar from "./components/Navbar";
 import { About } from "./sections/About";
@@ -21,6 +23,8 @@ export default function Home() {
 
   return (
     <main className="bg-base-100 min-h-screen relative">
+      <GoogleAnalytics />
+
       {isLoading ? (
         <Loading />
       ) : (

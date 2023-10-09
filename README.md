@@ -1,35 +1,39 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Joshua Mayhew's Personal Portfolio
 
-## Getting Started
+A hub where I blend code and coffee to craft captivating digital experiences.
 
-First, run the development server:
+![Website Preview](public/images/joshlandingshot.JPG)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## 🚀 Quick Overview
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **[Hero](#hero)**: An impactful introduction, capturing the essence of who I am - a developer with a penchant for crafting code that works. The dynamic typing effect adds an engaging touch to the visitor's experience.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- **[About](#about)**: A deep dive into my journey from paralegal to programmer. This section not only highlights my coding skills but also the analytical edge I've honed over the years. Learn about my design philosophy, experience, and the tools I wield to bring my projects to life.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **[Work](#work)**: A showcase of my most notable projects, highlighting the breadth and depth of my skills as a full-stack developer. Each project is presented with meticulous detail, allowing visitors to grasp the essence of each venture.
 
-## Learn More
+- **[Writing](#writing)**: My space to share thoughts, tutorials, and insights. Dive deep into my articles, covering a range of tech topics, and get a feel for my voice as a developer and writer.
 
-To learn more about Next.js, take a look at the following resources:
+- **[Contact](#contact)**: Interested in collaborating, or just in the mood for a chat? My inbox is always open. Let's connect where caffeine meets creativity.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🎨 Design Philosophy
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Inspired by Brittany Chiang's design patterns, I aimed for a blend of minimalism and vibrancy. My primary goal is to ensure every visitor not only gains insight into my professional capabilities but also feels the passion I pour into every project.
 
-## Deploy on Vercel
+## 🛠️ Tech Stack
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **React.js/Next.js**: For its powerful features, such as server-side rendering and static site generation, enhancing the performance and user experience of my portfolio.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-# joshua-portfolio
+- **TailwindCSS/DaisyUI**: Leveraging its utility-first approach for rapid UI development without compromising on design customization.
+
+## 🌐 Live Site
+
+Check out the live site hosted on [Vercel](https://joshmayhew.dev).
+
+## 🙏 Acknowledgments
+
+Huge shoutout to Brittany Chiang for her inspiring designs and the open-source community for the myriad of resources that have been indispensable throughout my development journey.
+
+## 📜 License
+
+© 2023 Joshua Mayhew. All rights reserved. Any reproduction, duplication, or distribution of the content is strictly prohibited without the written consent of the author.

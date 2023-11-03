@@ -2,27 +2,26 @@ import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 export const ProjectCard = ({ project }) => (
   <div className="card bg-neutral rounded-sm shadow-md transition-transform duration-200 p-4 md:p-6 mx-auto lg:max-w-3xl">
-    {/* The 'mx-auto' centers the card, and 'lg:max-w-3xl' limits its width on larger screens. Adjust '3xl' to your preference. */}
     {/* --- Image Section --- */}
     <figure className="relative w-full aspect-w-16 aspect-h-9 md:aspect-w-4 md:aspect-h-3 lg:aspect-w-16 lg:aspect-h-9 xl:aspect-w-4 xl:aspect-h-3 rounded-sm overflow-hidden mb-4">
-      {/* Desktop Mockup */}
+      {/* {Canva Mockup} */}
+      {project.canvaMockup && (
+        <div className="mockup-desktop w-full h-full">
+          <img
+            src={project.canvaMockup}
+            alt={project.title}
+            className="object-cover w-full h-full rounded-sm"
+            loading="lazy"
+          />
+        </div>
+      )}
+      {/* {Desktop Mockup} */}
       {project.desktopMockup && (
         <div className="mockup-desktop w-full h-full">
           <img
             src={project.desktopMockup}
             alt={project.title}
-            className="object-fit object-center w-full h-full rounded-sm"
-            loading="lazy"
-          />
-        </div>
-      )}
-      {/* Mobile Mockup - Overlay */}
-      {project.mobileMockup && (
-        <div className="mobile-mockup absolute bottom-[-2px] right-[-1px] w-1/5 md:w-1/6 lg:w-1/8 xl:w-1/10 2xl:w-1/12 z-20 rounded-md shadow-xl border-4 border-gray-800">
-          <img
-            src={project.mobileMockup}
-            alt={`${project.title} - Mobile View`}
-            className="object-fit object-center w-full h-full rounded-sm"
+            className="object-fit w-full h-full rounded-sm"
             loading="lazy"
           />
         </div>

@@ -91,12 +91,12 @@ export const projects = [
   {
     title: "Nomad List",
     links: {
-      github: "https://github.com/jmayheww/phase-1-project-NomadListApp", // Replace with actual URL
-      demo: "https://github.com/jmayheww/phase-1-project-NomadListApp", // Replace with actual URL
+      github: "https://github.com/jmayheww/phase-1-project-NomadListApp",
+      demo: "https://github.com/jmayheww/phase-1-project-NomadListApp",
     },
     mobileMockup: "",
     desktopMockup:
-      "https://res.cloudinary.com/daq5feofb/image/upload/v1696407724/nomad-amster_i1bwy8.jpg", // Replace with actual image path
+      "https://res.cloudinary.com/daq5feofb/image/upload/v1696407724/nomad-amster_i1bwy8.jpg",
     description:
       "Nomad List is a practical and powerful guide for digital nomads. Utilizing the Teleport API, Nomad List provides users with itemized quality of life metrics that enable more comprehensive and informed decisions about where to live, work, and travel. Nomad List is an essential tool for any nomad in the remote work era.",
     technologies: ["Teleport API", "JavaScript", "HTML", "CSS"],

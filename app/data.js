@@ -55,10 +55,9 @@ export const projects = [
       github: "https://github.com/jamesMAwalker/murder-mystery",
       demo: "https://murder-mystery-ielts.vercel.app/",
     },
-    mobileMockup:
-      "https://res.cloudinary.com/daq5feofb/image/upload/v1696400738/Screenshot_20231004_131833_Chrome_notqqs.jpg",
-    desktopMockup:
-      "https://res.cloudinary.com/daq5feofb/image/upload/v1696400962/mm_home_xbe4te.jpg",
+    canvaMockup:
+      "https://res.cloudinary.com/daq5feofb/image/upload/v1699000580/7_iepciy.png",
+
     description:
       "Experience the thrill of Murder Mystery: a captivating web app crafted for live-streamed events with mobile in mind. Participants engage in interactive decision-making, collaborate in teams, and receive real-time evidence updates. This project, undertaken as a freelance contract for an education industry client, has been implemented as part of an established IELTS curriculum, delivering immersive and educational experiences to over 200 students.",
     technologies: [
@@ -76,11 +75,10 @@ export const projects = [
       github: "https://github.com/jmayheww/infinite-eats",
       demo: "https://infinite-eats.onrender.com/home",
     },
-    mobileMockup:
-      "https://res.cloudinary.com/daq5feofb/image/upload/v1696322541/welcome_infinite_mfsazb.jpg",
-    desktopMockup:
-      "https://res.cloudinary.com/daq5feofb/image/upload/v1696319322/infinite-features_ms6lqd.jpg",
-    description: `Infinite Eats - A dynamic inventory management system built with React.js and Ruby on Rails. Empowering users with informed purchase decisions, streamlining stock control, safeguarding user data and privacy with robust user authentication, and facilitating secure transactions through Stripe API integration.`,
+    canvaMockup:
+      "https://res.cloudinary.com/daq5feofb/image/upload/v1699000591/8_fdho3o.png",
+
+    description: `A dynamic inventory management system built with React.js and Ruby on Rails. Empowering users with informed purchase decisions, streamlining stock control, safeguarding user data and privacy with robust user authentication, and facilitating secure transactions through Stripe API integration.`,
     technologies: [
       "React.js",
       "Ruby on Rails",

@@ -48,6 +48,19 @@ export const techSkills = [
   "Stripe",
 ];
 
+export const salesForceDevSkills = [
+  "Email Design", // Focusing on the creation of visually appealing email templates.
+  "SFMC", // General proficiency with Salesforce Marketing Cloud as a platform.
+  "Journey Builder", // Specialization in building customer journeys within SFMC.
+  "Data Integration", // Skill in integrating and managing data, pertinent to SFMC's data handling capabilities.
+  "Responsive Layouts", // Expertise in designing emails that work across various devices.
+  "Personalization", // Creating personalized content within emails.
+  "Automation", // Setting up automated email workflows.
+  "APIs", // Utilizing APIs for extended functionality in SFMC.
+  "Analytics", // Analyzing and interpreting campaign data.
+  "Agile Methods", // Working with Agile methodologies, beneficial for project management.
+];
+
 export const projects = [
   {
     title: "Murder Mystery",

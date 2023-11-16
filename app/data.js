@@ -13,6 +13,16 @@ export const typedAttr = [
   "dynamic",
 ];
 
+export const typedAttr2 = [
+  "engaging", // Highlighting the ability to create captivating content.
+  "personalized", // Emphasizing the customization aspect of email campaigns.
+  "targeted", // Reflecting the focus on specific audience segments.
+  "responsive", // Maintaining the importance of mobile-friendly designs.
+  "data-driven", // Showcasing the use of analytics and data for decision-making.
+  "automated", // Stressing on the automation capabilities in email marketing.
+  "optimized", // Focusing on the efficiency and effectiveness of campaigns.
+];
+
 export const socialLinks = [
   {
     name: "GitHub",

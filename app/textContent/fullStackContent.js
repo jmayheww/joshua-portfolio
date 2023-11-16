@@ -52,4 +52,11 @@ export const fullStackContent = {
         "text-sm sm:text-base font-jetbrains-mono md:text-lg leading-relaxed text-gray-300",
     },
   ],
+  skillsTagline: [
+    {
+      text: "Fully Stacked Toolkit.",
+      className:
+        "text-lg sm:text-xl md:text-2xl font-inter tracking-tight text-primary mb-4 mt-2",
+    },
+  ],
 };

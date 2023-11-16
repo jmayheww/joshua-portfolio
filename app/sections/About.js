@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { SectionHeader } from "../components/SectionHeader";
+import { salesforceContent } from "../textContent/salesForceContent";
 import { SkillsList } from "../components/SkillsList";
 
 export const About = () => {
@@ -29,71 +30,30 @@ export const About = () => {
         {/* Tagline */}
         <div className="flex flex-col space-y-4 w-full md:w-2/3 text-left md:pl-10">
           {/* Mobile Tagline */}
-
           <p
             className={`text-lg sm:text-xl text-white ${paragraphClasses} mx-auto max-w-xs text-center block md:hidden max-w-xs`}
           >
-            Code that&rsquo;s <strong>clean</strong>, designs that{" "}
-            <strong>impact</strong>, experience that <strong>lasts.</strong>
-            <span className="block text-primary font-bold mt-2 text-xl">
-              It&rsquo;s what I do.
-            </span>
+            {salesforceContent.taglineMobile.text}
           </p>
 
           {/* Desktop Tagline */}
           <div className="hidden md:block">
-            <p
-              className={`text-xl sm:text-2xl md:text-3xl text-white ${paragraphClasses}`}
-            >
-              Code that&rsquo;s clean.
-            </p>
-            <p
-              className={`text-xl sm:text-2xl md:text-3xl text-white ${paragraphClasses}`}
-            >
-              Designs that impact.
-            </p>
-            <p
-              className={`text-xl sm:text-2xl md:text-3xl text-white ${paragraphClasses}`}
-            >
-              Experience that lasts.
-            </p>
-            <p
-              className={`text-xl sm:text-2xl md:text-3xl text-primary ${paragraphClasses}`}
-            >
-              It&rsquo;s what I do.
-            </p>
+            {salesforceContent.taglineDesktop.map((item, index) => (
+              <p key={index} className={item.className}>
+                {item.text}
+              </p>
+            ))}
           </div>
         </div>
       </div>
 
       {/* More About Text */}
-      <div>
-        <h3 className="text-lg sm:text-2xl md:text-2xl font-inter tracking-tight text-white mb-2 mt-2">
-          Paralegal to Programmer
-        </h3>
-        <p
-          className={`${paragraphClasses} md:text-lg leading-relaxed text-gray-300`}
-        >
-          Navigating the world of legal documentation refined my analytical
-          edge. Today, I harness that rigor and precision in software
-          development, ensuring every line of code is not just functional, but
-          purposeful.
-        </p>
-      </div>
-
-      <div>
-        <h3 className="text-lg sm:text-2xl md:text-2xl font-inter tracking-tight text-white mb-2 mt-2">
-          Coding with Intention
-        </h3>
-        <p
-          className={`${paragraphClasses} md:text-lg leading-relaxed text-gray-300`}
-        >
-          I channel a cohesive vision - a synergized brew of innovation, drive,
-          and caffeinated creativity - in every project I undertake. My aim? To
-          craft digital experiences that captivate and serve both users and
-          businesses.
-        </p>
-      </div>
+      {salesforceContent.aboutSections.map((section, index) => (
+        <div key={index}>
+          <h3 className={section.titleClass}>{section.title}</h3>
+          <p className={section.contentClass}>{section.content}</p>
+        </div>
+      ))}
 
       <div className="w-full">
         <h3 className="text-lg sm:text-xl md:text-2xl font-inter tracking-tight text-primary mb-4 mt-2">

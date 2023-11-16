@@ -1,5 +1,7 @@
+import React, { useState } from "react";
 import { SectionHeader } from "../components/SectionHeader";
 import { ProjectCard } from "../components/ProjectCard";
+import { TabButtons } from "../components/TabButtons";
 import { projects } from "../data";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
@@ -10,18 +12,31 @@ const fadeIn = {
 };
 
 export const Work = () => {
+  const [activeTab, setActiveTab] = useState("email");
+
   return (
-    <section className="flex flex-col items-center py-16 px-4 sm:px-6 md:px-8 lg:px-8 space-y-2 sm:space-y-4 md:space-y-8 lg:space-y-12 max-w-4xl mx-auto">
+    <section className="flex flex-col items-center ...">
       <SectionHeader title="Work" className="mb-2" />
 
+      <TabButtons activeTab={activeTab} setActiveTab={setActiveTab} />
+
       <div className="grid grid-cols-1 gap-8">
-        {projects.map((project, index) => (
-          <InViewProjectCard
-            key={project.title}
-            project={project}
-            delay={index * 0.1}
-          />
-        ))}
+        {activeTab === "email" &&
+          projects.emailProjects.map((project, index) => (
+            <InViewProjectCard
+              key={project.title}
+              project={project}
+              delay={index * 0.1}
+            />
+          ))}
+        {activeTab === "fullstack" &&
+          projects.fullStackProjects.map((project, index) => (
+            <InViewProjectCard
+              key={project.title}
+              project={project}
+              delay={index * 0.1}
+            />
+          ))}
       </div>
     </section>
   );

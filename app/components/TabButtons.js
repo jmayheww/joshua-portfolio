@@ -7,14 +7,14 @@ export const TabButtons = ({ activeTab, setActiveTab }) => {
           tab === "email" ? "Email Development" : "Full Stack Development";
 
         return (
-          <a
+          <button
             key={tab}
             onClick={() => setActiveTab(tab)}
             className={`tab tab-lg m-1 ${isActive ? "tab-active" : ""}
                           text-sm sm:text-base flex-1 text-center`}
           >
             {tabName}
-          </a>
+          </button>
         );
       })}
     </div>

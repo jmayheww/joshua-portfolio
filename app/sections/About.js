@@ -57,7 +57,7 @@ export const About = () => {
 
       <div className="w-full">
         <h3 className="text-lg sm:text-xl md:text-2xl font-inter tracking-tight text-primary mb-4 mt-2">
-          Fully Stacked Toolkit.
+          {salesforceContent.skillsTagline[0].text}
         </h3>
         <SkillsList />
       </div>

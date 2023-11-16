@@ -7,7 +7,7 @@ export const salesforceContent = {
         Crafting <strong>responsive</strong>, <strong>high-impact</strong> email
         campaigns in Salesforce Marketing Cloud.
         <span className="block text-primary font-bold mt-2 text-xl">
-          That&rsquo;s what I do.
+          It&rsquo;s what I do.
         </span>
       </>
     ),
@@ -42,6 +42,13 @@ export const salesforceContent = {
         "text-lg sm:text-2xl md:text-2xl font-inter tracking-tight text-white mb-2 mt-2",
       contentClass:
         "text-sm sm:text-base font-jetbrains-mono md:text-lg leading-relaxed text-gray-300",
+    },
+  ],
+  skillsTagline: [
+    {
+      text: "SFMC Toolkit.",
+      className:
+        "text-lg sm:text-xl md:text-2xl font-inter tracking-tight text-primary mb-4 mt-2",
     },
   ],
 };

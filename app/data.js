@@ -71,60 +71,80 @@ export const salesForceDevSkills = [
   "Agile Methods", // Working with Agile methodologies, beneficial for project management.
 ];
 
-export const projects = [
-  {
-    title: "Murder Mystery",
-    links: {
-      github: "https://github.com/jamesMAwalker/murder-mystery",
-      demo: "https://murder-mystery-ielts.vercel.app/",
+export const projects = {
+  emailProjects: [
+    {
+      title: "VXX Newsletter",
+      links: {
+        github: "https://github.com/jmayheww/VXX-newsletter",
+      },
+      canvaMockup:
+        "https://res.cloudinary.com/daq5feofb/image/upload/v1700128599/vxx7_gy7k5k.gif",
+      description:
+        "The VXX Newsletter is a specialized email template crafted for engaging cycling enthusiasts with targeted announcements. Designed to encourage sign-ups and interaction for annual cycling trips in Vietnam, it blends compelling visuals with a responsive layout. This project not only showcases my HTML and CSS expertise but also my ability to create SFMC-compatible designs that effectively drive audience engagement and participation.",
+      technologies: [
+        "HTML",
+        "CSS",
+        "Responsive Design Principles",
+        "Email Marketing Best Practices",
+      ],
     },
-    canvaMockup:
-      "https://res.cloudinary.com/daq5feofb/image/upload/v1699000580/7_iepciy.png",
+  ],
+  fullStackProjects: [
+    {
+      title: "Murder Mystery",
+      links: {
+        github: "https://github.com/jamesMAwalker/murder-mystery",
+        demo: "https://murder-mystery-ielts.vercel.app/",
+      },
+      canvaMockup:
+        "https://res.cloudinary.com/daq5feofb/image/upload/v1699000580/7_iepciy.png",
 
-    description:
-      "Experience the thrill of Murder Mystery: a captivating web app crafted for live-streamed events with mobile in mind. Participants engage in interactive decision-making, collaborate in teams, and receive real-time evidence updates. This project, undertaken as a freelance contract for an education industry client, has been implemented as part of an established IELTS curriculum, delivering immersive and educational experiences to over 200 students.",
-    technologies: [
-      "React",
-      "TypeScript",
-      "Next.js",
-      "Clerk (User Authentication)",
-      "Convex (Database)",
-      "Tailwind CSS",
-    ],
-  },
-  {
-    title: "Infinite Eats",
-    links: {
-      github: "https://github.com/jmayheww/infinite-eats",
-      demo: "https://infinite-eats.onrender.com/home",
+      description:
+        "Experience the thrill of Murder Mystery: a captivating web app crafted for live-streamed events with mobile in mind. Participants engage in interactive decision-making, collaborate in teams, and receive real-time evidence updates. This project, undertaken as a freelance contract for an education industry client, has been implemented as part of an established IELTS curriculum, delivering immersive and educational experiences to over 200 students.",
+      technologies: [
+        "React",
+        "TypeScript",
+        "Next.js",
+        "Clerk (User Authentication)",
+        "Convex (Database)",
+        "Tailwind CSS",
+      ],
     },
-    canvaMockup:
-      "https://res.cloudinary.com/daq5feofb/image/upload/v1699000591/8_fdho3o.png",
+    {
+      title: "Infinite Eats",
+      links: {
+        github: "https://github.com/jmayheww/infinite-eats",
+        demo: "https://infinite-eats.onrender.com/home",
+      },
+      canvaMockup:
+        "https://res.cloudinary.com/daq5feofb/image/upload/v1699000591/8_fdho3o.png",
 
-    description: `A dynamic inventory management system built with React.js and Ruby on Rails. Empowering users with informed purchase decisions, streamlining stock control, safeguarding user data and privacy with robust user authentication, and facilitating secure transactions through Stripe API integration.`,
-    technologies: [
-      "React.js",
-      "Ruby on Rails",
-      "Stripe API",
-      "Bcrypt",
-      "PostgreSQL",
-      "Tailwind CSS",
-    ],
-  },
-  {
-    title: "Nomad List",
-    links: {
-      github: "https://github.com/jmayheww/phase-1-project-NomadListApp",
-      demo: "https://github.com/jmayheww/phase-1-project-NomadListApp",
+      description: `A dynamic inventory management system built with React.js and Ruby on Rails. Empowering users with informed purchase decisions, streamlining stock control, safeguarding user data and privacy with robust user authentication, and facilitating secure transactions through Stripe API integration.`,
+      technologies: [
+        "React.js",
+        "Ruby on Rails",
+        "Stripe API",
+        "Bcrypt",
+        "PostgreSQL",
+        "Tailwind CSS",
+      ],
     },
-    mobileMockup: "",
-    desktopMockup:
-      "https://res.cloudinary.com/daq5feofb/image/upload/v1696407724/nomad-amster_i1bwy8.jpg",
-    description:
-      "Nomad List is a practical and powerful guide for digital nomads. Utilizing the Teleport API, Nomad List provides users with itemized quality of life metrics that enable more comprehensive and informed decisions about where to live, work, and travel. Nomad List is an essential tool for any nomad in the remote work era.",
-    technologies: ["Teleport API", "JavaScript", "HTML", "CSS"],
-  },
-];
+    {
+      title: "Nomad List",
+      links: {
+        github: "https://github.com/jmayheww/phase-1-project-NomadListApp",
+        demo: "https://github.com/jmayheww/phase-1-project-NomadListApp",
+      },
+      mobileMockup: "",
+      desktopMockup:
+        "https://res.cloudinary.com/daq5feofb/image/upload/v1696407724/nomad-amster_i1bwy8.jpg",
+      description:
+        "Nomad List is a practical and powerful guide for digital nomads. Utilizing the Teleport API, Nomad List provides users with itemized quality of life metrics that enable more comprehensive and informed decisions about where to live, work, and travel. Nomad List is an essential tool for any nomad in the remote work era.",
+      technologies: ["Teleport API", "JavaScript", "HTML", "CSS"],
+    },
+  ],
+};
 
 export const articles = [
   {

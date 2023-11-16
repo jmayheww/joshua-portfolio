@@ -41,6 +41,7 @@ export const ArticleCard = ({ article }) => {
           className="flex items-center text-success font-mono hover:underline transition-colors duration-200"
           target="_blank"
           rel="noreferrer"
+          aria-label={`View ${article.title}`}
         >
           View Article
           <FaArrowRight className="ml-2" />

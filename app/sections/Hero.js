@@ -82,7 +82,7 @@ export const Hero = () => {
         </p>
 
         <div className={`${buttonContainerClasses}`}>
-          <a href="#work" className={buttonClasses}>
+          <a href="#work" className={buttonClasses} aria-label="View my work">
             {salesForceHeroContent.callToAction}
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -102,7 +102,7 @@ export const Hero = () => {
         </div>
 
         <div className="absolute bottom-8 sm:bottom-4 left-1/2 transform -translate-x-1/2 animate-pulse">
-          <a href="#about">
+          <a href="#about" aria-label="Scroll to about section">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"

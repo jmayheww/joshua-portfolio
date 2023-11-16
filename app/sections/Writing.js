@@ -30,6 +30,7 @@ export const Writing = () => {
           className="text-sm sm:text-gray-400 font-mono text-gray-400 hover:underline py-2 px-4"
           target="_blank"
           rel="noreferrer"
+          aria-label="View the archive of my articles on Dev.to"
         >
           VIEW THE ARCHIVE
         </a>

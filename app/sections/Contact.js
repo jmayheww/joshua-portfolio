@@ -36,7 +36,7 @@ export const Contact = () => {
           className={buttonClasses}
           target="_blank"
           rel="noreferrer"
-          aria-label="Email Me"
+          aria-label="Say Hello"
         >
           Say Hello
         </a>

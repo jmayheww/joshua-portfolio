@@ -74,14 +74,32 @@ export const salesForceDevSkills = [
 export const projects = {
   emailProjects: [
     {
-      title: "VXX Newsletter",
+      title: "VXX",
       links: {
         github: "https://github.com/jmayheww/VXX-newsletter",
+        demo: "https://vxx-newsletter.vercel.app/",
       },
+      isEmailProject: true,
       canvaMockup:
-        "https://res.cloudinary.com/daq5feofb/image/upload/v1700128599/vxx7_gy7k5k.gif",
-      description:
-        "The VXX Newsletter is a specialized email template crafted for engaging cycling enthusiasts with targeted announcements. Designed to encourage sign-ups and interaction for annual cycling trips in Vietnam, it blends compelling visuals with a responsive layout. This project not only showcases my HTML and CSS expertise but also my ability to create SFMC-compatible designs that effectively drive audience engagement and participation.",
+        "https://res.cloudinary.com/daq5feofb/image/upload/v1700207748/1_uec7du.png",
+      description: "Newsletter",
+      technologies: [
+        "HTML",
+        "CSS",
+        "Responsive Design Principles",
+        "Email Marketing Best Practices",
+      ],
+    },
+    {
+      title: "Stride Shoes",
+      links: {
+        github: "https://github.com/jmayheww/stride-suggested",
+        demo: "https://stride-promotional.vercel.app/",
+      },
+      isEmailProject: true,
+      canvaMockup:
+        "https://res.cloudinary.com/daq5feofb/image/upload/v1700207748/2_t3m8cv.png",
+      description: "Promotional Email",
       technologies: [
         "HTML",
         "CSS",
@@ -99,6 +117,8 @@ export const projects = {
       },
       canvaMockup:
         "https://res.cloudinary.com/daq5feofb/image/upload/v1699000580/7_iepciy.png",
+
+      isEmailProject: false,
 
       description:
         "Experience the thrill of Murder Mystery: a captivating web app crafted for live-streamed events with mobile in mind. Participants engage in interactive decision-making, collaborate in teams, and receive real-time evidence updates. This project, undertaken as a freelance contract for an education industry client, has been implemented as part of an established IELTS curriculum, delivering immersive and educational experiences to over 200 students.",
@@ -120,6 +140,8 @@ export const projects = {
       canvaMockup:
         "https://res.cloudinary.com/daq5feofb/image/upload/v1699000591/8_fdho3o.png",
 
+      isEmailProject: false,
+
       description: `A dynamic inventory management system built with React.js and Ruby on Rails. Empowering users with informed purchase decisions, streamlining stock control, safeguarding user data and privacy with robust user authentication, and facilitating secure transactions through Stripe API integration.`,
       technologies: [
         "React.js",
@@ -136,6 +158,7 @@ export const projects = {
         github: "https://github.com/jmayheww/phase-1-project-NomadListApp",
         demo: "https://github.com/jmayheww/phase-1-project-NomadListApp",
       },
+      isEmailProject: false,
       mobileMockup: "",
       desktopMockup:
         "https://res.cloudinary.com/daq5feofb/image/upload/v1696407724/nomad-amster_i1bwy8.jpg",

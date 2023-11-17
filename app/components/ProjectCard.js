@@ -3,28 +3,33 @@ import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 export const ProjectCard = ({ project }) => (
   <div className="card bg-neutral rounded-sm shadow-md transition-transform duration-200 p-4 md:p-6 mx-auto lg:max-w-3xl">
     {/* --- Image Section --- */}
-    <figure className="relative w-full aspect-w-16 aspect-h-9 md:aspect-w-4 md:aspect-h-3 lg:aspect-w-16 lg:aspect-h-9 xl:aspect-w-4 xl:aspect-h-3 rounded-sm overflow-hidden mb-4">
-      {/* {Canva Mockup} */}
-      {project.canvaMockup && (
-        <div className="mockup-desktop w-full h-full">
+    <figure
+      className={`relative w-full ${
+        project.isEmailProject
+          ? "aspect-w-1 aspect-h-1"
+          : "aspect-w-16 aspect-h-9"
+      } md:aspect-w-4 md:aspect-h-3 lg:aspect-w-16 lg:aspect-h-9 xl:aspect-w-4 xl:aspect-h-3 rounded-sm overflow-hidden ${
+        project.isEmailProject ? "mb-0" : "mb-4"
+      }`}
+    >
+      {project.isEmailProject ? (
+        <a href={project.links.demo} target="_blank" rel="noreferrer">
           <img
             src={project.canvaMockup}
             alt={project.title}
             className="object-cover w-full h-full rounded-sm"
             loading="lazy"
+            style={{ display: "block", lineHeight: 0 }} // Remove space caused by line-height
           />
-        </div>
-      )}
-      {/* {Desktop Mockup} */}
-      {project.desktopMockup && (
-        <div className="mockup-desktop w-full h-full">
-          <img
-            src={project.desktopMockup}
-            alt={project.title}
-            className="object-fit w-full h-full rounded-sm"
-            loading="lazy"
-          />
-        </div>
+        </a>
+      ) : (
+        <img
+          src={project.canvaMockup || project.desktopMockup}
+          alt={project.title}
+          className="object-cover w-full h-full rounded-sm"
+          loading="lazy"
+          style={{ display: "block", lineHeight: 0 }} // Remove space caused by line-height
+        />
       )}
     </figure>
 

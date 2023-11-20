@@ -16,7 +16,7 @@ export const salesForceHeroContent = {
   ],
   craftingHighlight: "SFMC Email Campaigns.",
   description:
-    "Your HTML Email Developer. I transform ideas into responsive, cross-client compatible email solutions, leveraging Salesforce Marketing Cloud for maximum impact. Let's",
+    "Your HTML Email Developer. I transform concepts into exceptional email campaigns. Let's",
   emailLinkText: "connect",
   emailLink: "mailto:joshsmayhew@gmail.com",
   descriptionEnd: "and make every message count.",

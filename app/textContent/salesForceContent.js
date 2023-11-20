@@ -26,9 +26,9 @@ export const salesforceContent = {
   ],
   aboutSections: [
     {
-      title: "Blending Development and Marketing",
+      title: "Design Meets Data in Email",
       content:
-        "Expert in transforming design mockups into dynamic, interactive email content, ensuring every pixel aligns with the client's vision and campaign objectives. I specialize in developing responsive, cross-client HTML emails, backed by a robust understanding of SFMC. My strength lies in integrating SFMC's dynamic capabilities with the technical demands of email design, ensuring campaigns are not only visually appealing but also functionally effective.",
+        "Transforming designs into dynamic, interactive HTML emails with a keen eye for detail and client objectives. Specialized in responsive, cross-client emails, I harness SFMC's dynamic features to create visually striking and functionally sound campaigns.",
       titleClass:
         "text-lg sm:text-2xl md:text-2xl font-inter tracking-tight text-white mb-2 mt-2",
       contentClass:
@@ -37,7 +37,7 @@ export const salesforceContent = {
     {
       title: "Data-Driven, User-Centric Approach",
       content:
-        "Through a comprehensive grasp of HTML, CSS, and SFMC, I create emails that perform seamlessly across devices and email clients. I am adept at leveraging SFMC's tools like Journey Builder and Email Studio to optimize campaign reach and impact, embodying a unique blend of technical acumen and strategic marketing insight. ",
+        "Expertly crafting emails with HTML, CSS, and SFMC, ensuring seamless performance across all devices and clients. Utilizing SFMC's Journey Builder and Email Studio, I blend technical skill with marketing insights to optimize campaign reach and effectiveness.",
       titleClass:
         "text-lg sm:text-2xl md:text-2xl font-inter tracking-tight text-white mb-2 mt-2",
       contentClass:

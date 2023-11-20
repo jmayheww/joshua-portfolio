@@ -99,7 +99,7 @@ export const projects = {
       isEmailProject: true,
       canvaMockup:
         "https://res.cloudinary.com/daq5feofb/image/upload/v1700207748/2_t3m8cv.png",
-      description: "Promotional Email",
+      description: "Promotional",
       technologies: [
         "HTML",
         "CSS",

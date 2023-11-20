@@ -4,7 +4,7 @@ export const salesForceHeroContent = {
   greeting: "Hey there, I’m",
   name: "Joshua Mayhew.",
   nameHighlightClass: "text-success",
-  craftingText: "Specializing in ",
+  craftingText: "Specializing in",
   typingAttributes: [
     "engaging",
     "personalized",
@@ -16,10 +16,10 @@ export const salesForceHeroContent = {
   ],
   craftingHighlight: "SFMC Email Campaigns.",
   description:
-    "I specialize in developing responsive, cross-client HTML emails, backed by a robust understanding of SFMC. My strength lies in integrating SFMC's dynamic capabilities with the technical demands of email design, ensuring campaigns are not only visually appealing but also functionally effective. If you're looking to elevate your email marketing with expertly crafted campaigns, let's",
-  emailLinkText: "connect.",
+    "Your HTML Email Developer. I transform ideas into responsive, cross-client compatible email solutions, leveraging Salesforce Marketing Cloud for maximum impact. Let's",
+  emailLinkText: "connect",
   emailLink: "mailto:joshsmayhew@gmail.com",
-  descriptionEnd: "Together, we can make every message count.",
+  descriptionEnd: "and make every message count.",
   callToAction: "Explore my work",
   callToActionLink: "#work",
 };

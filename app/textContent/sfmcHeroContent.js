@@ -16,10 +16,10 @@ export const salesForceHeroContent = {
   ],
   craftingHighlight: "SFMC Email Campaigns.",
   description:
-    "Blending marketing insight with technical expertise, I create Salesforce Marketing Cloud email campaigns that resonate with audiences and drive results. Ready to elevate your email marketing? Let’s ",
-  emailLinkText: "connect",
+    "I specialize in developing responsive, cross-client HTML emails, backed by a robust understanding of SFMC. My strength lies in integrating SFMC's dynamic capabilities with the technical demands of email design, ensuring campaigns are not only visually appealing but also functionally effective. If you're looking to elevate your email marketing with expertly crafted campaigns, let's",
+  emailLinkText: "connect.",
   emailLink: "mailto:joshsmayhew@gmail.com",
-  descriptionEnd: "and make every message count.",
+  descriptionEnd: "Together, we can make every message count.",
   callToAction: "Explore my work",
   callToActionLink: "#work",
 };

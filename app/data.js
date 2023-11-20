@@ -86,6 +86,7 @@ export const projects = {
       technologies: [
         "HTML",
         "CSS",
+        "Litmus",
         "Responsive Design Principles",
         "Email Marketing Best Practices",
       ],
@@ -103,6 +104,7 @@ export const projects = {
       technologies: [
         "HTML",
         "CSS",
+        "Litmus",
         "Responsive Design Principles",
         "Email Marketing Best Practices",
       ],

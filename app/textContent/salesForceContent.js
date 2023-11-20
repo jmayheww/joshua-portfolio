@@ -28,7 +28,7 @@ export const salesforceContent = {
     {
       title: "Blending Development and Marketing",
       content:
-        "Bridging a solid full-stack development background with Salesforce Marketing Cloud expertise. Specializing in HTML Email Development and leveraging SFMC tools to create personalized, impactful campaigns.",
+        "Expert in transforming design mockups into dynamic, interactive email content, ensuring every pixel aligns with the client's vision and campaign objectives. I specialize in developing responsive, cross-client HTML emails, backed by a robust understanding of SFMC. My strength lies in integrating SFMC's dynamic capabilities with the technical demands of email design, ensuring campaigns are not only visually appealing but also functionally effective.",
       titleClass:
         "text-lg sm:text-2xl md:text-2xl font-inter tracking-tight text-white mb-2 mt-2",
       contentClass:
@@ -37,7 +37,7 @@ export const salesforceContent = {
     {
       title: "Data-Driven, User-Centric Approach",
       content:
-        "Employing a data-driven and user-centric approach in email marketing. Constantly exploring new technologies and strategies to stay at the forefront of industry trends.",
+        "Through a comprehensive grasp of HTML, CSS, and SFMC, I create emails that perform seamlessly across devices and email clients. I am adept at leveraging SFMC's tools like Journey Builder and Email Studio to optimize campaign reach and impact, embodying a unique blend of technical acumen and strategic marketing insight. ",
       titleClass:
         "text-lg sm:text-2xl md:text-2xl font-inter tracking-tight text-white mb-2 mt-2",
       contentClass:

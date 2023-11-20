@@ -6,11 +6,9 @@ export const ProjectCard = ({ project }) => (
     <figure
       className={`relative w-full ${
         project.isEmailProject
-          ? "aspect-w-1 aspect-h-1"
-          : "aspect-w-16 aspect-h-9"
-      } md:aspect-w-4 md:aspect-h-3 lg:aspect-w-16 lg:aspect-h-9 xl:aspect-w-4 xl:aspect-h-3 rounded-sm overflow-hidden ${
-        project.isEmailProject ? "mb-0" : "mb-4"
-      }`}
+          ? "aspect-w-1 aspect-h-1 mb-[-1em]" // Adjust the negative margin as needed
+          : "aspect-w-16 aspect-h-9 mb-4"
+      } md:aspect-w-4 md:aspect-h-3 lg:aspect-w-16 lg:aspect-h-9 xl:aspect-w-4 xl:aspect-h-3 rounded-sm overflow-hidden`}
     >
       {project.isEmailProject ? (
         <a href={project.links.demo} target="_blank" rel="noreferrer">

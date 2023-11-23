@@ -97,7 +97,7 @@ export const projects = {
       },
       isEmailProject: true,
       canvaMockup:
-        "https://res.cloudinary.com/daq5feofb/image/upload/v1700207748/2_t3m8cv.png",
+        "https://res.cloudinary.com/daq5feofb/image/upload/v1700721798/Pale_Blue_Web_Browser_Designer_Artist_Letterhead_gpe324.png",
       description: "Promotional",
       technologies: [
         "HTML",

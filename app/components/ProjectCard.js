@@ -1,16 +1,19 @@
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
-import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
+import { useState, useEffect } from "react";
 
 export const ProjectCard = ({ project }) => {
-  const [ref, isIntersecting] = useIntersectionObserver({
-    threshold: 0.1,
-  });
+  const [imageLoaded, setImageLoaded] = useState(false);
+  console.log("imageLoaded: ", imageLoaded);
+  const onImageLoad = () => {
+    setImageLoaded(true);
+  };
+
+  useEffect(() => {
+    onImageLoad();
+  }, [imageLoaded]);
 
   return (
-    <div
-      className="card bg-neutral rounded-sm shadow-md transition-transform duration-200 p-4 md:p-6 mx-auto lg:max-w-3xl"
-      ref={ref}
-    >
+    <div className="card bg-neutral rounded-sm shadow-md transition-transform duration-200 p-4 md:p-6 mx-auto lg:max-w-3xl">
       {/* --- Image Section --- */}
       <figure
         className={`relative w-full ${
@@ -19,33 +22,37 @@ export const ProjectCard = ({ project }) => {
             : "aspect-w-16 aspect-h-9 mb-4"
         } md:aspect-w-4 md:aspect-h-3 lg:aspect-w-16 lg:aspect-h-9 xl:aspect-w-4 xl:aspect-h-3 rounded-sm overflow-hidden`}
       >
-        {isIntersecting && (
-          <div>
-            {project.isEmailProject ? (
-              <a
-                href={project.links.demo}
-                target="_blank"
-                rel="noreferrer"
-                aria-label="Live Demo"
-              >
-                <img
-                  src={project.canvaMockup}
-                  alt={project.title}
-                  className="object-cover w-full h-full rounded-sm"
-                  loading="lazy"
-                  style={{ display: "block", lineHeight: 0 }} // Remove space caused by line-height
-                />
-              </a>
-            ) : (
-              <img
-                src={project.canvaMockup || project.desktopMockup}
-                alt={project.title}
-                className="object-cover w-full h-full rounded-sm"
-                loading="lazy"
-                style={{ display: "block", lineHeight: 0 }} // Remove space caused by line-height
-              />
-            )}
-          </div>
+        {!imageLoaded && (
+          <div
+            className="animate-pulse bg-gray-200"
+            style={{ height: project.isEmailProject ? "300px" : "300px" }} // Adjust the height as needed
+          ></div>
+        )}
+
+        {project.isEmailProject ? (
+          <a href={project.links.demo} target="_blank" rel="noreferrer">
+            <img
+              src={project.canvaMockup}
+              alt={project.title}
+              className={`object-cover w-full h-full rounded-sm ${
+                imageLoaded ? "block" : "hidden"
+              }`}
+              onLoad={onImageLoad}
+              loading="lazy"
+              style={{ display: "block", lineHeight: 0 }} // Remove space caused by line-height
+            />
+          </a>
+        ) : (
+          <img
+            src={project.canvaMockup || project.desktopMockup}
+            alt={project.title}
+            className={`object-cover w-full h-full rounded-sm ${
+              imageLoaded ? "block" : "hidden"
+            }`}
+            onLoad={onImageLoad}
+            loading="lazy"
+            style={{ display: "block", lineHeight: 0 }} // Remove space caused by line-height
+          />
         )}
       </figure>
 

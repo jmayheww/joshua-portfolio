@@ -1,6 +1,16 @@
 import { FaArrowRight } from "react-icons/fa";
+import { useState, useEffect } from "react";
 
 export const ArticleCard = ({ article }) => {
+  const [imageLoaded, setImageLoaded] = useState(false);
+  const onImageLoad = () => {
+    setImageLoaded(true);
+  };
+
+  useEffect(() => {
+    onImageLoad();
+  }, [imageLoaded]);
+
   const getOptimizedImage = (url) => {
     // Assuming your cloudinary base URL is 'https://res.cloudinary.com/daq5feofb/image/upload/'
     const baseURL = "https://res.cloudinary.com/daq5feofb/image/upload/";
@@ -14,10 +24,19 @@ export const ArticleCard = ({ article }) => {
       {/* Image */}
       {article.image && (
         <div className="relative w-full aspect-w-16 aspect-h-9 md:aspect-w-4 md:aspect-h-3 lg:aspect-w-16 lg:aspect-h-9 xl:aspect-w-4 xl:aspect-h-3 rounded-t-sm overflow-hidden mb-4">
+          {!imageLoaded && (
+            <div
+              className="animate-pulse bg-gray-200"
+              style={{ height: "300px" }}
+            ></div>
+          )}
           <img
             src={getOptimizedImage(article.image)}
             alt={article.title}
-            className="object-cover object-center w-full h-full"
+            className={`object-cover object-center w-full h-full ${
+              imageLoaded ? "block" : "hidden"
+            }`}
+            onLoad={onImageLoad}
             loading="lazy"
           />
         </div>

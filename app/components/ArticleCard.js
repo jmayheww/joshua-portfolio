@@ -27,7 +27,7 @@ export const ArticleCard = ({ article }) => {
           {!imageLoaded && (
             <div
               className="animate-pulse bg-gray-200"
-              style={{ height: "300px" }}
+              style={{ height: "400px" }}
             ></div>
           )}
           <img

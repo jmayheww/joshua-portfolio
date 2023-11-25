@@ -72,24 +72,6 @@ export const salesForceDevSkills = [
 export const projects = {
   emailProjects: [
     {
-      title: "VXX",
-      links: {
-        github: "https://github.com/jmayheww/VXX-newsletter",
-        demo: "https://vxx-newsletter.vercel.app/",
-      },
-      isEmailProject: true,
-      canvaMockup:
-        "https://res.cloudinary.com/daq5feofb/image/upload/v1700207748/1_uec7du.png",
-      description: "Newsletter",
-      technologies: [
-        "HTML",
-        "CSS",
-        "Litmus",
-        "Responsive Design Principles",
-        "Email Marketing Best Practices",
-      ],
-    },
-    {
       title: "Stride Shoes",
       links: {
         github: "https://github.com/jmayheww/stride-suggested",
@@ -99,6 +81,24 @@ export const projects = {
       canvaMockup:
         "https://res.cloudinary.com/daq5feofb/image/upload/v1700721798/Pale_Blue_Web_Browser_Designer_Artist_Letterhead_gpe324.png",
       description: "Promotional",
+      technologies: [
+        "HTML",
+        "CSS",
+        "Litmus",
+        "Responsive Design Principles",
+        "Email Marketing Best Practices",
+      ],
+    },
+    {
+      title: "VXX",
+      links: {
+        github: "https://github.com/jmayheww/VXX-newsletter",
+        demo: "https://vxx-newsletter.vercel.app/",
+      },
+      isEmailProject: true,
+      canvaMockup:
+        "https://res.cloudinary.com/daq5feofb/image/upload/v1700207748/1_uec7du.png",
+      description: "Newsletter",
       technologies: [
         "HTML",
         "CSS",

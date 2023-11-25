@@ -61,6 +61,7 @@ export const Hero = () => {
 
         <div className="text-xl sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl leading-snug text-gray-300">
           {salesForceHeroContent.craftingText}
+          {` `}
           <Typing wordsList={salesForceHeroContent.typingAttributes} />
           <br />
           <span className="text-primary">

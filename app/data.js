@@ -90,6 +90,24 @@ export const projects = {
       ],
     },
     {
+      title: "Spotify",
+      links: {
+        github: "https://github.com/jmayheww/spotify-reset-password-template",
+        demo: "https://spotify-reset-password-template.vercel.app/",
+      },
+      isEmailProject: true,
+      canvaMockup:
+        "https://res.cloudinary.com/daq5feofb/image/upload/v1701098473/Spotify-pass-reset-browser_az5lfh.png",
+      description: "Transactional",
+      technologies: [
+        "HTML",
+        "CSS",
+        "Litmus",
+        "Responsive Design Principles",
+        "Email Marketing Best Practices",
+      ],
+    },
+    {
       title: "VXX",
       links: {
         github: "https://github.com/jmayheww/VXX-newsletter",

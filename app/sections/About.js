@@ -37,47 +37,57 @@ export const About = () => {
 
 // Portrait.js
 import Image from "next/image";
-
+import React, { useRef } from "react";
 export const Portrait = ({ isMobile }) => {
-  const [isTouched, setIsTouched] = useState(false);
+  const [isOverlayHidden, setIsOverlayHidden] = useState(false);
+  const portraitRef = useRef(null);
 
   const handleTouchStart = () => {
-    setIsTouched(true); // Turn off the overlay when touched
+    if (isMobile) {
+      setIsOverlayHidden(true); // Hide the overlay when touched
+    }
   };
 
-  const handleTouchEnd = (e) => {
-    // Check if the touch ended outside the portrait
-    if (!document.getElementById("portrait").contains(e.target)) {
-      setIsTouched(false); // Reapply the overlay
+  const handleTouchMove = (e) => {
+    if (!isMobile || !portraitRef.current) return;
+
+    const touch = e.touches[0];
+    const { left, top, right, bottom } =
+      portraitRef.current.getBoundingClientRect();
+    if (
+      touch.clientX < left ||
+      touch.clientX > right ||
+      touch.clientY < top ||
+      touch.clientY > bottom
+    ) {
+      setIsOverlayHidden(false); // Show the overlay if touch moves out of the portrait
+    }
+  };
+
+  const handleTouchEnd = () => {
+    if (isMobile) {
+      setIsOverlayHidden(false); // Show the overlay when touch ends
     }
   };
 
   useEffect(() => {
-    if (isMobile) {
-      // Add event listener to the document to handle touch end
-      document.addEventListener("touchend", handleTouchEnd, false);
-    }
-
-    // Cleanup the event listener
+    // Cleanup function if needed
     return () => {
-      if (isMobile) {
-        document.removeEventListener("touchend", handleTouchEnd, false);
-      }
+      portraitRef.current = null;
     };
-  }, [isMobile]);
-
-  const overlayClasses = isTouched
-    ? "opacity-0"
-    : "hover:opacity-0 opacity-100";
+  }, []);
 
   return (
     <div className="relative w-2/3 sm:w-1/2 md:w-1/3 mx-auto md:mx-0 mb-8 md:mb-0">
       <div className="absolute -bottom-3 -right-4 w-full h-full border-4 border-success rounded-sm z-0"></div>
       <div className="relative w-full z-10 overflow-hidden rounded-sm">
         <div
+          ref={portraitRef}
           id="portrait"
           className="relative overflow-hidden rounded-sm transition-transform duration-300"
-          onTouchStart={isMobile ? handleTouchStart : null}
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
         >
           <Image
             src="/images/headshot.jpg"
@@ -87,7 +97,9 @@ export const Portrait = ({ isMobile }) => {
             layout="responsive"
           />
           <div
-            className={`absolute top-0 left-0 w-full h-full bg-success mix-blend-multiply transition-opacity duration-300 ${overlayClasses}`}
+            className={`absolute top-0 left-0 w-full h-full bg-success mix-blend-multiply transition-opacity duration-300 ${
+              isOverlayHidden ? "opacity-0" : "hover:opacity-0"
+            }`}
           ></div>
         </div>
       </div>

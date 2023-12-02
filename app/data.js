@@ -79,7 +79,7 @@ export const projects = {
       },
       isEmailProject: true,
       canvaMockup:
-        "https://res.cloudinary.com/daq5feofb/image/upload/v1701504293/6_cudfgc.png",
+        "https://res.cloudinary.com/daq5feofb/image/upload/v1701505843/6_qb3dwx.png",
       description: "Promotional",
       technologies: [
         "HTML",
@@ -98,7 +98,7 @@ export const projects = {
       },
       isEmailProject: true,
       canvaMockup:
-        "https://res.cloudinary.com/daq5feofb/image/upload/v1701504293/5_itribr.png",
+        "https://res.cloudinary.com/daq5feofb/image/upload/v1701505843/5_ealx9p.png",
       description: "Promotional",
       technologies: [
         "HTML",
@@ -116,7 +116,7 @@ export const projects = {
       },
       isEmailProject: true,
       canvaMockup:
-        "https://res.cloudinary.com/daq5feofb/image/upload/v1701504292/4_ab8xnh.png",
+        "https://res.cloudinary.com/daq5feofb/image/upload/v1701505842/4_ne96fd.png",
       description: "Transactional",
       technologies: [
         "HTML",
@@ -134,7 +134,7 @@ export const projects = {
       },
       isEmailProject: true,
       canvaMockup:
-        "https://res.cloudinary.com/daq5feofb/image/upload/v1701504292/3_n5glf5.png",
+        "https://res.cloudinary.com/daq5feofb/image/upload/v1701505843/3_torid4.png",
       description: "Newsletter",
       technologies: [
         "HTML",

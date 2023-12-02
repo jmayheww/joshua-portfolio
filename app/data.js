@@ -72,6 +72,25 @@ export const salesForceDevSkills = [
 export const projects = {
   emailProjects: [
     {
+      title: "Old Navy",
+      links: {
+        github: "https://github.com/jmayheww/old-navy-cyber-monday-sale",
+        demo: "https://old-navy-cyber-monday-sale-promo-template.vercel.app/",
+      },
+      isEmailProject: true,
+      canvaMockup:
+        "https://res.cloudinary.com/daq5feofb/image/upload/v1701504293/6_cudfgc.png",
+      description: "Promotional",
+      technologies: [
+        "HTML",
+        "CSS",
+        "Litmus",
+        "Responsive Design Principles",
+        "Email Marketing Best Practices",
+        "Photoshop",
+      ],
+    },
+    {
       title: "Stride Shoes",
       links: {
         github: "https://github.com/jmayheww/stride-suggested",
@@ -79,7 +98,7 @@ export const projects = {
       },
       isEmailProject: true,
       canvaMockup:
-        "https://res.cloudinary.com/daq5feofb/image/upload/v1700721798/Pale_Blue_Web_Browser_Designer_Artist_Letterhead_gpe324.png",
+        "https://res.cloudinary.com/daq5feofb/image/upload/v1701504293/5_itribr.png",
       description: "Promotional",
       technologies: [
         "HTML",
@@ -97,7 +116,7 @@ export const projects = {
       },
       isEmailProject: true,
       canvaMockup:
-        "https://res.cloudinary.com/daq5feofb/image/upload/v1701098473/Spotify-pass-reset-browser_az5lfh.png",
+        "https://res.cloudinary.com/daq5feofb/image/upload/v1701504292/4_ab8xnh.png",
       description: "Transactional",
       technologies: [
         "HTML",
@@ -115,7 +134,7 @@ export const projects = {
       },
       isEmailProject: true,
       canvaMockup:
-        "https://res.cloudinary.com/daq5feofb/image/upload/v1700207748/1_uec7du.png",
+        "https://res.cloudinary.com/daq5feofb/image/upload/v1701504292/3_n5glf5.png",
       description: "Newsletter",
       technologies: [
         "HTML",

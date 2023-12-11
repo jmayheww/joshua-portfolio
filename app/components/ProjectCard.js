@@ -1,62 +1,41 @@
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 export const ProjectCard = ({ project }) => {
   const [imageLoaded, setImageLoaded] = useState(false);
-  console.log("imageLoaded: ", imageLoaded);
-  const onImageLoad = () => {
-    setImageLoaded(true);
-  };
 
-  useEffect(() => {
-    onImageLoad();
-  }, [imageLoaded]);
+  const imageSource = project.isEmailProject
+    ? project.canvaMockup
+    : project.canvaMockup || project.desktopMockup;
 
   return (
     <div className="card bg-neutral rounded-sm shadow-md transition-transform duration-200 p-4 md:p-6 mx-auto lg:max-w-3xl">
-      {/* --- Image Section --- */}
+      {/* Image Section */}
       <figure
         className={`relative w-full ${
           project.isEmailProject
-            ? "aspect-w-1 aspect-h-1 mb-[-1em]" // Adjust the negative margin as needed
+            ? "aspect-w-1 aspect-h-1 mb-[-1em]"
             : "aspect-w-16 aspect-h-9 mb-4"
         } md:aspect-w-4 md:aspect-h-3 lg:aspect-w-16 lg:aspect-h-9 xl:aspect-w-4 xl:aspect-h-3 rounded-sm overflow-hidden`}
       >
-        {!imageLoaded && (
-          <div
-            className="animate-pulse bg-gray-200"
-            style={{ height: project.isEmailProject ? "300px" : "300px" }} // Adjust the height as needed
-          ></div>
-        )}
-
-        {project.isEmailProject ? (
-          <a href={project.links.demo} target="_blank" rel="noreferrer">
-            <img
-              src={project.canvaMockup}
-              alt={project.title}
-              className={`object-cover w-full h-full rounded-sm ${
-                imageLoaded ? "block" : "hidden"
-              }`}
-              onLoad={onImageLoad}
-              loading="lazy"
-              style={{ display: "block", lineHeight: 0 }} // Remove space caused by line-height
-            />
-          </a>
-        ) : (
+        <a
+          href={project.isEmailProject ? project.links.demo : undefined}
+          target="_blank"
+          rel="noreferrer"
+        >
           <img
-            src={project.canvaMockup || project.desktopMockup}
+            src={imageSource}
             alt={project.title}
             className={`object-cover w-full h-full rounded-sm ${
               imageLoaded ? "block" : "hidden"
             }`}
-            onLoad={onImageLoad}
+            onLoad={() => setImageLoaded(true)}
             loading="lazy"
-            style={{ display: "block", lineHeight: 0 }} // Remove space caused by line-height
           />
-        )}
+        </a>
       </figure>
 
-      {/* --- Content Section --- */}
+      {/* Content Section */}
       <article className="flex flex-col justify-between space-y-4">
         {/* Content Details */}
         <div>
@@ -65,7 +44,7 @@ export const ProjectCard = ({ project }) => {
           </h2>
           <p className="text-gray-300 mb-4 leading-relaxed">
             {project.description}
-          </p>{" "}
+          </p>
           {/* Technologies */}
           <div className="flex flex-wrap gap-2 mb-2">
             {project.technologies.map((tech) => (
@@ -80,7 +59,6 @@ export const ProjectCard = ({ project }) => {
         </div>
         {/* Project Links */}
         <div className="flex justify-end space-x-4">
-          {/* Added 'justify-end' to move the buttons to the right */}
           {project.links.github && (
             <a
               href={project.links.github}

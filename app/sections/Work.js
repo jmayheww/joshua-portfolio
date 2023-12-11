@@ -25,29 +25,29 @@ export const Work = () => {
 
       <TabButtons activeTab={activeTab} setActiveTab={setActiveTab} />
 
-      <div className="grid grid-cols-1 gap-8">
-        {activeTab === "email" &&
-          projects.emailProjects.map((project, index) => (
-            <InViewProjectCard
-              key={project.title}
-              project={project}
-              delay={index * 0.1}
-            />
-          ))}
-        {activeTab === "fullstack" &&
-          projects.fullStackProjects.map((project, index) => (
-            <InViewProjectCard
-              key={project.title}
-              project={project}
-              delay={index * 0.1}
-            />
-          ))}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
+        {projects[
+          activeTab === "email" ? "emailProjects" : "fullStackProjects"
+        ].map((project, index) => (
+          <InViewProjectCard
+            key={project.title}
+            project={project}
+            delay={index * 0.1}
+            isOdd={index % 2 !== 0}
+          />
+        ))}
+        {/* {projects[activeTab === "email" ? "emailProjects" : "fullStackProjects"]
+          .length %
+          2 !==
+          0 && (
+          <div className="bg-gray-200 p-4 rounded-md text-center">See More</div>
+        )} */}
       </div>
     </section>
   );
 };
 
-const InViewProjectCard = ({ project, delay }) => {
+const InViewProjectCard = ({ project, delay, isOdd }) => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.2,

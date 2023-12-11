@@ -11,11 +11,16 @@ const fadeIn = {
   visible: { opacity: 1, y: 0 },
 };
 
+const fadeInFromRight = {
+  hidden: { opacity: 0, x: 80 }, // Adjusted x value for a subtle animation
+  visible: { opacity: 1, x: 0 },
+};
+
 export const Work = () => {
   const [activeTab, setActiveTab] = useState("email");
 
   return (
-    <section className="flex flex-col items-center ...">
+    <section className="flex flex-col items-center">
       <SectionHeader title="Work" className="mb-2" />
 
       <TabButtons activeTab={activeTab} setActiveTab={setActiveTab} />
@@ -45,16 +50,16 @@ export const Work = () => {
 const InViewProjectCard = ({ project, delay }) => {
   const [ref, inView] = useInView({
     triggerOnce: true,
-    threshold: 0.1,
+    threshold: 0.2,
   });
 
   return (
     <motion.div
       ref={ref}
-      variants={fadeIn}
+      variants={fadeInFromRight}
       initial="hidden"
       animate={inView ? "visible" : "hidden"}
-      transition={{ duration: 0.5, delay: delay }}
+      transition={{ duration: 0.7, delay: delay }}
     >
       <ProjectCard project={project} />
     </motion.div>

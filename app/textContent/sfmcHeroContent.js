@@ -2,7 +2,8 @@
 
 export const salesForceHeroContent = {
   greeting: "Hey there, I’m",
-  name: "Joshua Mayhew.",
+  first_name: "Joshua",
+  last_name: "Mayhew.",
   nameHighlightClass: "text-success",
   craftingText: "Specializing in",
   typingAttributes: [

@@ -56,7 +56,11 @@ export const Hero = () => {
           {salesForceHeroContent.greeting}
         </p>
         <h1 className="whitespace-nowrap fold-portrait:whitespace-normal fold-landscape:whitespace-nowrap text-4xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-extrabold font-jetbrains-mono leading-none">
-          <span className="text-success"> {salesForceHeroContent.name}</span>
+          <span className="text-white">{salesForceHeroContent.first_name}</span>
+          <span className="text-success">
+            {" "}
+            {salesForceHeroContent.last_name}
+          </span>
         </h1>
 
         <div className="text-xl sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl leading-snug text-gray-300">

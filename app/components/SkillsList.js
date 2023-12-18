@@ -24,20 +24,13 @@ function CheckIcon() {
 
 export const SkillsList = () => {
   return (
-    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-4 gap-4">
+    <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-4 gap-6 lg:gap-8">
       {salesForceDevSkills.map((skill) => (
-        <div key={skill} className="flex items-center space-x-2">
-          {/* Checkmark Icon */}
+        <div key={skill} className="flex items-center space-x-3 group">
           <div className="flex-shrink-0">
-            {" "}
-            {/* Ensures icon doesn't flex */}
             <CheckIcon />
           </div>
-
-          {/* Skill Name */}
-          <span className="text-sm sm:text-md font-inter font-semibold ">
-            {" "}
-            {/* Responsive font size and truncation */}
+          <span className="text-sm sm:text-md lg:text-lg font-inter font-semibold">
             {skill}
           </span>
         </div>

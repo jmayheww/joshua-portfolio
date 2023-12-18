@@ -141,7 +141,7 @@ export const AboutSection = ({ section }) => {
 export const SkillHeader = ({ skillsLabel }) => {
   return (
     <div className="w-full">
-      <h3 className="text-lg sm:text-xl md:text-2xl font-inter tracking-tight text-primary mb-4 mt-2">
+      <h3 className="text-lg sm:text-xl md:text-2xl font-inter tracking-tight text-primary mb-2 mt-2">
         {skillsLabel[0].text}
       </h3>
     </div>

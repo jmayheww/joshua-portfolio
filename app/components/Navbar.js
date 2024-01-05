@@ -4,7 +4,7 @@ import { useNavBarEffects } from "../hooks/useNavBarEffects";
 import { sectionLinks } from "../data";
 
 const Overlay = ({ closeMenu }) => (
-  <div className="nav-overlay z-40 md:hidden" onClick={closeMenu}></div>
+  <div className="nav-overlay z-40 md:hidden " onClick={closeMenu}></div>
 );
 
 const MobileMenuButton = ({ isOpen, handleMenu }) => (
@@ -102,7 +102,7 @@ const Navbar = () => {
     ${isVisible ? "block" : "hidden"}
     ${
       isTopOfPage
-        ? "bg-opacity-10 backdrop-blur-sm"
+        ? "bg-opacity-100 backdrop-blur-none"
         : "bg-opacity-90 backdrop-blur-sm"
     }
   `;

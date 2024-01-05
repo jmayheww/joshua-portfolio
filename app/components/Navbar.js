@@ -139,7 +139,7 @@ const Navbar = () => {
               key={link}
               href={`#${link}`}
               aria-label={`#${link}`}
-              className="text-gray-300 font-inter font-bold transition-transform duration-300 ease-out transform hover:scale-105 hover:text-success hover:shadow-md"
+              className="text-gray-300 font-inter font-bold transition-transform duration-300 ease-out transform hover:scale-105 hover:text-success"
             >
               {link}
             </a>

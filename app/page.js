@@ -39,7 +39,7 @@ export default function Home() {
               alt="Workstation"
               layout="fill"
               objectFit="cover"
-              loading="lazy"
+              loading="eager"
             />
             <div className="absolute inset-0 bg-base-100 bg-opacity-80 transition duration-500 ease-in-out"></div>
             <div className="absolute inset-0 bg-gradient-to-b from-transparent to-base-100">

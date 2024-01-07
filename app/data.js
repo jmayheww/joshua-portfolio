@@ -60,13 +60,13 @@ export const techSkills = [
 
 export const salesForceDevSkills = [
   "HTML & CSS",
-  "AMPScript",
-  "Responsive Design",
-  "SFMC Journey Builder",
+  "JavaScript",
+  "MJML",
   "Litmus",
-  "Email on Acid",
-  "SFMC Data Extensions",
-  "API Integration",
+  "Google Analytics",
+  "Salesforce Marketing Cloud",
+  "Klayvio",
+  "Figma & Adobe Creative Suite",
 ];
 
 export const projects = {
